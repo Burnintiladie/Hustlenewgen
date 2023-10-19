@@ -96,5 +96,37 @@ header{
     justify-content: space-between;
   }
 }
+.season{
+  background-color: #E0E3E8;
+  border-radius: 2rem;
+  margin-top: 5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  & h1{
+    color: white;
+    background-color: #1f325c;
+    border-radius: 2rem;
+  }
+  & article{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.playoffs{
+  background-color: #E0E3E8;
+  border-radius: 2rem;
+  margin-top: 5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  & h1{
+    color: white;
+    background-color: #1f325c;
+    border-radius: 2rem;
+  }
+  & article{
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 
