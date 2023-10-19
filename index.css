@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+}
+
+header{
+    height: 200px;
+}
+
+.logo{
+    background-color: #0B193A;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    justify-content: center;
+    /* color: white; */
+}
+
+.logo a{
+    padding: 5px;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+
+.menu{
+    display: flex;
+    background-color: #0B193A;
+    width: 100%;
+
+}
