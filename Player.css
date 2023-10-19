@@ -1,0 +1,41 @@
+* {
+}
+body {
+  background-color: white;
+}
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  position: absolute;
+  display: flex;
+  background-color: #0b193a;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 8rem;
+  margin-left: 3rem;
+}
+.navigation {
+  display: flex;
+}
+.navigation li {
+  list-style: none;
+  margin: 0 8rem;
+}
+.navigation li a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+
