@@ -4,6 +4,8 @@
 body{
   background-color: white;
 }
+
+
 header{
   top: 0;
   left: 0;
@@ -12,15 +14,16 @@ header{
   position: absolute;
   display: flex;
   background-color: #0b193a;
-  align-items: baseline;
   & img{
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
     border-radius: 8rem;
     margin-left: 3rem;
+    align-items: center;
   }
   & ul{
     display: flex;
+    align-items: baseline;
   }
   & li{
     list-style: none;
@@ -37,6 +40,8 @@ header{
     letter-spacing: 1px;
   }
 }
+
+
 .player-profile{
     display: flex;
     height: 40rem;
@@ -80,6 +85,8 @@ header{
     margin-top: 2rem;
   }
 }
+
+
 .recent-matches{
   background-color: #E0E3E8;
   border-radius: 2rem;
@@ -94,8 +101,16 @@ header{
   & article{
     display: flex;
     justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  & img{
+    width: 3rem;
+    height: 3rem;
   }
 }
+
+
 .season{
   background-color: #E0E3E8;
   border-radius: 2rem;
@@ -110,6 +125,12 @@ header{
   & article{
     display: flex;
     justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  & img{
+    width: 3rem;
+    height: 3rem;
   }
 }
 .playoffs{
@@ -126,6 +147,12 @@ header{
   & article{
     display: flex;
     justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  & img{
+    width: 3rem;
+    height: 3rem;
   }
 }
 
