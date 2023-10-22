@@ -1,6 +1,14 @@
 *{
-       
+  margin: 0%;     
 }
 header{
-
+    height: 100px;
+    width: 100%;
+    display: flex;
+    background-color: #0B193A;
+}
+.navigation{
+    height: 50px;
+    width: 100%;
+    display: flex;
 }
