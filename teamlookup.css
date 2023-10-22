@@ -2,10 +2,31 @@
   margin: 0%;     
 }
 header{
-    height: 100px;
-    width: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  position: absolute;
+  display: flex;
+  background-color: #0b193a;
+
+  & ul{
     display: flex;
-    background-color: #0B193A;
+    position: absolute;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    overflow-x: hidden;
+  }
+
+  & li{
+    list-style: none;
+    position: center;
+  }
 }
 .navigation{
     height: 50px;
