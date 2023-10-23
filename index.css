@@ -45,6 +45,7 @@ header{
     padding: 20px 0;
     left: 0;
     z-index: 1;
+    font-weight: bold;
 }
 
 .drop-player a{
@@ -86,7 +87,6 @@ header{
 .column span{
     color: #2758CC;
     padding: 10px;
-    font-weight: 900;
 }
 
 .menu{
@@ -99,9 +99,14 @@ header{
 }
 
 .menu a{
-    padding: 40px;
+    padding: 25px 30px 10px;
     text-decoration: none;
     color: white;
+    border-bottom: 3px solid white;
+}
+
+.menu a:hover{
+    border-bottom: 3px solid #0B193A;
 }
 
 /* .notify{
@@ -118,8 +123,10 @@ header{
 
 .match{
     display: flex;
-    justify-content: center;
+    padding: 25px;
+    font-family: 'Poppins', sans-serif;
     color: white;
+    justify-content: center;
 }
 
 .match img{
@@ -127,13 +134,73 @@ header{
     height: 60px;
 }
 
-.match div{
-    background-color: rgba(31, 50, 92, 0.90);
+.game{
+    display: flex;
+    background-color: rgba(31, 50, 92, 0.9);
+    border-radius: 25px;
+    height: 90px;
+    width: 240px;
+    margin: 20px;
+    padding: 30px 15px;
+    justify-content: center;
+}
+
+.game section{
+    margin: 0px 8px;
+    text-align: center;
+}
+
+.final-text{
+    padding-top: 5px;
+    font-size: 9px;
+    color: #f04040;
+    text-align: center;
+}
+
+.team{
+    font-size: 20px;
+    display: flex;
+}
+
+.news{
+    background-color: #1F325CE5;
     display: flex;
     padding: 30px;
-    margin: 20px;
-    border-radius: 25px;
+    justify-content: center;
 }
+
+.news article{
+    font-family: 'Poppins', sans-serif;
+    margin: 30px;
+    background-color: white;
+    border-radius: 10px;  
+}
+
+.news img{
+    width: 370px;
+    height: 220px;
+    border-radius: 10px 10px 0px 0px;  
+}
+
+.news h5{
+    padding-top: 2px;
+    color: #0B193A;
+    text-align: center;  
+}
+
+.news p{
+    font-size: 12px;
+    text-align: right;
+    padding: 8px 10px ;
+}
+
+
+
+
+
+
+
+
 
 
 
