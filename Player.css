@@ -1,12 +1,9 @@
-* {
-
-}
-body{
+body {
   background-color: white;
 }
 
 /*header*/
-header{
+header {
   width: 100%;
   height: 140px;
   display: flex;
@@ -14,21 +11,21 @@ header{
   justify-content: space-between;
 
   /*bagiin logo*/
-  & img{
+  & img {
     width: 9rem;
     height: 9rem;
     margin-left: 3rem;
   }
 
   /*menu*/
-  & ul{
+  & ul {
     display: flex;
     list-style-type: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     padding: 5rem;
   }
 
-  & .menu a{
+  & .menu a {
     padding: 30px 80px 11px;
     color: white;
     text-decoration: none;
@@ -37,54 +34,52 @@ header{
     border-bottom: 5px solid #0b193a;
   }
 
-  & .menu a:hover{
+  & .menu a:hover {
     border-bottom: 5px solid white;
   }
-
 }
 
 /*player profile heseg*/
-.player-profile{
-    display: flex;
-    height: 40rem;
-    background-color: #E0E3E8;
-    border-radius: 2rem;
+.player-profile {
+  display: flex;
+  height: 40rem;
+  background-color: #e0e3e8;
+  border-radius: 2rem;
+  margin-top: 5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+
+  /*toglogchiin nuur zurag*/
+  & img {
+    width: 25rem;
+    height: 35rem;
+    margin-left: 5rem;
+    margin-top: 5rem;
+  }
+
+  /*toglogchiin huviin dugaar*/
+  & .number {
+    margin-left: 3rem;
+    margin-top: 2rem;
+    font-size: 15rem;
+    color: #0b193a;
+  }
+
+  /*toglogchiin huviin medeelel*/
+  & .info {
     margin-top: 5rem;
     margin-left: 3rem;
-    margin-right: 3rem;
-
-    /*toglogchiin nuur zurag*/
-    & img{
-      width: 25rem;
-      height: 35rem;
-      margin-left: 5rem;
-      margin-top: 5rem;
-    }
-
-    /*toglogchiin huviin dugaar*/
-    & .number{
-      margin-left: 3rem;
-      margin-top: 2rem;
-      font-size: 15rem;
-      color: #0b193a;
-      
-    }
-
-    /*toglogchiin huviin medeelel*/
-    & .info{
-      margin-top: 5rem;
-      margin-left: 3rem;
-    }
-    & .lname{
-      font-size: 3rem;
-      color: #0b193a;
-    }
-    & .fname{
-      font-size: 6rem;
-      color: #0b193a;
-      font-weight: 600;
-    }
-  & p{
+  }
+  & .lname {
+    font-size: 3rem;
+    color: #0b193a;
+  }
+  & .fname {
+    font-size: 6rem;
+    color: #0b193a;
+    font-weight: 600;
+  }
+  & p {
     font-size: 1rem;
     color: #0b193a;
     font-weight: 500;
@@ -92,26 +87,25 @@ header{
     letter-spacing: 1px;
     margin-top: 2rem;
   }
-
 }
 
 /*recent matches husnegt*/
-.recent-matches{
-  background-color: #E0E3E8;
+.recent-matches {
+  background-color: #e0e3e8;
   border-radius: 1rem;
   margin-top: 5rem;
   margin-left: 3rem;
   margin-right: 3rem;
 
   /*husnegtiin garchig*/
-  & h1{
+  & h1 {
     color: white;
     background-color: #1f325c;
     border-radius: 1rem;
   }
 
   /*toglogchiin uzuulelt*/
-  & article{
+  & article {
     display: flex;
     justify-content: space-between;
     margin-left: 2rem;
@@ -120,22 +114,22 @@ header{
 }
 
 /*season husnegt*/
-.season{
-  background-color: #E0E3E8;
+.season {
+  background-color: #e0e3e8;
   border-radius: 1rem;
   margin-top: 5rem;
   margin-left: 3rem;
   margin-right: 3rem;
 
   /*husngegtiin garchig*/
-  & h1{
+  & h1 {
     color: white;
     background-color: #1f325c;
     border-radius: 1rem;
   }
 
   /*toglogchiin uzuulelt*/
-  & article{
+  & article {
     display: flex;
     justify-content: space-between;
     margin-left: 2rem;
@@ -144,22 +138,22 @@ header{
 }
 
 /*playoffs husnegt*/
-.playoffs{
-  background-color: #E0E3E8;
+.playoffs {
+  background-color: #e0e3e8;
   border-radius: 1rem;
   margin-top: 5rem;
   margin-left: 3rem;
   margin-right: 3rem;
 
   /*husnegtiin garchig*/
-  & h1{
+  & h1 {
     color: white;
     background-color: #1f325c;
     border-radius: 1rem;
   }
 
   /*toglogchiin uzuulelt*/
-  & article{
+  & article {
     display: flex;
     justify-content: space-between;
     margin-left: 2rem;
@@ -168,22 +162,20 @@ header{
 }
 
 /*footer*/
-footer{
+footer {
   width: 100%;
   background-color: #0b193a;
   margin-top: 5rem;
 
   /*contact-us heseg*/
-  & .contact{
+  & .contact {
     display: flex;
     justify-content: space-between;
-    margin-top:  10rem;
+    margin-top: 10rem;
   }
 
   /*about-us heseg*/
-  & .about{
+  & .about {
     display: flex;
   }
-
 }
-
