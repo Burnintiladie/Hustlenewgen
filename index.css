@@ -2,18 +2,21 @@
     margin: 0;
 }
 
+/* Logo bolon menu heseg*/
 header{
     height: 120px;
     background-color: #0B193A;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*Logo heseg*/
 .logo{
     display: flex;
     list-style-type: none;
     justify-content: center;
 }
 
+/*Logonii hemjee*/
 .logo img{
     width: 50px;
     height: 50px;
@@ -26,15 +29,18 @@ header{
     border-bottom: 2px solid white;
 }
 
-.drop{
+
+/* .drop{
     float: left;
     overflow: hidden;
-}
+} */
 
+/* Logo hover*/
 .drop:hover  .drop-player{
     display: block;
 }
 
+/*Logo hover roster heseg*/
 .drop-player{
     display: none;
     position: absolute;
@@ -48,6 +54,7 @@ header{
     font-weight: bold;
 }
 
+/*Roster toglogciin ners*/
 .drop-player a{
     text-decoration: none;
     color: rgba(31, 50, 92, 1.0);
@@ -57,16 +64,19 @@ header{
     padding: 3px;
 }
 
+/*Roster toglogciin ner hover*/
 .drop-player a:hover{
     font-size: 15px;
 }
 
+/*Roster toglogcdiin bairlaliin title*/
 .drop-player h3{
     color: rgba(31, 50, 92, 1.0);
     padding-bottom: 15px;
     margin-left: 12px;
 }
 
+/*Bairlaliin title bolon toglogciin zaag*/
 .drop-player h3::after{
     display: block;
     content: "";
@@ -77,6 +87,7 @@ header{
     margin-top: 5px;
 }
 
+/*Toglogciin bairlal*/
 .column{
     float: left;
     width: 18%;
@@ -84,11 +95,13 @@ header{
     border-right: 1px solid rgba(31, 50, 92, 1.0);
 } 
 
+/*Toglogchiin number */
 .column span{
     color: #2758CC;
     padding: 10px;
 }
 
+/*Menu heseg*/
 .menu{
     padding: 10px;
     display: flex;
@@ -98,6 +111,7 @@ header{
     font-family: 'Poppins', sans-serif;
 }
 
+/*Menu text*/
 .menu a{
     padding: 25px 30px 10px;
     text-decoration: none;
@@ -105,6 +119,7 @@ header{
     border-bottom: 3px solid white;
 }
 
+/*Menu hover*/
 .menu a:hover{
     border-bottom: 3px solid #0B193A;
 }
@@ -115,12 +130,14 @@ header{
     color: white;
 } */
 
+/*Cover heseg*/
 .cover{
     background-image: url(assets/cover.jpeg);
     background-size: cover;
     height: 700px;
 }
 
+/*Togloltiin heseg*/
 .match{
     display: flex;
     padding: 25px;
@@ -129,11 +146,13 @@ header{
     justify-content: center;
 }
 
+/*Togloj bui bagiin logo*/
 .match img{
     width: 60px;
     height: 60px;
 }
 
+/*Neg togloltiin heseg*/
 .game{
     display: flex;
     background-color: rgba(31, 50, 92, 0.9);
@@ -145,11 +164,13 @@ header{
     justify-content: center;
 }
 
+/*Bagiin logo bairluulalt*/
 .game section{
     margin: 0px 8px;
     text-align: center;
 }
 
+/*Togloltiin minut bolon Final*/
 .final-text{
     padding-top: 5px;
     font-size: 9px;
@@ -157,11 +178,13 @@ header{
     text-align: center;
 }
 
+/*Onoonii haritsaa*/
 .team{
     font-size: 20px;
     display: flex;
 }
 
+/*Medeenii heseg*/
 .news{
     background-color: #1F325CE5;
     display: flex;
@@ -169,6 +192,7 @@ header{
     justify-content: center;
 }
 
+/*Neg medee*/
 .news article{
     font-family: 'Poppins', sans-serif;
     margin: 30px;
@@ -176,18 +200,21 @@ header{
     border-radius: 10px;  
 }
 
+/*Medeenii zurag*/
 .news img{
     width: 370px;
     height: 220px;
     border-radius: 10px 10px 0px 0px;  
 }
 
+/*Medeenii garchig*/
 .news h5{
     padding-top: 2px;
     color: #0B193A;
     text-align: center;  
 }
 
+/*Medeenii ognoo*/
 .news p{
     font-size: 12px;
     text-align: right;
