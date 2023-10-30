@@ -1,0 +1,58 @@
+body {
+    background-color: white;
+}
+
+/*header*/
+header{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    background-color: #0b193a;
+
+    /*menu*/
+    & ul {
+        display: flex;
+        list-style-type: none;
+        font-family: "Poppins", sans-serif;
+        padding: 5rem;
+    }
+
+    & .menu a {
+        padding: 30px 80px 11px;
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 550;
+        border-bottom: 5px solid #0b193a;
+    }
+
+    & .menu a:hover {
+        border-bottom: 5px solid white;
+    }
+}
+
+/*games*/
+.games{
+    background-color: #e0e3e8;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 2rem;
+
+        /*husnegtiin garchig*/
+        & h1{
+            
+        }
+
+        /*togloltiin huvaari*/
+        & .schedule{
+            
+        }
+
+            /*toglolt bolson hugatsaa*/
+            & .date{
+               
+            }
+
+
+}
