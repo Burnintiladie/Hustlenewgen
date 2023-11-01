@@ -184,11 +184,38 @@ header{
     display: flex;
 }
 
+.game:hover .detail{
+    display: block;
+}
+
+.detail{
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin: 70px;
+    display: none;
+    position: absolute;
+    height: 50px;
+    background-color: white;
+    border: 0.1px solid #0B193A;
+    width: 269px;
+}
+
+.detail p{
+    color: rgba(31, 50, 92, 1.0);
+    text-align: center;
+    padding-top: 10px;
+}
+
+.detail a{
+    text-decoration: none;
+}
+
 /*Medeenii heseg*/
 .news{
     background-color: #1F325CE5;
     display: flex;
-    padding: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     justify-content: center;
 }
 
@@ -198,12 +225,27 @@ header{
     margin: 30px;
     background-color: white;
     border-radius: 10px;  
+    height: 400px;
+}
+.title h3{
+    padding: 20px;
+}
+.title:hover p{
+    display: block;
+}
+
+p{
+    display: none;
+    position: absolute;
+    color: rgba(31, 50, 92, 1.0);
+    text-align: center;
+    padding-top: 10px;
 }
 
 /*Medeenii zurag*/
 .news img{
-    width: 370px;
-    height: 220px;
+    width: 100%;
+    height: 65%;
     border-radius: 10px 10px 0px 0px;  
 }
 
@@ -214,12 +256,6 @@ header{
     text-align: center;  
 }
 
-/*Medeenii ognoo*/
-.news p{
-    font-size: 12px;
-    text-align: right;
-    padding: 8px 10px ;
-}
 
 
 
