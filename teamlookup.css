@@ -33,6 +33,11 @@ nav ul{
   border-bottom: 3px solid white;
 }
 
+.navigation a:hover{
+  border-bottom: 3px solid #0B193A;
+}
+
+
 .navigation form {
   display: flex;
   color: #fff;
