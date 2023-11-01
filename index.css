@@ -184,42 +184,99 @@ header{
     display: flex;
 }
 
+.game:hover .detail{
+    display: block;
+}
+
+.detail{
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin: 70px;
+    display: none;
+    position: absolute;
+    height: 50px;
+    background-color: white;
+    border: 0.1px solid #0B193A;
+    width: 269px;
+}
+
+.detail p{
+    color: rgba(31, 50, 92, 1.0);
+    text-align: center;
+    padding-top: 10px;
+}
+
+.detail a{
+    text-decoration: none;
+}
+
 /*Medeenii heseg*/
 .news{
     background-color: #1F325CE5;
     display: flex;
-    padding: 30px;
+    padding: 50px;
     justify-content: center;
 }
 
-/*Neg medee*/
-.news article{
+.medee{
     font-family: 'Poppins', sans-serif;
-    margin: 30px;
+    margin: 20px;
     background-color: white;
-    border-radius: 10px;  
+    border-radius: 5px;  
+    height: 370px;
+    width: 25%;
+}
+
+.title{
+    background-color: white;
+}
+.title h5{
+    padding: 20px;
+}
+
+.title h5::after{
+    display: block;
+    content: "";
+    height: 2px;
+    width: 100%;
+    border-radius: 3px;
+    background: #0B193A;
+    margin-top: 20px;
+}
+.medee:hover .zurag{
+    height: 30%;
+}
+
+.medee:hover .title{
+    height: 70%;
+    border-radius: 5px;
+}
+
+.desc{
+    display: none;
+    overflow: hidden;
+    color: #666C74;
+    font-size: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.medee:hover .desc{
+    display: block;
 }
 
 /*Medeenii zurag*/
 .news img{
-    width: 370px;
-    height: 220px;
-    border-radius: 10px 10px 0px 0px;  
+    /* width: 100%;
+    height: 60%; */
+    border-radius: 5px 5px 0px 0px;  
+    object-fit: cover;
+    height: 60%;
+    width: 100%;
 }
 
-/*Medeenii garchig*/
-.news h5{
-    padding-top: 2px;
-    color: #0B193A;
-    text-align: center;  
-}
 
-/*Medeenii ognoo*/
-.news p{
-    font-size: 12px;
-    text-align: right;
-    padding: 8px 10px ;
-}
+
 
 
 
