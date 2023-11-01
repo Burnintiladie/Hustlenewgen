@@ -234,7 +234,7 @@ header{
     display: block;
 }
 
-p{
+.title p{
     display: none;
     position: absolute;
     color: rgba(31, 50, 92, 1.0);
