@@ -53,7 +53,7 @@ nav ul{
 }
 
 .match-background{
-  background-image: url(assets/metall\ vs\ brothers.jpg);
+  background-image: url(assets/Teamcover.png);
   background-size: cover;
   height: 600px;
   align-items: center;
@@ -61,11 +61,31 @@ nav ul{
 }
 
 .match-b-text{
+  margin-top: 3rem;
+  margin-left: 9rem;
   text-align: center;
-  align-items: center;
-  margin: 0 auto;
+  font-weight: bold;
+  font-size: 3rem;
 }
 
+.versus{
+  
+}
+
+.Nextmatch{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.logoteam1{
+  height: 15rem;
+}
+
+.gamedate{
+  font-size: small;
+  font-weight: bolder;
+}
 
 .match{
   display: flex;
