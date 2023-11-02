@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Mongolian Deed League website new generation">
     <link rel="stylesheet" href="teamlookup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>The Deed League</title>
 </head>
+
 <body>
     <!--header-->
     <header>
-        <a href="#" class="logo">The Deed League</a>
         <!--navigation-->
-        <nav class="navigation">
-            <ul>
-                <li><a href="MainMenu.html">Home</a></li>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="Games.html">Games</a></li>
                 <li><a href="League.html">League</a></li>
                 <li>
                     <form>
-                        <label for="email">Notify me</label>
+                        <label for="email" class="labelemail">Notify me</label>
                         <input type="email" id="email" placeholder="email@example.com">
                         <input type="button" aria-label="Done" id="Done">
                     </form>
@@ -35,460 +38,374 @@
     <main>
         <section>
             <!--background photo-->
-            <div class="match-background" >
-                <img src="assets\metall vs brothers.jpg" class="Teamlookupbackground" alt="matchbackground photo">
+            <div class="match-background">
+                <!--<img src="assets\metall vs brothers.jpg" class="Teamlookupbackground" alt="matchbackground photo">-->
                 <div class="match-b-text">
                     <h5 class="Nextmatch">Next match</h5>
-                    <img src="" class="logoteam1" alt="backgroundteamlogo1">
+                    <img src="assets/metal.png" class="logoteam1" alt="backgroundteamlogo1">
                     <p class="versus">VS</p>
-                    <img src="" class="logoteam2" alt="backgroundteamlogo2">
+                    <img src="assets/brothers.png" class="logoteam1" alt="backgroundteamlogo2">
                 </div>
             </div>
             <!--Scrollable recent matches-->
             <article>
-                <div class="recentmatchtxt"><h5>Recent match</h5></div>
-                <div class="Game_scroller_container">
-                    <div class="CarouselDynamic_track">
-                    <div class="CarouselDynamic_slide">
-                        <div class="Game_info">
-                            <p class="Game_info_txt">Final</p>
-                            <p class="date_recent_game">Date</p>
-                        </div>
-                        <div class="Team_logo">
-                            <div class="logoblock_team"><img src="" alt="team logo block on recent match"></div>
-                        </div>
-                        <div class="Score_of_team">88:78</div>
-                        <div class="Team_logo">
-                            <div class="logoblock_team"><img src="" alt="opposite team logo block on recent match"></div>
-                        </div>
+                <article class="recentmatchtxt">
+                    <h5>Recent match</h5>
+                </article>
+                <div class="match">
+                    <div class="game">
+                        <section>
+                            <img src="assets/garid.png" alt="team1 logo">
+                        </section>
+
+                        <section class="final">
+                            <p class="final-text">Final</p>
+                            <div class="team">
+                                <p>34</p>
+                                <p>:</p>
+                                <p>41</p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img src="assets/metal.png" alt="team2 logo">
+                        </section>
                     </div>
+                    <div class="game">
+                        <section>
+                            <img src="assets/garid.png" alt="team1 logo">
+                        </section>
+
+                        <section class="final">
+                            <p class="final-text">Final</p>
+                            <div class="team">
+                                <p>34</p>
+                                <p>:</p>
+                                <p>41</p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img src="assets/metal.png" alt="team2 logo">
+                        </section>
                     </div>
-                    <div class="CarouselDynamic_slide">
-                        <div class="Game_info">
-                            <p class="Game_info_txt">Final</p>
-                            <p class="date_recent_game">Date</p>
-                        </div>
-                        <div class="Team_logo">
-                            <div class="logoblock_team"><img src="" alt="team logo block on recent match"></div>
-                        </div>
-                        <div class="Score_of_team">74:77</div>
-                        <div class="Team_logo">
-                            <div class="logoblock_team"><img src="" alt="opposite logo block on recent match"></div>
-                        </div>
+                    <div class="game">
+                        <section>
+                            <img src="assets/garid.png" alt="team1 logo">
+                        </section>
+
+                        <section class="final">
+                            <p class="final-text">Final</p>
+                            <div class="team">
+                                <p>34</p>
+                                <p>:</p>
+                                <p>41</p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img src="assets/metal.png" alt="team2 logo">
+                        </section>
                     </div>
-                    <div class="CarouselDynamic_slide">
-                        <div class="Game_info">
-                            <p class="Game_info_txt">Final</p>
-                            <p class="date_recent_game">Date</p>
-                        </div>
-                        <div class="Team_logo">
-                            <div class="logoblock_team"><img src="" alt="team logo block on recent match"></div>
-                        </div>
-                        <div class="Score_of_team">66:59</div>
-                        <div class="Team_logo">
-                            <div class="logoblock_team"><img src="" alt="opposite logo block on recent match"></div>
-                        </div>
+                    <div class="game">
+                        <section>
+                            <img src="assets/garid.png" alt="team1 logo">
+                        </section>
+
+                        <section class="final">
+                            <p class="final-text">Final</p>
+                            <div class="team">
+                                <p>34</p>
+                                <p>:</p>
+                                <p>41</p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img src="assets/metal.png" alt="team2 logo">
+                        </section>
                     </div>
-                    <div class="CarouselDynamic_slide">
-                        <div class="Game_info">
-                            <p class="Game_info_txt">Final</p>
-                            <p class="date_recent_game">Date</p>
-                        </div>
-                        <div class="Team_logo">
-                            <div class="logoblock_team"><img src="" alt="team logo block on recent match"></div>
-                        </div>
-                        <div class="Score_of_team">81:83</div>
-                        <div class="Team_logo">
-                            <div class="logoblock_team"><img src="" alt="opposite logo block on recent match"></div>
-                        </div>
-                    </div>
-                    <div class="CarouselDynamic_slide">
-                        <div class="Game_info">
-                            <p class="Game_info_txt">Final</p>
-                            <p class="date_recent_game">Date</p>
-                        </div>
-                        <div class="Team_logo">
-                            <div class="logoblock_team"><img src="" alt="team logo block on recent match"></div>
-                        </div>
-                        <div class="Score_of_team">58:57</div>
-                        <div class="Team_logo">
-                            <div class="logoblock_team"><img src="" alt="opposite logo block on recent match"></div>
-                        </div>
-                    </div><div class="CarouselDynamic_slide">
-                        <div class="Game_info">
-                            <p class="Game_info_txt">Final</p>
-                            <p class="date_recent_game">Date</p>
-                        </div>
-                        <div class="Team_logo">
-                            <div class="logoblock_team"><img src="" alt="team logo block on recent match"></div>
-                        </div>
-                        <div class="Score_of_team">71:59</div>
-                        <div class="Team_logo">
-                            <div class="logoblock_team"><img src="" alt="opposite logo block on recent match"></div>
-                        </div>
-                    </div>
+
+                </div>
                 </div>
                 <!--About team information-->
-                <div>
-                    <div class="Teaminfologo"><img src="" class="teamlogoininfo" alt="team logo info">
-                    <p>Тэнүүн өлзий металл</p>
-                    </div>
+                <section class="aboutteam">
                     <div class="team_table">
-                        <div>
-                            <div>Багийн үүсгэн байгуулагдсан он:  </div>>
-                            <div>Багийн хүснэгтэн дэх байрлал:  </div>
-                        </div>>
-                        <div>
-                            <div>Багийн эзэн:  </div>
-                            <div>Багийн дундаж оноо авалт: </div>
-                        </div>
-                        <div>
-                            <div>Багийн ерөнхий менежер: </div>
-                            <div>Багийн дундаж самбар авалт: </div>
-                        </div>
-                        <div>
-                            <div>Багийн ерөнхий дасгалжуулагч: </div>
-                            <div>Дундаж оновчтой дамжуулалт: </div>
-                        </div>
-                        <div>
-                            <div>Багийн ахлагч:</div>
-                            <div>Багийн дундаж бөмбөг таслалт: </div>
-                        </div>
+                        <p>Багийн үүсгэн байгуулагдсан он:</p>
+                        <p>Багийн хүснэгтэн дэх байрлал:</p>
+                        <p>Багийн эзэн:</p>
+                        <p>Багийн дундаж оноо авалт:</p>
+                        <p>Багийн ерөнхий менежер:</p>
+                        <p>Багийн дундаж самбар авалт:</p>
+                        <p>Багийн ерөнхий дасгалжуулагч:</p>
+                        <p>Дундаж оновчтой дамжуулалт:</p>
+                        <p>Багийн ахлагч:</p>
+                        <p>Багийн дундаж бөмбөг таслалт:</p>
                     </div>
-                    <!--team player info // roster-->
-                    <div class="Team_roster">
-                        <div><p>Team Roster</p></div>
-                        <div class="Player_info">
-                           <article class="Player_card">
-                                <div><img src="" alt="methal-blake"></div>
+                </section>
+
+                <!--team player info // roster-->
+                <div class="Team_roster">
+                    <p class="teamrosterparagraph">Team Roster</p>
+                    <div class="slider-container">
+                        <div class="slider">
+                            <article class="Player_card">
+                                <div class="playercardimg"></div>
                                 <div class="playercard_details">
                                     <div class="player_number">1</div>
                                 </div>
                                 <div class="player-card_info_container">
                                     <div class="player-card_info_table">
-                                        <div>
-                                            <h6>Тоглогчийн нэр: </h6>
-                                            <p>Тоглогчийн дугаар: </p>
-                                        </div>
-                                        <div>
-                                            <p>Age</p>
-                                            <p>Position</p>
-                                        </div>
-                                        <div>
-                                            <p>Height</p>
-                                            <p>Weight</p>
-                                        </div>
+                                        <h6>Тоглогчийн нэр: </h6>
+                                        <div></div>
+                                        <p>Age</p>
+                                        <p>Position</p>
+                                        <p>Height</p>
+                                        <p>Weight</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="Player_card">
-                                <div><img src="" alt="methal-delgernyam"></div>
+                                <div class="playercardimg"></div>
                                 <div class="playercard_details">
                                     <div class="player_number">2</div>
                                 </div>
                                 <div class="player-card_info_container">
                                     <div class="player-card_info_table">
-                                        <div>
-                                            <h6>Тоглогчийн нэр: </h6>
-                                            <p>Тоглогчийн дугаар: </p>
-                                        </div>
-                                        <div>
-                                            <p>Age</p>
-                                            <p>Position</p>
-                                        </div>
-                                        <div>
-                                            <p>Height</p>
-                                            <p>Weight</p>
-                                        </div>
+                                        <h6>Тоглогчийн нэр: </h6>
+                                        <div></div>
+                                        <p>Age</p>
+                                        <p>Position</p>
+                                        <p>Height</p>
+                                        <p>Weight</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="Player_card">
-                                <div><img src="" alt="methal-monhchodor"></div>
+                                <div class="playercardimg"></div>
                                 <div class="playercard_details">
                                     <div class="player_number">3</div>
                                 </div>
                                 <div class="player-card_info_container">
                                     <div class="player-card_info_table">
-                                        <div>
-                                            <h6>Тоглогчийн нэр: </h6>
-                                            <p>Тоглогчийн дугаар: </p>
-                                        </div>
-                                        <div>
-                                            <p>Age</p>
-                                            <p>Position</p>
-                                        </div>
-                                        <div>
-                                            <p>Height</p>
-                                            <p>Weight</p>
-                                        </div>
+                                        <h6>Тоглогчийн нэр: </h6>
+                                        <div></div>
+                                        <p>Age</p>
+                                        <p>Position</p>
+                                        <p>Height</p>
+                                        <p>Weight</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="Player_card">
-                                <div><img src="" alt="methal-sukhbat"></div>
+                                <div class="playercardimg"></div>
                                 <div class="playercard_details">
                                     <div class="player_number">4</div>
                                 </div>
                                 <div class="player-card_info_container">
                                     <div class="player-card_info_table">
-                                        <div>
-                                            <h6>Тоглогчийн нэр: </h6>
-                                            <p>Тоглогчийн дугаар: </p>
-                                        </div>
-                                        <div>
-                                            <p>Age</p>
-                                            <p>Position</p>
-                                        </div>
-                                        <div>
-                                            <p>Height</p>
-                                            <p>Weight</p>
-                                        </div>
+                                        <h6>Тоглогчийн нэр: </h6>
+                                        <div></div>
+                                        <p>Age</p>
+                                        <p>Position</p>
+                                        <p>Height</p>
+                                        <p>Weight</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="Player_card">
-                                <div><img src="" alt="methal-uuganbayar"></div>
+                                <div class="playercardimg"></div>
                                 <div class="playercard_details">
                                     <div class="player_number">5</div>
                                 </div>
                                 <div class="player-card_info_container">
                                     <div class="player-card_info_table">
-                                        <div>
-                                            <h6>Тоглогчийн нэр: </h6>
-                                            <p>Тоглогчийн дугаар: </p>
-                                        </div>
-                                        <div>
-                                            <p>Age</p>
-                                            <p>Position</p>
-                                        </div>
-                                        <div>
-                                            <p>Height</p>
-                                            <p>Weight</p>
-                                        </div>
+                                        <h6>Тоглогчийн нэр: </h6>
+                                        <div></div>
+                                        <p>Age</p>
+                                        <p>Position</p>
+                                        <p>Height</p>
+                                        <p>Weight</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="Player_card">
-                                <div><img src="" alt="methal-enkhtor"></div>
+                                <div class="playercardimg"></div>
                                 <div class="playercard_details">
                                     <div class="player_number">6</div>
                                 </div>
                                 <div class="player-card_info_container">
                                     <div class="player-card_info_table">
-                                        <div>
-                                            <h6>Тоглогчийн нэр: </h6>
-                                            <p>Тоглогчийн дугаар: </p>
-                                        </div>
-                                        <div>
-                                            <p>Age</p>
-                                            <p>Position</p>
-                                        </div>
-                                        <div>
-                                            <p>Height</p>
-                                            <p>Weight</p>
-                                        </div>
+                                        <h6>Тоглогчийн нэр: </h6>
+                                        <div></div>
+                                        <p>Age</p>
+                                        <p>Position</p>
+                                        <p>Height</p>
+                                        <p>Weight</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="Player_card">
-                                <div><img src="" alt="methal-enkhsaihan"></div>
+                                <div class="playercardimg"></div>
                                 <div class="playercard_details">
                                     <div class="player_number">7</div>
                                 </div>
                                 <div class="player-card_info_container">
                                     <div class="player-card_info_table">
-                                        <div>
-                                            <h6>Тоглогчийн нэр: </h6>
-                                            <p>Тоглогчийн дугаар: </p>
-                                        </div>
-                                        <div>
-                                            <p>Age</p>
-                                            <p>Position</p>
-                                        </div>
-                                        <div>
-                                            <p>Height</p>
-                                            <p>Weight</p>
-                                        </div>
+                                        <h6>Тоглогчийн нэр: </h6>
+                                        <div></div>
+                                        <p>Age</p>
+                                        <p>Position</p>
+                                        <p>Height</p>
+                                        <p>Weight</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="Player_card">
-                                <div><img src="" alt="methal-sill"></div>
+                                <div class="playercardimg"></div>
                                 <div class="playercard_details">
                                     <div class="player_number">8</div>
                                 </div>
                                 <div class="player-card_info_container">
                                     <div class="player-card_info_table">
-                                        <div>
-                                            <h6>Тоглогчийн нэр: </h6>
-                                            <p>Тоглогчийн дугаар: </p>
-                                        </div>
-                                        <div>
-                                            <p>Age</p>
-                                            <p>Position</p>
-                                        </div>
-                                        <div>
-                                            <p>Height</p>
-                                            <p>Weight</p>
-                                        </div>
+                                        <h6>Тоглогчийн нэр: </h6>
+                                        <div></div>
+                                        <p>Age</p>
+                                        <p>Position</p>
+                                        <p>Height</p>
+                                        <p>Weight</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="Player_card">
-                                <div><img src="" alt="methal-dorjzowd"></div>
+                                <div class="playercardimg"></div>
                                 <div class="playercard_details">
                                     <div class="player_number">9</div>
                                 </div>
                                 <div class="player-card_info_container">
                                     <div class="player-card_info_table">
-                                        <div>
-                                            <h6>Тоглогчийн нэр: </h6>
-                                            <p>Тоглогчийн дугаар: </p>
-                                        </div>
-                                        <div>
-                                            <p>Age</p>
-                                            <p>Position</p>
-                                        </div>
-                                        <div>
-                                            <p>Height</p>
-                                            <p>Weight</p>
-                                        </div>
+                                        <h6>Тоглогчийн нэр: </h6>
+                                        <div></div>
+                                        <p>Age</p>
+                                        <p>Position</p>
+                                        <p>Height</p>
+                                        <p>Weight</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="Player_card">
-                                <div><img src="" alt="methal-sainbayar"></div>
+                                <div class="playercardimg"></div>
                                 <div class="playercard_details">
                                     <div class="player_number">10</div>
                                 </div>
                                 <div class="player-card_info_container">
                                     <div class="player-card_info_table">
-                                        <div>
-                                            <h6>Тоглогчийн нэр: </h6>
-                                            <p>Тоглогчийн дугаар: </p>
-                                        </div>
-                                        <div>
-                                            <p>Age</p>
-                                            <p>Position</p>
-                                        </div>
-                                        <div>
-                                            <p>Height</p>
-                                            <p>Weight</p>
-                                        </div>
+                                        <h6>Тоглогчийн нэр: </h6>
+                                        <div></div>
+                                        <p>Age</p>
+                                        <p>Position</p>
+                                        <p>Height</p>
+                                        <p>Weight</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="Player_card">
-                                <div><img src="" alt="methal-sainbayar"></div>
+                                <div class="playercardimg"></div>
                                 <div class="playercard_details">
                                     <div class="player_number">11</div>
                                 </div>
                                 <div class="player-card_info_container">
                                     <div class="player-card_info_table">
-                                        <div>
-                                            <h6>Тоглогчийн нэр: </h6>
-                                            <p>Тоглогчийн дугаар: </p>
-                                        </div>
-                                        <div>
-                                            <p>Age</p>
-                                            <p>Position</p>
-                                        </div>
-                                        <div>
-                                            <p>Height</p>
-                                            <p>Weight</p>
-                                        </div>
+                                        <h6>Тоглогчийн нэр: </h6>
+                                        <div></div>
+                                        <p>Age</p>
+                                        <p>Position</p>
+                                        <p>Height</p>
+                                        <p>Weight</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="Player_card">
-                                <div><img src="" alt="methal-tsogbadrah"></div>
+                                <div class="playercardimg"></div>
                                 <div class="playercard_details">
                                     <div class="player_number">12</div>
                                 </div>
                                 <div class="player-card_info_container">
                                     <div class="player-card_info_table">
-                                        <div>
-                                            <h6>Тоглогчийн нэр: </h6>
-                                            <p>Тоглогчийн дугаар: </p>
-                                        </div>
-                                        <div>
-                                            <p>Age</p>
-                                            <p>Position</p>
-                                        </div>
-                                        <div>
-                                            <p>Height</p>
-                                            <p>Weight</p>
-                                        </div>
+                                        <h6>Тоглогчийн нэр: </h6>
+                                        <div></div>
+                                        <p>Age</p>
+                                        <p>Position</p>
+                                        <p>Height</p>
+                                        <p>Weight</p>
                                     </div>
                                 </div>
                             </article>
                         </div>
                     </div>
-                    <!--Ariin albanii gishuud-->
-                    <div class="Ariin ajilchid">
-                        <div><p>Багийн арын ажилчид</p></div>
-                        <div class="Team_employee_info">
-                            <article class="Employee_card">
-                                <div><img src="" alt="methal-buynolzii"></div>
-                                <div class="Employeecard_details">
-                                    <div class="employee_number">1</div>
+                </div>
+                <!--Ariin albanii gishuud-->
+                <div class="Ariin-ajilchid">
+                    <p class="employeerosterparagraph">Багийн арын ажилчид</p>
+                    <div class="Team_employee_info">
+                        <article class="employee_card">
+                            <div class="playercardimg"></div>
+                            <div class="employeecard_details">
+                                <div class="player_number">1</div>
+                            </div>
+                            <div class="employee-card_info_container">
+                                <div class="employee-card_info_table">
+                                    <h6>Нэр: </h6>
+                                    <p>Position</p>
                                 </div>
-                                <div class="employee-card_info_container">
-                                    <span class="employeename">Нэр:</span>
-                                    <span class="position">Position:</span>
+                            </div>
+                        </article>
+                        
+                        <article class="employee_card">
+                            <div class="playercardimg"></div>
+                            <div class="employeecard_details">
+                                <div class="player_number">2</div>
+                            </div>
+                            <div class="employee-card_info_container">
+                                <div class="employee-card_info_table">
+                                    <h6>Нэр: </h6>
+                                    <p>Position</p>
                                 </div>
-                            </article>
-                            <article class="Employee_card">
-                                <div><img src="" alt="methal-batorgil"></div>
-                                <div class="Employeecard_details">
-                                    <div class="employee_number">2</div>
+                            </div>
+                        </article>
+                        <article class="employee_card">
+                            <div class="playercardimg"></div>
+                            <div class="employeecard_details">
+                                <div class="player_number">3</div>
+                            </div>
+                            <div class="employee-card_info_container">
+                                <div class="employee-card_info_table">
+                                    <h6>Нэр: </h6>
+                                    <p>Position</p>
                                 </div>
-                                <div class="employee-card_info_container">
-                                    <span class="employeename">Нэр:</span>
-                                    <span class="position">Position:</span>
+                            </div>
+                        </article>
+                        <article class="employee_card">
+                            <div class="playercardimg"></div>
+                            <div class="employeecard_details">
+                                <div class="player_number">4</div>
+                            </div>
+                            <div class="employee-card_info_container">
+                                <div class="employee-card_info_table">
+                                    <h6>Нэр: </h6>
+                                    <p>Position</p>
                                 </div>
-                            </article>
-                            <article class="Employee_card">
-                                <div><img src="" alt="methal-gankholog"></div>
-                                <div class="Employeecard_details">
-                                    <div class="employee_number">3</div>
-                                </div>
-                                <div class="employee-card_info_container">
-                                    <span class="employeename">Нэр:</span>
-                                    <span class="position">Position:</span>
-                                </div>
-                            </article>
-                            <article class="Employee_card">
-                                <div><img src="" alt="methal-4"></div>
-                                <div class="Employeecard_details">
-                                    <div class="employee_number">4</div>
-                                </div>
-                                <div class="employee-card_info_container">
-                                    <span class="employeename">Нэр:</span>
-                                    <span class="position">Position:</span>
-                                </div>
-                            </article>
-                            <article class="Employee_card">
-                                <div><img src="" alt="methal-5"></div>
-                                <div class="Employeecard_details">
-                                    <div class="employee_number">5</div>
-                                </div>
-                                <div class="employee-card_info_container">
-                                    <span class="employeename">Нэр:</span>
-                                    <span class="position">Position:</span>
-                                </div>
-                            </article>
-                        </div>
+                            </div>
+                        </article>
                     </div>
+                </div>
                 </div>
             </article>
         </section>
     </main>
     <footer>
-        <div>
-            <p>footer section</p>
-        </div>
+        
     </footer>
 </body>
+
 </html>

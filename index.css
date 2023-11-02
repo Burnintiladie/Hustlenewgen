@@ -14,26 +14,20 @@ header{
     display: flex;
     list-style-type: none;
     justify-content: center;
+
+    /*Logonii hemjee*/
+    & img{
+        width: 50px;
+        height: 50px;
+        padding: 10px 20px 10px 20px;
+    }
+
+    & img:hover{
+        width: 55px;
+        height: 55px;
+        border-bottom: 2px solid white;
+    }
 }
-
-/*Logonii hemjee*/
-.logo img{
-    width: 50px;
-    height: 50px;
-    padding: 10px 20px 10px 20px;
-}
-
-.logo img:hover{
-    width: 55px;
-    height: 55px;
-    border-bottom: 2px solid white;
-}
-
-
-/* .drop{
-    float: left;
-    overflow: hidden;
-} */
 
 /* Logo hover*/
 .drop:hover  .drop-player{
@@ -52,39 +46,39 @@ header{
     left: 0;
     z-index: 1;
     font-weight: bold;
-}
 
-/*Roster toglogciin ners*/
-.drop-player a{
-    text-decoration: none;
-    color: rgba(31, 50, 92, 1.0);
-    font-size: 13px;
-    text-align: left;
-    display: block; 
-    padding: 3px;
-}
+    /*Roster toglogciin ners*/
+    & a{
+        text-decoration: none;
+        color: rgba(31, 50, 92, 1.0);
+        font-size: 13px;
+        text-align: left;
+        display: block; 
+       padding: 3px;
+    }
 
-/*Roster toglogciin ner hover*/
-.drop-player a:hover{
-    font-size: 15px;
-}
+    /*Roster toglogciin ner hover*/
+    & a:hover{
+        font-size: 15px;
+    }
 
-/*Roster toglogcdiin bairlaliin title*/
-.drop-player h3{
-    color: rgba(31, 50, 92, 1.0);
-    padding-bottom: 15px;
-    margin-left: 12px;
-}
+    /*Roster toglogcdiin bairlaliin title*/
+    & h3{
+        color: rgba(31, 50, 92, 1.0);
+        padding-bottom: 15px;
+        margin-left: 12px;
+    }
 
-/*Bairlaliin title bolon toglogciin zaag*/
-.drop-player h3::after{
-    display: block;
-    content: "";
-    height: 7px;
-    width: 30px;
-    border-radius: 3px;
-    background: #0B193A;
-    margin-top: 5px;
+    /*Bairlaliin title bolon toglogciin zaag*/
+    & h3::after{
+        display: block;
+        content: "";
+        height: 7px;
+        width: 30px;
+        border-radius: 3px;
+        background: #0B193A;
+        margin-top: 5px;
+    }
 }
 
 /*Toglogciin bairlal*/
@@ -93,13 +87,13 @@ header{
     width: 18%;
     padding: 10px;
     border-right: 1px solid rgba(31, 50, 92, 1.0);
-} 
 
-/*Toglogchiin number */
-.column span{
-    color: #2758CC;
-    padding: 10px;
-}
+    /*Toglogchiin number */
+    & span{
+        color: #2758CC;
+        padding: 10px; 
+    }
+} 
 
 /*Menu heseg*/
 .menu{
@@ -109,26 +103,20 @@ header{
     justify-content: center;
     font-size: 17px;
     font-family: 'Poppins', sans-serif;
-}
 
-/*Menu text*/
-.menu a{
-    padding: 25px 30px 10px;
-    text-decoration: none;
-    color: white;
-    border-bottom: 3px solid white;
-}
+    /*Menu text*/
+    & a{
+        padding: 25px 30px 10px;
+        text-decoration: none;
+        color: white;
+        border-bottom: 3px solid white;
+    }
 
-/*Menu hover*/
-.menu a:hover{
-    border-bottom: 3px solid #0B193A;
+    /*Menu hover*/
+    & a:hover{
+        border-bottom: 3px solid #0B193A;
+    }
 }
-
-/* .notify{
-    display: flex;
-    justify-content: end;
-    color: white;
-} */
 
 /*Cover heseg*/
 .cover{
@@ -144,12 +132,12 @@ header{
     font-family: 'Poppins', sans-serif;
     color: white;
     justify-content: center;
-}
 
-/*Togloj bui bagiin logo*/
-.match img{
-    width: 60px;
-    height: 60px;
+    /*Togloj bui bagiin logo*/
+    & img{
+        width: 60px;
+        height: 60px;
+    }
 }
 
 /*Neg togloltiin heseg*/
@@ -162,18 +150,19 @@ header{
     margin: 20px;
     padding: 30px 15px;
     justify-content: center;
+
+    /*Bagiin logo bairluulalt*/
+    & section{
+        margin: 0px 8px;
+        text-align: center;
+    }
 }
 
-/*Bagiin logo bairluulalt*/
-.game section{
-    margin: 0px 8px;
-    text-align: center;
-}
 
 /*Togloltiin minut bolon Final*/
 .final-text{
     padding-top: 5px;
-    font-size: 9px;
+    font-size: 10px;
     color: #f04040;
     text-align: center;
 }
@@ -184,42 +173,97 @@ header{
     display: flex;
 }
 
+.game:hover .detail{
+    display: block;
+}
+
+.detail{
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin: 70px;
+    display: none;
+    position: absolute;
+    height: 50px;
+    background-color: white;
+    border: 0.1px solid #0B193A;
+    width: 269px;
+
+    & p{
+        color: rgba(31, 50, 92, 1.0);
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    & a{
+        text-decoration: none;
+    }
+}
+
 /*Medeenii heseg*/
 .news{
     background-color: #1F325CE5;
     display: flex;
-    padding: 30px;
+    padding: 50px;
     justify-content: center;
 }
 
-/*Neg medee*/
-.news article{
+.medee{
     font-family: 'Poppins', sans-serif;
-    margin: 30px;
+    margin: 20px;
     background-color: white;
-    border-radius: 10px;  
+    border-radius: 5px;  
+    height: 370px;
+    width: 25%;
+    overflow: hidden;
+
+    & img{
+        border-radius: 5px 5px 0px 0px;  
+        object-fit: cover;
+        height: 60%;
+        width: 100%;
+    }
+
 }
 
-/*Medeenii zurag*/
-.news img{
-    width: 370px;
-    height: 220px;
-    border-radius: 10px 10px 0px 0px;  
+.title{
+    background-color: white;
+    padding: 20px;
+
+    & h5::after{
+        display: block;
+        content: "";
+        height: 2px;
+        width: 100%;
+        border-radius: 3px;
+        background: #0B193A;
+        margin-top: 20px;
+    }
 }
 
-/*Medeenii garchig*/
-.news h5{
-    padding-top: 2px;
-    color: #0B193A;
-    text-align: center;  
+.medee:hover .zurag{
+    height: 30%;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in;
 }
 
-/*Medeenii ognoo*/
-.news p{
-    font-size: 12px;
-    text-align: right;
-    padding: 8px 10px ;
+.medee:hover .title{
+    height: 70%;
+    border-radius: 5px;
 }
+
+.desc{
+    padding-top: 10px;
+    display: none;
+    color: #666C74;
+    font-size: 10px;
+}
+
+.medee:hover .desc{
+    display: block;
+}
+
+
+
 
 
 
