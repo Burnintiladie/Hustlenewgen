@@ -17,44 +17,96 @@ header{
         padding: 5rem;
     }
 
-    & .menu a {
-        padding: 30px 80px 11px;
-        color: white;
-        text-decoration: none;
-        font-size: 25px;
-        font-weight: 550;
-        border-bottom: 5px solid #0b193a;
-    }
+        & .menu a {
+            padding: 30px 80px 11px;
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 550;
+            border-bottom: 5px solid #0b193a;
+        }
 
-    & .menu a:hover {
-        border-bottom: 5px solid white;
-    }
+        & .menu a:hover {
+            border-bottom: 5px solid white;
+        }
 }
 
 /*games*/
 .games{
     background-color: #e0e3e8;
     margin-top: 5rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
     border-radius: 2rem;
 
         /*husnegtiin garchig*/
         & .title{
             font-size: 3rem;
             font-family: "Poppins", sans-serif;
+            padding-top: 4rem;
+            color: #0b193a;
+            font-weight: 600;
+            text-align: center;
+
             
         }
 
         /*togloltiin huvaari*/
         & .schedule{
-            
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            justify-content: center;    
+            align-items: center;
+            margin: 2rem;
         }
 
-            /*toglolt bolson hugatsaa*/
-            & .date{
-               
+            /*bagiin logo ner*/
+            & .team{
+                margin-left: 12rem;
+                margin-right: 12rem;
             }
 
+                & img{
+                    height: 10rem;
+                    width: 10rem;    
+                    padding: 2rem;
+                    
+                }
 
+                & figcaption{
+                    color: #0b193a;
+                    font-weight: 600;
+                    width: 100%;
+                    text-align: center;
+                }
+
+            /*togloltiin hugatsaa, onoo*/
+            & .finalScore{
+                margin: 4rem;
+            }
+                & .hugatsaa{
+                    color: #5b5b5b;
+                    font-weight: 600;
+                    font-size: large;
+                }
+
+                & .onoo{
+                    text-align: center;
+                }
+                    & h1{
+                        color: #5b5b5b;
+                        font-size: 2.7rem;
+                        font-weight: 500;
+                        margin-bottom: -1rem;
+                    }
+
+                    & p{
+                        color: #5b5b5b;
+                        font-size: 0.8rem;
+                    }
+                        
+                    & span{
+                        color: #0b193a;
+                        font-weight: 600;
+                    }
 }
