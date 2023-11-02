@@ -40,7 +40,9 @@ header{
     border-radius: 2rem;
 
         /*husnegtiin garchig*/
-        & h1{
+        & .title{
+            font-size: 3rem;
+            font-family: "Poppins", sans-serif;
             
         }
 
