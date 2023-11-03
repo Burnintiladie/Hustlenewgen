@@ -25,18 +25,18 @@ header {
     padding: 5rem;
   }
 
-  & .menu a {
-    padding: 30px 80px 11px;
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: 550;
-    border-bottom: 5px solid #0b193a;
-  }
+    & .menu a {
+      padding: 30px 80px 11px;
+      color: white;
+      text-decoration: none;
+      font-size: 25px;
+      font-weight: 550;
+      border-bottom: 5px solid #0b193a;
+    }
 
-  & .menu a:hover {
-    border-bottom: 5px solid white;
-  }
+      & .menu a:hover {
+        border-bottom: 5px solid white;
+      }
 }
 
 /*player profile heseg*/
@@ -72,23 +72,23 @@ header {
     margin-left: 3rem;
     font-family: "Poppins", sans-serif;
   }
-  & .lname {
-    font-size: 3rem;
-    color: #0b193a;
-  }
-  & .fname {
-    font-size: 6rem;
-    color: #0b193a;
-    font-weight: 600;
-  }
-  & p {
-    font-size: 1rem;
-    color: #0b193a;
-    font-weight: 500;
-    font-size: large;
-    letter-spacing: 1px;
-    margin-top: 2rem;
-  }
+    & .lname {
+      font-size: 3rem;
+      color: #0b193a;
+    }
+    & .fname {
+      font-size: 6rem;
+      color: #0b193a;
+      font-weight: 600;
+    }
+    & p {
+      font-size: 1rem;
+      color: #0b193a;
+      font-weight: 500;
+      font-size: large;
+      letter-spacing: 1px;
+      margin-top: 2rem;
+    }
 }
 
 /*recent matches husnegt*/

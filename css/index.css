@@ -120,7 +120,7 @@ header{
 
 /*Cover heseg*/
 .cover{
-    background-image: url(assets/cover.jpeg);
+    background-image: url(../assets/cover.jpeg);
     background-size: cover;
     height: 700px;
 }

@@ -53,7 +53,7 @@ nav ul{
 }
 
 .match-background{
-  background-image: url(assets/Teamcover.png);
+  background-image: url(../assets/Teamcover.png);
   background-size: cover;
   height: 600px;
   align-items: center;
