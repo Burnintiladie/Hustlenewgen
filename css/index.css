@@ -4,7 +4,7 @@
 
 /* Logo bolon menu heseg*/
 header{
-    height: 120px;
+    height: 7.5rem;
     background-color: #0B193A;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -17,14 +17,14 @@ header{
 
     /*Logonii hemjee*/
     & img{
-        width: 50px;
-        height: 50px;
+        width: 3.125rem;
+        height: 3.125rem;
         padding: 10px 20px 10px 20px;
     }
 
     & img:hover{
-        width: 55px;
-        height: 55px;
+        width: 3.438rem;
+        height: 3.438rem;
         border-bottom: 2px solid white;
     }
 }
@@ -41,7 +41,7 @@ header{
     background-color:white;
     border-bottom: 10px solid #0B193A;
     width: 100%;
-    height: 140px;
+    height: 8.75rem;
     padding: 20px 0;
     left: 0;
     z-index: 1;
@@ -54,7 +54,7 @@ header{
         font-size: 13px;
         text-align: left;
         display: block; 
-       padding: 3px;
+        padding: 3px;
     }
 
     /*Roster toglogciin ner hover*/
@@ -135,8 +135,8 @@ header{
 
     /*Togloj bui bagiin logo*/
     & img{
-        width: 60px;
-        height: 60px;
+        width: 3.75rem;
+        height: 3.75rem;
     }
 }
 
@@ -145,8 +145,8 @@ header{
     display: flex;
     background-color: rgba(31, 50, 92, 0.9);
     border-radius: 25px;
-    height: 90px;
-    width: 240px;
+    height: 5.625rem;
+    width: 15rem;
     margin: 20px;
     padding: 30px 15px;
     justify-content: center;
@@ -186,7 +186,7 @@ header{
     height: 50px;
     background-color: white;
     border: 0.1px solid #0B193A;
-    width: 269px;
+    width: 16.813rem;
 
     & p{
         color: rgba(31, 50, 92, 1.0);
@@ -260,6 +260,129 @@ header{
 
 .medee:hover .desc{
     display: block;
+}
+
+
+.ad{
+    & img{
+        height: 250px;
+        width: 800px;
+        border-radius: 5px;
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+}
+.grid{
+    display: grid;
+    gap: 3px;
+    padding: 50px;
+    width: 1028px;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+
+    & .sons{
+        background-color: white;
+        color: white;
+        border-radius: 5px;
+    }
+
+    & .item1{
+        grid-column: 1 / span 2;
+        background-color: #1F325C;
+        padding: 10px;
+        text-align: center;
+    }
+
+    & .item2{
+        background-color: #1F325CE5;
+        width: 428px;
+        grid-row: 2 / span 2;
+
+        & ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+        }
+        & li{
+            margin: 10px;
+        }
+        & p{
+            background-color: #1F325C;
+        }
+    }
+
+    & .item3{
+        grid-row: 2 ;
+        background-color: #1F325C;
+        height: 40px;
+        text-align: center;
+    }
+
+    & .item4{
+        width: 600px;
+        grid-row: 3;
+        color: black;
+
+        & .pic{
+            display: flex;
+        }
+
+        & .picture{
+            text-align: center;
+            margin-left: 50px;
+            margin-right: 50px;
+
+            & .name{
+                font-size: 40px;
+                font-weight: bolder;
+            }
+
+            & .bairlal{
+               font-size: 8px;
+            }
+        }
+
+
+        & .profile{
+            height: 100px;
+            background-color: #1F325C;
+            color: white;
+            display: flex;
+            padding: 10px;
+            justify-content: space-between;
+
+            & div{
+                text-align: center;
+                margin: auto;
+            }
+
+            & .tit{
+                font-size: 10px;
+            }
+
+            & .stats{
+                font-size: 30px;
+            }
+        }
+
+        & .teamlogo{
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+
+.items{
+    display: none;
+}
+
+footer{
+    height: 20rem;
+    background-color: #0B193A;
 }
 
 
