@@ -1,230 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Mongolian Deed League event website new generation">
+    <link rel="stylesheet" href="css/league.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
     <!--header-->
+    <!--header-->
     <header>
-        <a href="#" class="logo">The Deed League</a>
-        <!--Navigation-->
+        <!--team logos-->
+        <ul class="logos">
+            <li><a href="TeamLookup.html"><img src="assets/miners.png" alt="miners logo"></a></li>
+            <li><a href="TeamLookup.html"><img src="assets/garid.png" alt="garid logo"></a></li>
+            <li><a href="TeamLookup.html"><img src="assets/metal.png" alt="metal logo"></a></li>
+            <li><a href="TeamLookup.html"><img src="assets/ihc.png" alt="ihs logo"></a></li>
+            <li><a href="TeamLookup.html"><img src="assets/huleguud.png" alt="huleguud logo"></a></li>
+            <li><a href="TeamLookup.html"><img src="assets/daichid.png" alt="daichid logo"></a></li>
+            <li><a href="TeamLookup.html"><img src="assets/brothers.png" alt="brothers logo"></a></li>
+            <li><a href="TeamLookup.html"><img src="assets/bison.png" alt="bison logo"></a></li>
+        </ul>
         <nav>
-            <ul>
-                <li><a href="MainMenu.html">Home</a></li>
+            <!--menu-->
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="Games.html">Games</a></li>
                 <li><a href="League.html">League</a></li>
-                <li>
-                    <form>
-                        <label for="email">Notify me</label>
-                        <input type="email" id="email" placeholder="email@example.com">
-                        <input type="button" aria-label="Done" id="Done">
-                    </form>
-                </li>
             </ul>
-        </nav>
-        <div class="icons">
-            <i class="fas fa-facebook" id="fb"></i>
-            <i class="fas fa-instagram" id="ig"></i>
-        </div>
-    </header>
-    <main>
-        <section>
-            <!--AD section-->
-            <div class="adsectiononleague">
-                <div><a href="shoppy.mn"><img src="" alt="Ad"></a></div>
-            </div>
-            <!--League event box-->
-            <div class="league-event-box">
-                <div class="Event-txt"><h5>Event</h5></div>
-                <ul>
-                    <li>
-                        <figure>
-                            <img src="" class="eventphoto"  alt="event4">
-                            <figcaption class="eventarticle">Event article</h6>
-                            <p class="eventdate">Date</p>
-                        </figcaption>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="" class="eventphoto"  alt="event4">
-                            <figcaption class="eventarticle">Event article</h6>
-                            <p class="eventdate">Date</p>
-                        </figcaption>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="" class="eventphoto"  alt="event4">
-                            <figcaption class="eventarticle">Event article</h6>
-                            <p class="eventdate">Date</p>
-                        </figcaption>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="" class="eventphoto"  alt="event4">
-                            <figcaption class="eventarticle">Event article</h6>
-                            <p class="eventdate">Date</p>
-                        </figcaption>
-                    </li>
-                </ul>
-            </div>
-            <div class="League-news">
+            <main>
+                <section>
+                    <!--AD section-->
+                    <div class="adsectiononleague">
+                        <div><a href="shoppy.mn"><img src="" alt="Ad"></a></div>
+                    </div>
+                    <!--League event box-->
+                    <div class="league-event-box">
+                        <div class="Event-txt">
+                            <h5>Event</h5>
+                        </div>
+                        <ul>
+                            <li>
+                                <figure>
+                                    <img src="" class="eventphoto" alt="event4">
+                                    <figcaption class="eventarticle">Event article</h6>
+                                        <p class="eventdate">Date</p>
+                                    </figcaption>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="" class="eventphoto" alt="event4">
+                                    <figcaption class="eventarticle">Event article</h6>
+                                        <p class="eventdate">Date</p>
+                                    </figcaption>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="" class="eventphoto" alt="event4">
+                                    <figcaption class="eventarticle">Event article</h6>
+                                        <p class="eventdate">Date</p>
+                                    </figcaption>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="" class="eventphoto" alt="event4">
+                                    <figcaption class="eventarticle">Event article</h6>
+                                        <p class="eventdate">Date</p>
+                                    </figcaption>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="League-news">
 
-            </div>
-            <!--Table of teams position -->
-            <div>
-                <h6>Дээд лиг 2022-2023</h6>
-                <div class="league-position-table">
-        <div class="table-header-on-event">
-            <div>Pos</div>
-            <div>Team</div>
-            <div>W</div>
-            <div>L</div>
-            <div>Win%</div>
-            <div>GB</div>
-            <div>L5</div>
-            <div>STRK</div>
-            <div>PTS</div>
-            <div>PA</div>
-            <div>DIFF</div>
-        </div>
-        <div>
-            <div>1</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div>
-            <div>2</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div>
-            <div>3</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div>
-            <div>2</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div>
-            <div>4</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div>
-            <div>5</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div>
-            <div>6</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div>
-            <div>7</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div>
-            <div>8</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-            </div>
-        </section>
-    </main>
-    <!--footer-->
-    <footer>
-        <div>
-            <p>footer section</p>
-        </div>
-    </footer>
+                    </div>
+                    <!--Table of teams position -->
+                    <div>
+                        <h6>Дээд лиг 2022-2023</h6>
+                        <div class="league-position-table">
+                            <div class="table-header-on-event">
+                                <div>Pos</div>
+                                <div>Team</div>
+                                <div>W</div>
+                                <div>L</div>
+                                <div>Win%</div>
+                                <div>GB</div>
+                                <div>L5</div>
+                                <div>STRK</div>
+                                <div>PTS</div>
+                                <div>PA</div>
+                                <div>DIFF</div>
+                            </div>
+                            <div>
+                                <div>1</div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>2</div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>3</div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>2</div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>4</div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>5</div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>6</div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>7</div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>8</div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!--footer-->
+            <footer>
+                <div>
+                    <p>footer section</p>
+                </div>
+            </footer>
 </body>
+
 </html>
