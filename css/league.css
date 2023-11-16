@@ -53,3 +53,102 @@ header {
         }
     }
 }
+.news{
+    background-color: var(--bg-color);
+    display: flex;
+    padding: 3rem;
+    justify-content: center;
+
+/* 1 medeenii heseg */
+& .medee{
+    font-family: var(--font);
+    margin: 1.25rem;
+    background-color: white;
+    border-radius: 5px;  
+    height: 24rem;
+    width: 25%;
+    overflow: hidden;
+
+        /* Medeenii zurag */
+        & img{
+            object-fit: cover;
+            height: 60%;
+            width: 100%;
+        }
+    }
+}
+/* Medeenii text heseg */
+.title{
+    background-color: white;
+    padding: 1.25rem;
+
+    /* Garchignii doodoh zuraas */
+    & h5::after{
+        display: block;
+        content: "";
+        height: 2px;
+        width: 100%;
+        border-radius: 3px;
+        background: var(--main-bg-color);
+        margin-top: 1.25rem;
+    }
+}
+
+/* Medeenii zuragnii hover */
+.medee:hover .zurag{
+    height: 30%;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in;
+}
+
+/* Medeenii title hover */
+.medee:hover .title{
+    height: 70%;
+    border-radius: 5px;
+}
+.desc{
+    padding-top: 0.6rem;
+    display: none;
+    color: #666C74;
+    font-size: 10px;
+    text-align: justify;
+}
+
+/* Medeenii delgerengui hesgiin hover */
+.medee:hover .desc{
+    display: block;
+}
+
+main{
+    display: grid
+
+    & #adimg{
+        padding: 3rem;
+    }
+}
+
+
+.league-position-table {
+    background-color:  var(--games-bg-color);
+    border-radius: 1rem;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: var(--font);
+  
+    /*husnegtiin garchig*/
+    & h1 {
+      color:  var(--main-bg-color2);
+      background-color:  var(--title-bg-color);
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+  
+    /*toglogchiin uzuulelt*/
+    & article {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
