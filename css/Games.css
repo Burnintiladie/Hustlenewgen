@@ -150,16 +150,21 @@ footer {
     width: 100%;
     background-color: var(--main-bg-color);
     margin-top: 5rem;
+    color: var(--main-bg-color2);
 
     /*contact-us heseg*/
     & .contact {
         display: flex;
         justify-content: space-between;
         margin-top: 10rem;
+
+        & .find-us{
+            display: flex;
+        }
     }
 
     /*about-us heseg*/
     & .about {
         display: flex;
     }
-}
+}   
