@@ -1,44 +1,64 @@
+@import url(root.css);
+@import url(Player-Responsive.css);
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: var(--main-bg-color2);
-}
-
+  margin: auto;
+  width: 100%;
+} 
 /*header*/
 header {
-  width: 100%;
-  height: 140px;
-  display: flex;
+  height: 7.5rem;
   background-color: var(--main-bg-color);
-  justify-content: space-between;
+  font-family: var(--main-font);
 
-  /*bagiin logo*/
-  & img {
-    width: 9rem;
-    height: 9rem;
-    margin-left: 3rem;
-  }
-
-  /*menu*/
-  & ul {
+  /*team logos*/
+  & .logos{
     display: flex;
     list-style-type: none;
-    font-family: var(--font);
-    padding: 5rem;
-  }
+    justify-content: center;
 
-    & .menu a {
-      padding: 30px 80px 11px;
-      color: var(--main-bg-color2);
-      text-decoration: none;
-      font-size: 25px;
-      font-weight: 550;
-      border-bottom: 5px solid var(--bg-color);
+    /*Logonii hemjee*/
+    & img{
+        width: 3.1rem;
+        height: 3.1rem;
+        padding: 0.6rem 1.2rem;
+        transition: transform 500ms;
     }
 
-      & .menu a:hover {
-        border-bottom: 5px solid var(--main-bg-color2);
+      & img:hover{
+          width: 3.2rem;
+          height: 3.2rem;
+          border-bottom: 1px solid var(--main-bg-color2);
+          transform: translateY(-0.3rem);
       }
-}
+  }
+  /*menu*/
+  .menu{
+    padding: 0.58rem;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    font-size: 17px;
+    font-family: var(--font);
 
+    /*Menu text*/
+    & a{
+        padding: 1.55rem 1.8rem 0.65rem;
+        text-decoration: none;
+        color: var(--main-bg-color2);
+        border-bottom: 3px solid var(--main-bg-color);
+    }
+
+    /*Menu hover*/
+    & a:hover{
+        border-bottom: 3px solid var(--main-bg-color2);
+    }
+  }
+}
 /*player profile heseg*/
 .player-profile {
   display: flex;
@@ -70,16 +90,17 @@ header {
   & .info {
     margin-top: 5rem;
     margin-left: 3rem;
-    font-family: var(--font);;
-  }
+  
     & .lname {
       font-size: 3rem;
       color:  var(--main-bg-color);
+      font-family: var(--font);;
     }
     & .fname {
       font-size: 6rem;
       color:  var(--main-bg-color);
       font-weight: 600;
+      font-family: var(--font);
     }
     & p {
       font-size: 1rem;
@@ -89,6 +110,7 @@ header {
       letter-spacing: 1px;
       margin-top: 2rem;
     }
+  }
 }
 
 /*recent matches husnegt*/
@@ -98,6 +120,7 @@ header {
   margin-top: 5rem;
   margin-left: 3rem;
   margin-right: 3rem;
+  font-family: var(--font);
 
   /*husnegtiin garchig*/
   & h1 {
@@ -123,6 +146,7 @@ header {
   margin-top: 5rem;
   margin-left: 3rem;
   margin-right: 3rem;
+  font-family: var(--font);;
 
   /*husngegtiin garchig*/
   & h1 {
@@ -148,6 +172,7 @@ header {
   margin-top: 5rem;
   margin-left: 3rem;
   margin-right: 3rem;
+  font-family: var(--font);;
 
   /*husnegtiin garchig*/
   & h1 {

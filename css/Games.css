@@ -1,131 +1,165 @@
-body {
-    background-color:  var(--main-bg-color2);
+@import url(root.css);
+* {
+    margin: 0;
+    padding: 0;
 }
-
-/*header*/
-header{
+body {
+    background-color: var(--main-bg-color2);
+    margin: auto;
     width: 100%;
-    height: 140px;
-    display: flex;
-    background-color:  var(--main-bg-color);
+}
+/*header*/
+header {
+    height: 7.5rem;
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
 
-    /*menu*/
-    & ul {
+    /*team logos*/
+    & .logos {
         display: flex;
         list-style-type: none;
-        font-family:  var(--font);
-        padding: 5rem;
+        justify-content: center;
+
+        /*Logonii hemjee*/
+        & img {
+        width: 3.1rem;
+        height: 3.1rem;
+        padding: 0.6rem 1.2rem;
+        transition: transform 500ms;
+        }
+
+        & img:hover {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-bottom: 1px solid var(--main-bg-color2);
+        transform: translateY(-0.3rem);
+        }
     }
+    /*menu*/
+    & .menu {
+        padding: 0.58rem;
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        font-size: 17px;
+        font-family: var(--font);
 
-        & .menu a {
-            padding: 30px 80px 11px;
-            color:  var(--main-bg-color2);
-            text-decoration: none;
-            font-size: 25px;
-            font-weight: 550;
-            border-bottom: 5px solid  var(--main-bg-color);
+        /*Menu text*/
+        & a {
+        padding: 1.55rem 1.8rem 0.65rem;
+        text-decoration: none;
+        color: var(--main-bg-color2);
+        border-bottom: 3px solid var(--main-bg-color);
         }
 
-        & .menu a:hover {
-            border-bottom: 5px solid  var(--main-bg-color2);
+        /*Menu hover*/
+        & a:hover {
+        border-bottom: 3px solid var(--main-bg-color2);
         }
+    }
 }
 
-/*games*/
-.games{
-    background-color:  var(--games-bg-color);
-    margin-top: 10rem;
-    margin-left: 8rem;
-    margin-right: 8rem;
-    border-radius: 2rem;
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*games*/
+    & .games {
+        background-color: var(--games-bg-color);
+        width: 65%;
+        margin-top: 5rem;
+        border-radius: 2rem;
+
 
         /*husnegtiin garchig*/
-        & .title{
-            font-size: 3rem;
-            font-family:  var(--font);
+        & .title {
+            font-size: 2.5rem;
+            font-family: var(--font);
             padding-top: 4rem;
-            color:  var(--main-bg-color);
+            color: var(--main-bg-color);
             font-weight: 600;
             text-align: center;
-
-            
         }
 
         /*togloltiin huvaari*/
-        & .schedule{
-            font-family:  var(--font);
+        & .schedule {
             display: flex;
-            justify-content: center;    
+            justify-content: center;
             align-items: center;
-            margin: 2rem;
-        }
 
             /*bagiin logo ner*/
-            & .team{
-                margin-left: 12rem;
-                margin-right: 12rem;
-            }
+            & .team {
+                margin-left: 9rem;
+                margin-right: 9rem;
 
-                & img{
-                    height: 10rem;
-                    width: 10rem;    
-                    padding: 1.5rem;
-                    
+                & img {
+                    height: 4rem;
+                    width: 4rem;
+                    padding: 4rem;
                 }
 
-                & figcaption{
-                    color:  var(--main-bg-color);
+                & figcaption {
+                    margin-top: -3.5rem;
+                    color: var(--main-bg-color);
                     font-weight: 600;
                     width: 100%;
                     text-align: center;
+                    font-size: 0.8rem;
                 }
-
-            /*togloltiin hugatsaa, onoo*/
-            & .finalScore{
-                margin: 4rem;
             }
-                & .hugatsaa{
-                    color:  var(--text-color);
+            /*togloltiin hugatsaa, onoo*/
+            & .finalScore {
+                padding: 1.5rem;
+
+                & .hugatsaa {
+                    color: var(--text-color);
                     font-weight: 600;
-                    font-size: large;
+                    font-size: 0.9rem;
+                    padding: 2rem;
                 }
 
-                & .onoo{
+                & .onoo {
                     text-align: center;
-                }
-                    & h1{
-                        color:  var(--text-color);
-                        font-size: 2.7rem;
-                        font-weight: 500;
-                        margin-bottom: -1rem;
+
+                    & h1 {
+                    color: var(--text-color);
+                    font-size: 2.3rem;
+                    font-weight: 500;
+                    margin-bottom: 0rem;
                     }
 
-                    & p{
-                        color:  var(--text-color);
-                        font-size: 0.8rem;
+                    & p {
+                    color: var(--text-color);
+                    font-size: 0.7rem;
+                    font-weight: 400;
                     }
-                        
-                    & span{
-                        color:  var(--main-bg-color);
-                        font-weight: 600;
+
+                    & span {
+                    color: var(--main-bg-color);
+                    font-weight: 600;
                     }
+                }
+            }
+        }
+    }
 }
 
 /*footer*/
 footer {
     width: 100%;
-    background-color:  var(--main-bg-color);
+    background-color: var(--main-bg-color);
     margin-top: 5rem;
-  
-      /*contact-us heseg*/
-      & .contact {
+
+    /*contact-us heseg*/
+    & .contact {
         display: flex;
         justify-content: space-between;
         margin-top: 10rem;
-      }
-  
-      /*about-us heseg*/
-      & .about {
+    }
+
+    /*about-us heseg*/
+    & .about {
         display: flex;
-      }
+    }
 }
