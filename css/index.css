@@ -12,17 +12,18 @@
 
 /* Logo bolon menu heseg*/
 header{
-    height: 7.5rem;
+    height: 15vh;
     background-color: var(--main-bg-color);
-    font-family: var(--main-font)
+    font-family: var(--main-font);
 }
 
 /*Logo heseg*/
 .logo{
+    height: 10vh;
     display: flex;
     list-style-type: none;
     justify-content: center;
-
+    padding-left: 0;
     /*Logonii hemjee*/
     & img{
         width: 3.1rem;
@@ -37,8 +38,7 @@ header{
         border-bottom: 1px solid white;
         transform: translateY(-0.3rem);
     }
-}
-
+ }
 
 /* Logo hover*/
 .drop:hover  .drop-player{
@@ -123,12 +123,13 @@ header{
 
 /*Menu heseg*/
 .menu{
-    padding: 0.65rem;
+    height: 5vh;
     display: flex;
     list-style-type: none;
     justify-content: center;
     font-size: 17px;
-    font-family: var(--font);
+    font-family: 'Poppins', sans-serif;
+    padding-left: 0;
 
     /*Menu text*/
     & a{
@@ -148,16 +149,19 @@ header{
 .cover{
     background-image: url(../assets/cover.jpeg);
     background-size: cover;
-    height: 40rem;
+    height: 80vh;
 }
 
 /*Togloltiin heseg*/
 .match{
-    display: flex;
+    height: 25vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    overflow: scroll;
     padding: 1.5rem;
     font-family: var(--font);
     color: white;
-    justify-content: center;
 
     /*Togloj bui bagiin logo*/
     & img{
@@ -183,7 +187,6 @@ header{
         text-align: center;
     }
 }
-
 
 /*Togloltiin minut bolon Final*/
 .final-text{
@@ -230,9 +233,12 @@ header{
 /*Medeenii heseg*/
 .news{
     background-color: var(--bg-color);
-    display: flex;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    height: 50vh;
     padding: 3rem;
-    justify-content: center;
 }
 
 /* 1 medeenii heseg */
@@ -242,7 +248,6 @@ header{
     background-color: white;
     border-radius: 5px;  
     height: 24rem;
-    width: 25%;
     overflow: hidden;
 
     /* Medeenii zurag */
@@ -251,7 +256,6 @@ header{
         height: 60%;
         width: 100%;
     }
-
 }
 
 /* Medeenii text heseg */
@@ -301,8 +305,7 @@ header{
 /* Ad heseg */
 .ad{
     & img{
-        height: 15.5rem;
-        width: 50rem;
+        width: 60vw;
         border-radius: 5px;
         display: block;
         margin: auto;
@@ -316,7 +319,7 @@ header{
     display: grid;
     gap: 3px;
     padding: 3rem;
-    width: 64.25rem;
+    width: 65vw;
     margin: auto;
     font-family: var(--font);
 
@@ -330,14 +333,16 @@ header{
     & .item1{
         grid-column: 1 / span 2;
         background-color: var(--title-bg-color);
-        padding: 0.6rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         text-align: center;
+
     }
 
     /* Jagsaalt heseg */
     & .item2{
         background-color: var(--bg-color);
-        width: 26.75rem;
+        width: 25vw;
         grid-row: 2 / span 2;
 
         & ul{
@@ -348,6 +353,7 @@ header{
         }
         & li{
             margin: 0.6rem;
+            font-size: 1vw;
         }
         & p{
             background-color: var(--title-bg-color);
@@ -356,6 +362,7 @@ header{
 
     /* Search heseg */
     & .item3{
+        width: 40vw;
         grid-row: 2 ;
         background-color: var(--title-bg-color);
         height: 2.5rem;
@@ -364,33 +371,38 @@ header{
 
     /* Player profile heseg */
     & .item4{
-        width: 37.5rem;
+        width: 40vw;
         grid-row: 3;
         color: black;
 
         /* Zuragnii heseg */
         & .pic{
             display: flex;
+            justify-content: space-around;
+        }
+
+        & .playerpro{
+            width: 20vw;
         }
 
         /* Logo bolon textuud */
         & .picture{
             text-align: center;
-            margin-left: 3rem;
-            margin-right: 3rem;
+            & .ovog{
+                font-size: 1vw;
+            }
 
             & .name{
-                font-size: 40px;
+                font-size: 3vw;
                 font-weight: bolder;
             }
 
             & .bairlal{
-               font-size: 8px;
+               font-size: 0.6vw;
             }
 
             & .teamlogo{
-                width: 6.25rem;
-                height: 6.25rem;
+                width: 6.25vw;
             }
         }
 
@@ -411,24 +423,172 @@ header{
 
             /* Statsnii ner */
             & .tit{
-                font-size: 10px;
+                font-size: 0.7vw;
             }
 
             /* Toon uzuulelt */
             & .stats{
-                font-size: 30px;
+                font-size: 2vw;
             }
         }
     }
-}
-
-/* Listnii heseg */
-.items{
-    display: none;
 }
 
 /* Footer heseg */
 footer{
     height: 20rem;
     background-color: var(--main-bg-color);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .logo{
+        & img{
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+    }
+
+    .news{
+        grid-template-columns: 30vw 30vw 30vw 30vw;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .logo{
+        & img{
+            height: 2.3rem;
+            width: 2.3rem;
+        }
+    }
+    
+    .cover{
+        height: 65vh;
+    }
+
+    .news{
+        height: 58vh;
+        padding: 0.5rem;
+        grid-template-columns: 40vw 40vw 40vw 40vw;
+    }
+
+    .grid{
+        width: 80vw;
+        grid-template-columns: auto;
+    
+        & .item1{
+            grid-row: 1;
+            width: 80vw;
+        }
+
+        & .item2{
+            grid-row: 2;
+            width: 80vw;
+        }
+        & .item3{
+            grid-row: 3;
+            width: 80vw;
+        }
+        & .item4{
+            grid-row: 4;
+            width: 80vw;
+        } 
+     }    
+}
+
+@media screen and (max-width: 620px) {
+    .logo{
+        justify-content: space-evenly;
+       & img{
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0;
+        margin-top: 1rem;
+       }
+    }
+
+    .news{
+        padding: 0.5rem;
+        grid-template-columns: 50vw 50vw 50vw 50vw;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+
+    .menu{
+        justify-content: space-evenly;
+        font-size: 16px;
+        padding: 0.5rem;
+
+        & a{
+            border-bottom: none;
+        }
+    }
+
+    .cover{
+        border-top: 2px solid white;
+        height: 50vh;
+    }
+    
+    .news{
+        padding: 1rem;
+        grid-template-columns: 80vw 80vw 80vw 80vw;
+    }
+
+    .ad{
+        & img{
+            width: 85vw;
+        }
+    }
+
+    .grid{
+        width: 90vw;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0;
+
+        & .item1{
+            width: 90vw;
+        }
+        & .item2{
+            width: 90vw;
+        }
+        & .item3{
+            width: 90vw;
+        }
+        & .item4{
+            width: 90vw;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .logo{
+       & img{
+        width: 2.0rem;
+        height: 2.0rem;
+       }
+    }
+    .cover{
+        height: 40vh;
+    }
+    .match{
+        padding: 0;
+        
+        & img{
+            width: 3.0rem;
+            height: 3.0rem;
+        }
+    }
+    .game{  
+        height: 5rem;
+        width: 14rem;
+    }
+
+    .news{
+        grid-template-columns: 95vw 95vw 95vw 95vw;
+    }
 }
