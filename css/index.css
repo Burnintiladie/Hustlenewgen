@@ -159,7 +159,7 @@ header{
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto;
-    overflow: scroll;
+    overflow-x: scroll;
     padding: 1.5rem;
     font-family: var(--font);
     color: white;
@@ -170,10 +170,9 @@ header{
         height: 3.75rem;
     }
 }
-
-/*Neg togloltiin heseg*/
-.game{
-    display: flex;
+.buhel{
+    display: grid;
+    grid-template-rows: auto auto;
     background-color: var(--bg-color);
     border-radius: 1.55rem;
     height: 5.625rem;
@@ -187,6 +186,11 @@ header{
         margin: 0rem 0.5rem;
         text-align: center;
     }
+}
+
+.game{
+    grid-row: 1;
+    display: flex;
 }
 
 /*Togloltiin minut bolon Final*/
@@ -203,27 +207,26 @@ header{
     display: flex;
 }
 
-/* Game hover */
-.game:hover .detail{
-    display: block;
+.buhel:hover .game{
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.buhel:hover .detail{
+    opacity: 1;
 }
 
 /* Game hover detail*/
 .detail{
-    border-bottom-left-radius: 1.55rem;
-    border-bottom-right-radius: 1.55rem;
-    margin: 4.375rem;
-    display: none;
-    position: absolute;
-    height: 3rem;
-    background-color: white;
-    border: 0.1px solid var(--main-bg-color);
-    width: 16.8rem;
+    grid-row: 2;
+    opacity: 0;
+    transform: translateY(-4rem);
+	transition: 0.8s;
 
     & p{
-        color: var(--bg-color);
+        font-size: 20px;
+        color: white;
         text-align: center;
-        padding-top: 0.6rem;
     }
 
     & a{
@@ -448,6 +451,10 @@ footer{
             height: 2.5rem;
             width: 2.5rem;
         }
+        & img:hover{
+            width: 2.6rem;
+            height: 2.6rem;
+        }
     }
     .drop-player{
         & a{
@@ -536,8 +543,8 @@ footer{
         margin-top: 1rem;
        }
        & img:hover{
-        width: 2.8rem;
-        height: 2.8rem;
+        width: 2.6rem;
+        height: 2.6rem;
         }
     }
 
