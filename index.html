@@ -309,11 +309,59 @@
     <main>
         <!--Poster/Wallpaper--> 
         <div class="cover">
-            <!-- <div><img src="assets/season.jpg"></div>
-            <div><img src="assets/women.jpg"></div> -->
+
+            <!-- Tom zurag -->
+            <div class="big">
+
+                <!-- Poster 1 -->
+                <div class="slide a">
+                   <img src="assets/cover.jpeg">
+                </div>
+
+                 <!-- Poster 2 -->
+                <div class="slide a">
+                    <img src="assets/mgl.jpg">
+                </div>
+                
+                 <!-- Poster 3 -->
+                <div class="slide a">
+                    <img src="assets/allstar.jpg">
+                 </div>
+
+                  <!-- Poster 4 -->
+                <div class="slide a">
+                    <img src="assets/2023.jpg">
+                </div>   
+            </div>
+
+            <!-- Jijig zuragnuud -->
+            <div  class="mini">
+
+                 <!-- Poster 1 -->
+                <div class="m-one">
+                    <img src="assets/cover.jpeg">
+                 </div>
+
+                  <!-- Poster 2 -->
+                <div class="m-one">
+                    <img src="assets/mgl.jpg">
+                </div>
+
+                 <!-- Poster 3 -->
+                <div class="m-one">
+                    <img src="assets/allstar.jpg">
+                </div>
+
+                 <!-- Poster 4 -->
+                <div class="m-one">
+                    <img src="assets/2023.jpg">
+                </div>
+            </div>
         </div>
 
-        <!--Recent matches--> 
+    
+
+        <!--Recent matches-->
         <div class="match">
             <!--Match 1--> 
             <div class="buhel">
@@ -427,7 +475,7 @@
                 </div>
             </div>
         </div>
-
+        
         <!--News story--> 
         <div class="news">
             <!--News 1--> 
@@ -551,5 +599,35 @@
     <!--Footer--> 
     <footer>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() 
+        {
+          let i;
+          let slides = document.getElementsByClassName("slide");
+          let mini = document.getElementsByClassName("m-one");
+
+          for (i = 0; i < slides.length; i++) 
+          {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+
+          if (slideIndex > slides.length) 
+          {slideIndex = 1}    
+
+          for (i = 0; i < mini.length; i++) 
+          {
+            mini[i].className = mini[i].className.replace(" active", "");
+          }
+
+          slides[slideIndex-1].style.display = "block";  
+          mini[slideIndex-1].className += " active";
+          setTimeout(showSlides, 5000); 
+        }
+    </script>
 </body>
 </html>

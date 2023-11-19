@@ -148,10 +148,67 @@ header{
 
 /*Cover heseg*/
 .cover{
-    background-image: url(../assets/cover.jpeg);
-    background-size: cover;
+    display: grid;
+    grid-template-columns: 100% 30%;
     height: 80vh;
+    overflow: hidden;
 }
+
+/* Tom zurag */
+.big{
+    position: relative;
+    width: 100%;
+  }
+
+/*1 tom zuragnii heseg*/
+.slide {
+    display: none;
+    & img{
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+    }
+}
+
+/* Mini zurag */
+.mini{
+    margin-top: 0.3rem;
+    margin-left: -60%;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    height: 80vh;
+  }
+
+/*1 tom zuragnii heseg*/
+.m-one {
+    opacity: 0.8;
+    /* transition: opacity 0.6s ease; */
+    & img{
+       width: 35%;
+       border-radius: 1rem;
+    }
+  }
+  
+.active {
+    opacity: 1;
+  } 
+  
+
+/* .a {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+@keyframes a {
+    0% {
+        opacity: 0.8;
+    } 
+    100% {
+        opacity: 1;
+    }
+  } */
+
+
 
 /*Togloltiin heseg*/
 .match{
@@ -209,7 +266,7 @@ header{
 
 .buhel:hover .game{
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .buhel:hover .detail{
