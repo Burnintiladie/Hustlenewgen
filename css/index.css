@@ -12,17 +12,18 @@
 
 /* Logo bolon menu heseg*/
 header{
-    height: 7.5rem;
+    height: 15vh;
     background-color: var(--main-bg-color);
-    font-family: var(--main-font)
+    font-family: var(--main-font);
 }
 
 /*Logo heseg*/
 .logo{
+    height: 10vh;
     display: flex;
     list-style-type: none;
     justify-content: center;
-
+    padding-left: 0;
     /*Logonii hemjee*/
     & img{
         width: 3.1rem;
@@ -37,8 +38,7 @@ header{
         border-bottom: 1px solid white;
         transform: translateY(-0.3rem);
     }
-}
-
+ }
 
 /* Logo hover*/
 .drop:hover  .drop-player{
@@ -53,7 +53,8 @@ header{
     border-bottom: 0.8rem solid var(--main-bg-color);
     width: 100%;
     height: 8.75rem;
-    padding: 1.2rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
     left: 0;
     z-index: 1;
     font-weight: bold;
@@ -64,7 +65,7 @@ header{
     & a{
         text-decoration: none;
         color: var(--bg-color);
-        font-size: 13px;
+        font-size: 0.9vw;
         text-align: left;
         display: block; 
         padding: 3px;
@@ -74,7 +75,7 @@ header{
     /*Roster toglogciin ner hover*/
     & a:hover{
         color: var(--main-bg-color);
-        font-size: 14px;
+        font-size: 1vw;
         transform: translateX(1rem);
     }
 
@@ -123,12 +124,13 @@ header{
 
 /*Menu heseg*/
 .menu{
-    padding: 0.65rem;
+    height: 5vh;
     display: flex;
     list-style-type: none;
     justify-content: center;
     font-size: 17px;
-    font-family: var(--font);
+    font-family: 'Poppins', sans-serif;
+    padding-left: 0;
 
     /*Menu text*/
     & a{
@@ -146,18 +148,78 @@ header{
 
 /*Cover heseg*/
 .cover{
-    background-image: url(../assets/cover.jpeg);
-    background-size: cover;
-    height: 40rem;
+    display: grid;
+    grid-template-columns: 100% 30%;
+    height: 80vh;
+    overflow: hidden;
 }
+
+/* Tom zurag */
+.big{
+    position: relative;
+    width: 100%;
+  }
+
+/*1 tom zuragnii heseg*/
+.slide {
+    display: none;
+    & img{
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+    }
+}
+
+/* Mini zurag */
+.mini{
+    margin-left: -60%;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    height: 80vh;
+  }
+
+/*1 mini heseg*/
+.m-one {
+    opacity: 0.8;
+    /* transition: opacity 0.6s ease; */
+    & img{
+       margin-top: 0.7rem;
+       width: 35%;
+       border-radius: 1rem;
+    }
+  }
+  
+.active {
+    opacity: 1;
+  } 
+  
+
+/* .a {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+@keyframes a {
+    0% {
+        opacity: 0.8;
+    } 
+    100% {
+        opacity: 1;
+    }
+  } */
+
+
 
 /*Togloltiin heseg*/
 .match{
-    display: flex;
+    height: 25vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    overflow-x: scroll;
     padding: 1.5rem;
     font-family: var(--font);
     color: white;
-    justify-content: center;
 
     /*Togloj bui bagiin logo*/
     & img{
@@ -165,10 +227,9 @@ header{
         height: 3.75rem;
     }
 }
-
-/*Neg togloltiin heseg*/
-.game{
-    display: flex;
+.buhel{
+    display: grid;
+    grid-template-rows: auto auto;
     background-color: var(--bg-color);
     border-radius: 1.55rem;
     height: 5.625rem;
@@ -184,6 +245,10 @@ header{
     }
 }
 
+.game{
+    grid-row: 1;
+    display: flex;
+}
 
 /*Togloltiin minut bolon Final*/
 .final-text{
@@ -199,27 +264,26 @@ header{
     display: flex;
 }
 
-/* Game hover */
-.game:hover .detail{
-    display: block;
+.buhel:hover .game{
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.buhel:hover .detail{
+    opacity: 1;
 }
 
 /* Game hover detail*/
 .detail{
-    border-bottom-left-radius: 1.55rem;
-    border-bottom-right-radius: 1.55rem;
-    margin: 4.375rem;
-    display: none;
-    position: absolute;
-    height: 3rem;
-    background-color: white;
-    border: 0.1px solid var(--main-bg-color);
-    width: 16.8rem;
+    grid-row: 2;
+    opacity: 0;
+    transform: translateY(-4rem);
+	transition: 0.8s;
 
     & p{
-        color: var(--bg-color);
+        font-size: 20px;
+        color: white;
         text-align: center;
-        padding-top: 0.6rem;
     }
 
     & a{
@@ -230,9 +294,12 @@ header{
 /*Medeenii heseg*/
 .news{
     background-color: var(--bg-color);
-    display: flex;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    height: 60vh;
     padding: 3rem;
-    justify-content: center;
 }
 
 /* 1 medeenii heseg */
@@ -242,7 +309,6 @@ header{
     background-color: white;
     border-radius: 5px;  
     height: 24rem;
-    width: 25%;
     overflow: hidden;
 
     /* Medeenii zurag */
@@ -251,7 +317,6 @@ header{
         height: 60%;
         width: 100%;
     }
-
 }
 
 /* Medeenii text heseg */
@@ -301,8 +366,7 @@ header{
 /* Ad heseg */
 .ad{
     & img{
-        height: 15.5rem;
-        width: 50rem;
+        width: 60vw;
         border-radius: 5px;
         display: block;
         margin: auto;
@@ -316,7 +380,7 @@ header{
     display: grid;
     gap: 3px;
     padding: 3rem;
-    width: 64.25rem;
+    width: 65vw;
     margin: auto;
     font-family: var(--font);
 
@@ -330,14 +394,16 @@ header{
     & .item1{
         grid-column: 1 / span 2;
         background-color: var(--title-bg-color);
-        padding: 0.6rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         text-align: center;
+
     }
 
     /* Jagsaalt heseg */
     & .item2{
         background-color: var(--bg-color);
-        width: 26.75rem;
+        width: 25vw;
         grid-row: 2 / span 2;
 
         & ul{
@@ -348,6 +414,7 @@ header{
         }
         & li{
             margin: 0.6rem;
+            font-size: 1vw;
         }
         & p{
             background-color: var(--title-bg-color);
@@ -356,6 +423,7 @@ header{
 
     /* Search heseg */
     & .item3{
+        width: 40vw;
         grid-row: 2 ;
         background-color: var(--title-bg-color);
         height: 2.5rem;
@@ -364,33 +432,38 @@ header{
 
     /* Player profile heseg */
     & .item4{
-        width: 37.5rem;
+        width: 40vw;
         grid-row: 3;
         color: black;
 
         /* Zuragnii heseg */
         & .pic{
             display: flex;
+            justify-content: space-around;
+        }
+
+        & .playerpro{
+            width: 20vw;
         }
 
         /* Logo bolon textuud */
         & .picture{
             text-align: center;
-            margin-left: 3rem;
-            margin-right: 3rem;
+            & .ovog{
+                font-size: 1vw;
+            }
 
             & .name{
-                font-size: 40px;
+                font-size: 3vw;
                 font-weight: bolder;
             }
 
             & .bairlal{
-               font-size: 8px;
+               font-size: 0.6vw;
             }
 
             & .teamlogo{
-                width: 6.25rem;
-                height: 6.25rem;
+                width: 6.25vw;
             }
         }
 
@@ -411,24 +484,309 @@ header{
 
             /* Statsnii ner */
             & .tit{
-                font-size: 10px;
+                font-size: 0.7vw;
             }
 
             /* Toon uzuulelt */
             & .stats{
-                font-size: 30px;
+                font-size: 2vw;
             }
         }
     }
-}
-
-/* Listnii heseg */
-.items{
-    display: none;
 }
 
 /* Footer heseg */
 footer{
     height: 20rem;
     background-color: var(--main-bg-color);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .logo{
+        & img{
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+        & img:hover{
+            width: 2.6rem;
+            height: 2.6rem;
+        }
+    }
+    .drop-player{
+        & a{
+            font-size: 1vw;
+        }
+    }
+    .column{
+        padding-right: 0;
+    }
+    .cover{
+        height: 65vh;
+    }
+    .slide {
+        & img{
+            height: 65vh;
+        }
+    }
+    .mini{
+        height: 65vh;
+      }
+    .m-one {
+        & img{
+           margin-top: 0.5rem;
+        }
+      }
+    .news{
+        grid-template-columns: 30vw 30vw 30vw 30vw;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .logo{
+        & img{
+            height: 2.3rem;
+            width: 2.3rem;
+        }
+        & img:hover{
+            width: 2.5rem;
+            height: 2.5rem;
+            }
+    }
+    .drop-player{
+        height: 15rem;
+       & a{
+        font-size: 1.4vw;
+       }
+       & a:hover{
+        font-size: 1.4vw;
+       }
+       & h3{
+        padding-bottom: 0.5rem;
+       }
+    }
+    .column{
+        width: 30%;
+        margin-left: 0.5rem;
+    }
+    .cover{
+        height: 60vh;
+    }
+    .slide {
+        & img{
+            height: 60vh;
+        }
+    }
+    .mini{
+        margin-left: -75%;
+        height: 60vh;
+    }
+    .m-one {
+        & img{
+           margin-top: 1rem;
+           width: 40%;
+        }
+    }
+    .news{
+        height: 58vh;
+        padding: 0.5rem;
+        grid-template-columns: 40vw 40vw 40vw 40vw;
+    }
+
+    .grid{
+        width: 80vw;
+        grid-template-columns: auto;
+    
+        & .item1{
+            grid-row: 1;
+            width: 80vw;
+        }
+
+        & .item2{
+            grid-row: 2;
+            width: 80vw;
+        }
+        & .item3{
+            grid-row: 3;
+            width: 80vw;
+        }
+        & .item4{
+            grid-row: 4;
+            width: 80vw;
+        } 
+     }    
+}
+
+@media screen and (max-width: 620px) {
+    .logo{
+        justify-content: space-evenly;
+       & img{
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0;
+        margin-top: 1rem;
+       }
+       & img:hover{
+        width: 2.6rem;
+        height: 2.6rem;
+        }
+    }
+    .cover{
+        grid-template-columns: auto;
+        grid-template-rows: 70% 30%;
+        height: 50vh;
+    }
+    .big{
+        grid-row: 1;
+    }
+    .slide{
+        & img{
+            height: 50vh;
+        }
+    }
+    .mini{
+        margin: 0;
+        height: 10vh;
+        grid-row: 2;
+        grid-template-rows: auto;
+        grid-template-columns: 25% 25% 25% 25%;
+        width: 100%;
+    }
+    .m-one{
+        & img{
+            width: 100%;
+        }
+    }
+    .drop-player{
+        height: 21rem;
+       & a{
+        font-size: 2vw;
+       }
+       & a:hover{
+        font-size: 2vw;
+       }
+       & h3{
+        padding-bottom: 0.5rem;
+       }
+    }
+    .column{
+        width: 40%;
+        margin-left: 2rem;
+    }
+    .news{
+        padding: 0.5rem;
+        grid-template-columns: 50vw 50vw 50vw 50vw;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .menu{
+        justify-content: space-evenly;
+        font-size: 16px;
+        padding: 0.5rem;
+        & a{
+            border-bottom: none;
+        }
+    }
+    .drop-player{
+        justify-content: center;
+        padding: 0;
+        height: 37rem;
+       & a{
+        font-size: 3vw;
+       }
+       & a:hover{
+        font-size: 3vw;
+       }
+       & h3{
+        padding-bottom: 0.5rem;
+       }
+       & h3::after{
+        width: 100%;
+        height: 0.1rem;
+    }
+    }
+    .column{
+        margin-left: 5.5rem;
+        text-align: center;
+        width: 50%;
+        border-right: none;
+    }
+
+    .cover{
+        border-top: 2px solid white;
+        height: 40vh;
+    }
+    .slide {
+        & img{
+            height: 40vh;
+        }
+    }
+    
+    .news{
+        padding: 1rem;
+        grid-template-columns: 80vw 80vw 80vw 80vw;
+    }
+
+    .ad{
+        & img{
+            width: 85vw;
+        }
+    }
+
+    .grid{
+        width: 90vw;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0;
+
+        & .item1{
+            width: 90vw;
+        }
+        & .item2{
+            width: 90vw;
+        }
+        & .item3{
+            width: 90vw;
+        }
+        & .item4{
+            width: 90vw;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .logo{
+       & img{
+        width: 2.0rem;
+        height: 2.0rem;
+       }
+    }
+    .cover{
+        height: 30vh;
+    }
+    .slide {
+        & img{
+            height: 30vh;
+        }
+    }
+    .match{
+        padding: 0;
+        
+        & img{
+            width: 3.0rem;
+            height: 3.0rem;
+        }
+    }
+    .game{  
+        height: 5rem;
+        width: 14rem;
+    }
+
+    .news{
+        grid-template-columns: 95vw 95vw 95vw 95vw;
+    }
 }
