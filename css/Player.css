@@ -1,243 +1,736 @@
 @import url(root.css);
+@media only screen and (max-width: 480px){
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: var(--main-bg-color2);
+    margin: auto;
+    width: 100%;
+  }
+  /*header*/
+  header {
+    height: auto;
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
 
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-color: var(--main-bg-color2);
-  margin: auto;
-  width: 100%;
-} 
-/*header*/
-header {
-  height: 7.5rem;
-  background-color: var(--main-bg-color);
-  font-family: var(--main-font);
+    /*team logos*/
+    & .logos {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
 
-  /*team logos*/
-  & .logos{
+      /*Logonii hemjee*/
+      & img {
+        width: 2rem;
+        height: 2rem;
+        padding: 0.2rem 0.6rem;
+        margin-top: 0.5rem;
+        transition: transform 500ms;
+      }
+
+      & img:hover {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-bottom: 1px solid var(--main-bg-color2);
+        transform: translateY(-0.3rem);
+      }
+    }
+    /*menu*/
+    .menu {
+      padding: 0.58rem;
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      font-size: 12px;
+      font-family: var(--font);
+
+      /*Menu text*/
+      & a {
+        padding: 1.55rem 1.8rem 0.45rem;
+        text-decoration: none;
+        color: var(--main-bg-color2);
+        border-bottom: 3px solid var(--main-bg-color);
+      }
+
+      /*Menu hover*/
+      & a:hover {
+        border-bottom: 3px solid var(--main-bg-color2);
+      }
+    }
+  }
+  /*player profile heseg*/
+  .player-profile {
     display: flex;
-    list-style-type: none;
-    justify-content: center;
+    height: 11rem;
+    background-color: var(--games-bg-color);
+    border-radius: 1rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 
-    /*Logonii hemjee*/
-    & img{
+    /*toglogchiin nuur zurag*/
+    & img {
+      width: 6rem;
+      height: 9rem;
+      margin-left: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    /*toglogchiin huviin dugaar*/
+    & .number {
+      margin-left: 1rem;
+      margin-top: 1.5rem;
+      font-size: 3rem;
+      color: var(--main-bg-color);
+      font-family: var(--font);
+    }
+
+    /*toglogchiin huviin medeelel*/
+    & .info {
+      margin-top: 2.5rem;
+      margin-left: 1rem;
+
+      & .lname {
+        font-size: 0.8rem;
+        color: var(--main-bg-color);
+        font-family: var(--font);
+      }
+      & .fname {
+        font-size: 1.1rem;
+        color: var(--main-bg-color);
+        font-weight: 600;
+        font-family: var(--font);
+      }
+      & p {
+        font-size: 0.2rem;
+        color: var(--main-bg-color);
+        letter-spacing: 0.7px;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  /*recent matches husnegt*/
+  .recent-matches {
+    background-color: var(--games-bg-color);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: var(--font);
+
+    /*husnegtiin garchig*/
+    & h1 {
+      color: var(--main-bg-color2);
+      background-color: var(--title-bg-color);
+      border-radius: 0.7rem;
+      padding: 0.4rem;
+      font-size: 0.8rem;
+    }
+
+    /*toglogchiin uzuulelt*/
+    & article {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      font-size: 0.5rem;
+    }
+  }
+
+  /*season husnegt*/
+  .season {
+    background-color: var(--games-bg-color);
+    border-radius: 1rem;
+    margin-top: 4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: var(--font);
+
+    /*husnegtiin garchig*/
+    & h1 {
+      color: var(--main-bg-color2);
+      background-color: var(--title-bg-color);
+      border-radius: 1rem;
+      padding: 0.7rem;
+      font-size: 1.2rem;
+    }
+
+    /*toglogchiin uzuulelt*/
+    & article {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      font-size: 0.5rem;
+    }
+  }
+
+  /*playoffs husnegt*/
+  .playoffs {
+    background-color: var(--games-bg-color);
+    border-radius: 1rem;
+    margin-top: 4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: var(--font);
+
+    /*husnegtiin garchig*/
+    & h1 {
+      color: var(--main-bg-color2);
+      background-color: var(--title-bg-color);
+      border-radius: 1rem;
+      padding: 0.7rem;
+      font-size: 1.2rem;
+    }
+
+    /*toglogchiin uzuulelt*/
+    & article {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      font-size: 0.5rem;
+    }
+  }
+  /*footer*/
+  footer {
+    height: auto;
+    background-color: var(--main-bg-color);
+    margin-top: 4rem;
+    & .title {
+      color: var(--footer-color);
+      font-weight: 300;
+      font-size: 1rem;
+      margin-left: 8rem;
+      padding-top: 2rem;
+    }
+    & .main {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      color: var(--footer-color);
+      & .contact-us {
+        margin-right: 10rem;
+        font-size: 0.7rem;
+        & ul {
+          margin-top: 1rem;
+          & li {
+            list-style-type: none;
+            margin-bottom: 1rem;
+            align-items: center;
+            font-size: 0.6rem;
+          }
+          & img {
+            margin-right: 1rem;
+            width: 0.5rem;
+            height: 0.5rem;
+          }
+        }
+      }
+      & .follow-us {
+        font-size: 0.7rem;
+        & ul {
+          display: flex;
+          & li {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            list-style-type: none;
+          }
+          & img{
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: var(--main-bg-color2);
+    margin: auto;
+    width: 100%;
+  }
+  /*header*/
+  header {
+    height: auto;
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
+
+    /*team logos*/
+    & .logos {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+
+      /*Logonii hemjee*/
+      & img {
+        width: 2.4rem;
+        height: 2.4rem;
+        padding: 0.2rem 0.6rem;
+        margin-top: 0.5rem;
+        transition: transform 500ms;
+      }
+
+      & img:hover {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-bottom: 1px solid var(--main-bg-color2);
+        transform: translateY(-0.3rem);
+      }
+    }
+    /*menu*/
+    .menu {
+      padding: 0.58rem;
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      font-size: 15px;
+      font-family: var(--font);
+
+      /*Menu text*/
+      & a {
+        padding: 1.55rem 1.8rem 0.45rem;
+        text-decoration: none;
+        color: var(--main-bg-color2);
+        border-bottom: 3px solid var(--main-bg-color);
+      }
+
+      /*Menu hover*/
+      & a:hover {
+        border-bottom: 3px solid var(--main-bg-color2);
+      }
+    }
+  }
+  /*player profile heseg*/
+  .player-profile {
+    display: flex;
+    height: 20rem;
+    background-color: var(--games-bg-color);
+    border-radius: 2rem;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+
+    /*toglogchiin nuur zurag*/
+    & img {
+      width: 13rem;
+      height: 18rem;
+      margin-left: 2rem;
+      margin-top: 2rem;
+    }
+
+    /*toglogchiin huviin dugaar*/
+    & .number {
+      margin-left: 3rem;
+      margin-top: 2rem;
+      font-size: 6rem;
+      color: var(--main-bg-color);
+      font-family: var(--font);
+    }
+
+    /*toglogchiin huviin medeelel*/
+    & .info {
+      margin-top: 3.5rem;
+      margin-left: 2rem;
+
+      & .lname {
+        font-size: 1.5rem;
+        color: var(--main-bg-color);
+        font-family: var(--font);
+      }
+      & .fname {
+        font-size: 3rem;
+        color: var(--main-bg-color);
+        font-weight: 600;
+        font-family: var(--font);
+      }
+      & p {
+        font-size: 0.6rem;
+        color: var(--main-bg-color);
+        letter-spacing: 1px;
+        margin-top: 0.7rem;
+      }
+    }
+  }
+
+  /*recent matches husnegt*/
+  .recent-matches {
+    background-color: var(--games-bg-color);
+    border-radius: 1rem;
+    margin-top: 4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: var(--font);
+
+    /*husnegtiin garchig*/
+    & h1 {
+      color: var(--main-bg-color2);
+      background-color: var(--title-bg-color);
+      border-radius: 1rem;
+      padding: 0.7rem;
+      font-size: 1.2rem;
+    }
+
+    /*toglogchiin uzuulelt*/
+    & article {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      font-size: 0.5rem;
+    }
+  }
+
+  /*season husnegt*/
+  .season {
+    background-color: var(--games-bg-color);
+    border-radius: 1rem;
+    margin-top: 4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: var(--font);
+
+    /*husnegtiin garchig*/
+    & h1 {
+      color: var(--main-bg-color2);
+      background-color: var(--title-bg-color);
+      border-radius: 1rem;
+      padding: 0.7rem;
+      font-size: 1.2rem;
+    }
+
+    /*toglogchiin uzuulelt*/
+    & article {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      font-size: 0.5rem;
+    }
+  }
+
+  /*playoffs husnegt*/
+  .playoffs {
+    background-color: var(--games-bg-color);
+    border-radius: 1rem;
+    margin-top: 4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: var(--font);
+
+    /*husnegtiin garchig*/
+    & h1 {
+      color: var(--main-bg-color2);
+      background-color: var(--title-bg-color);
+      border-radius: 1rem;
+      padding: 0.7rem;
+      font-size: 1.2rem;
+    }
+
+    /*toglogchiin uzuulelt*/
+    & article {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      font-size: 0.5rem;
+    }
+  }
+  /*footer*/
+  footer {
+    height: auto;
+    background-color: var(--main-bg-color);
+    margin-top: 4rem;
+    & .title {
+      color: var(--footer-color);
+      font-weight: 300;
+      font-size: 1rem;
+      margin-left: 8rem;
+      padding-top: 2rem;
+    }
+    & .main {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      color: var(--footer-color);
+      & .contact-us {
+        margin-right: 10rem;
+        font-size: 0.7rem;
+        & ul {
+          margin-top: 1rem;
+          & li {
+            list-style-type: none;
+            margin-bottom: 1rem;
+            align-items: center;
+            font-size: 0.6rem;
+          }
+          & img {
+            margin-right: 1rem;
+            width: 0.5rem;
+            height: 0.5rem;
+          }
+        }
+      }
+      & .follow-us {
+        font-size: 0.7rem;
+        & ul {
+          display: flex;
+          & li {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            list-style-type: none;
+          }
+          & img{
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: var(--main-bg-color2);
+    margin: auto;
+    width: 100%;
+  }
+  /*header*/
+  header {
+    height: 7.5rem;
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
+
+    /*team logos*/
+    & .logos {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+
+      /*Logonii hemjee*/
+      & img {
         width: 3.1rem;
         height: 3.1rem;
         padding: 0.6rem 1.2rem;
         transition: transform 500ms;
-    }
-
-      & img:hover{
-          width: 3.2rem;
-          height: 3.2rem;
-          border-bottom: 1px solid var(--main-bg-color2);
-          transform: translateY(-0.3rem);
       }
-  }
-  /*menu*/
-  .menu{
-    padding: 0.58rem;
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    font-size: 17px;
-    font-family: var(--font);
 
-    /*Menu text*/
-    & a{
+      & img:hover {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-bottom: 1px solid var(--main-bg-color2);
+        transform: translateY(-0.3rem);
+      }
+    }
+    /*menu*/
+    .menu {
+      padding: 0.58rem;
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      font-size: 17px;
+      font-family: var(--font);
+
+      /*Menu text*/
+      & a {
         padding: 1.55rem 1.8rem 0.65rem;
         text-decoration: none;
         color: var(--main-bg-color2);
         border-bottom: 3px solid var(--main-bg-color);
-    }
+      }
 
-    /*Menu hover*/
-    & a:hover{
+      /*Menu hover*/
+      & a:hover {
         border-bottom: 3px solid var(--main-bg-color2);
+      }
     }
   }
-}
-/*player profile heseg*/
-.player-profile {
-  display: flex;
-  height: 40rem;
-  background-color: var(--games-bg-color);
-  border-radius: 2rem;
-  margin-top: 5rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
-
-  /*toglogchiin nuur zurag*/
-  & img {
-    width: 25rem;
-    height: 35rem;
-    margin-left: 5rem;
-    margin-top: 5rem;
-  }
-
-  /*toglogchiin huviin dugaar*/
-  & .number {
-    margin-left: 3rem;
-    margin-top: 2rem;
-    font-size: 12rem;
-    color: var(--main-bg-color);
-    font-family: var(--font);;
-  }
-
-  /*toglogchiin huviin medeelel*/
-  & .info {
+  /*player profile heseg*/
+  .player-profile {
+    display: flex;
+    height: 40rem;
+    background-color: var(--games-bg-color);
+    border-radius: 2rem;
     margin-top: 5rem;
     margin-left: 3rem;
-  
-    & .lname {
-      font-size: 3rem;
-      color:  var(--main-bg-color);
-      font-family: var(--font);;
+    margin-right: 3rem;
+
+    /*toglogchiin nuur zurag*/
+    & img {
+      width: 25rem;
+      height: 35rem;
+      margin-left: 5rem;
+      margin-top: 5rem;
     }
-    & .fname {
-      font-size: 6rem;
-      color:  var(--main-bg-color);
-      font-weight: 600;
+
+    /*toglogchiin huviin dugaar*/
+    & .number {
+      margin-left: 3rem;
+      margin-top: 2rem;
+      font-size: 12rem;
+      color: var(--main-bg-color);
       font-family: var(--font);
     }
-    & p {
-      font-size: 1rem;
-      color:  var(--main-bg-color);
-      font-weight: 500;
-      font-size: large;
-      letter-spacing: 1px;
+
+    /*toglogchiin huviin medeelel*/
+    & .info {
+      margin-top: 5rem;
+      margin-left: 3rem;
+
+      & .lname {
+        font-size: 3rem;
+        color: var(--main-bg-color);
+        font-family: var(--font);
+      }
+      & .fname {
+        font-size: 6rem;
+        color: var(--main-bg-color);
+        font-weight: 600;
+        font-family: var(--font);
+      }
+      & p {
+        font-size: 1rem;
+        color: var(--main-bg-color);
+        font-weight: 500;
+        font-size: large;
+        letter-spacing: 1px;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  /*recent matches husnegt*/
+  .recent-matches {
+    background-color: var(--games-bg-color);
+    border-radius: 1rem;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: var(--font);
+
+    /*husnegtiin garchig*/
+    & h1 {
+      color: var(--main-bg-color2);
+      background-color: var(--title-bg-color);
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+
+    /*toglogchiin uzuulelt*/
+    & article {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+
+  /*season husnegt*/
+  .season {
+    background-color: var(--games-bg-color);
+    border-radius: 1rem;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: var(--font);
+
+    /*husngegtiin garchig*/
+    & h1 {
+      color: var(--main-bg-color2);
+      background-color: var(--title-bg-color);
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+
+    /*toglogchiin uzuulelt*/
+    & article {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+
+  /*playoffs husnegt*/
+  .playoffs {
+    background-color: var(--games-bg-color);
+    border-radius: 1rem;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: var(--font);
+
+    /*husnegtiin garchig*/
+    & h1 {
+      color: var(--main-bg-color2);
+      background-color: var(--title-bg-color);
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+
+    /*toglogchiin uzuulelt*/
+    & article {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+  /*footer*/
+  footer {
+    height: auto;
+    background-color: var(--main-bg-color);
+    margin-top: 5rem;
+    & .title {
+      color: var(--footer-color);
+      font-weight: 300;
+      font-size: 1.5rem;
+      margin-left: 18rem;
+      padding-top: 2rem;
+    }
+    & .main {
       margin-top: 2rem;
-    }
-  }
-}
-
-/*recent matches husnegt*/
-.recent-matches {
-  background-color:  var(--games-bg-color);
-  border-radius: 1rem;
-  margin-top: 5rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  font-family: var(--font);
-
-  /*husnegtiin garchig*/
-  & h1 {
-    color:  var(--main-bg-color2);
-    background-color:  var(--title-bg-color);
-    border-radius: 1rem;
-    padding: 1rem;
-  }
-
-  /*toglogchiin uzuulelt*/
-  & article {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-}
-
-/*season husnegt*/
-.season {
-  background-color:  var(--games-bg-color);
-  border-radius: 1rem;
-  margin-top: 5rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  font-family: var(--font);;
-
-  /*husngegtiin garchig*/
-  & h1 {
-    color:  var(--main-bg-color2);
-    background-color:  var(--title-bg-color);
-    border-radius: 1rem;
-    padding: 1rem;
-  }
-
-  /*toglogchiin uzuulelt*/
-  & article {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-}
-
-/*playoffs husnegt*/
-.playoffs {
-  background-color:  var(--games-bg-color);
-  border-radius: 1rem;
-  margin-top: 5rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  font-family: var(--font);;
-
-  /*husnegtiin garchig*/
-  & h1 {
-    color:  var(--main-bg-color2);
-    background-color:  var(--title-bg-color);
-    border-radius: 1rem;
-    padding: 1rem;
-  }
-
-  /*toglogchiin uzuulelt*/
-  & article {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-}
-/*footer*/
-footer{
-  height: auto;
-  background-color: var(--main-bg-color);
-  margin-top: 5rem;
-  & .title{
-    color: var(--footer-color);
-    font-weight: 300;
-    font-size: 1.5rem;
-    margin-left: 18rem;
-    padding-top: 2rem;
-  }
-  & .main{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    color: var(--footer-color);
-    & .contact-us{
-      margin-right: 20rem;
-      & ul{
-        margin-top: 1rem;
-        & li{
-          list-style-type: none;
-          margin-bottom: 1rem;
-          align-items: center;
-        }
-        & img{
-          margin-right: 1rem;
-          
-        }
-
-      }
-    }
-    & .follow-us{
-      & h3{
-
-      }
-      & ul{
-        display: flex;
-        & li{
+      display: flex;
+      justify-content: center;
+      color: var(--footer-color);
+      & .contact-us {
+        margin-right: 20rem;
+        & ul {
           margin-top: 1rem;
-          margin-right: 1rem;
-          list-style-type: none;
+          & li {
+            list-style-type: none;
+            margin-bottom: 1rem;
+            align-items: center;
+          }
+          & img {
+            margin-right: 1rem;
+          }
+        }
+      }
+      & .follow-us {
+        & h3 {
+        }
+        & ul {
+          display: flex;
+          & li {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            list-style-type: none;
+          }
         }
       }
     }
   }
 }
-
-
-
