@@ -120,7 +120,7 @@ header {
 }
 
 main{
-    display: grid
+    display: grid;
 
     & #adimg{
         padding: 3rem;
