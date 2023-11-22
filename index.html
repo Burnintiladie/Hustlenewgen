@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Mongolian Deed League Website (new generation)">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="javascript/home-players.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
@@ -20,7 +21,7 @@
                     <a href="TeamLookup.html"><img src="assets/miners.png" alt="miners logo"></a>
                     <div class="drop-player">
                         <section class="column">
-                            <h3 class="h">Point Guard</h3>
+                            <h3>Point Guard</h3>
                             <a href="Player.html"><span>04</span>Ганцолмон Ган-Эрдэнэ</a>
                             <a href="Player.html"><span>17</span>Ганболд Баттөр</a>
                             <a href="Player.html"><span>44</span>Ганцолмон Болор-Эрдэнэ</a>
@@ -268,7 +269,7 @@
                             <h3>Shooting Guard</h3>
                             <a href="Player.html"><span>23</span>Баянзул Бат-Эрдэнэ</a>
                             <a href="Player.html"><span>02</span>Шинэбилэг Мөнх-Эрдэнэ</a>
-                            <a href="Player.html"><span>03</span>Жаргалсайхан Жамсрандорж</a>
+                            <a href="Player.html"><span>03</span>Жаргал Жамсрандорж</a>
                         </section>
                         <section class="column">
                             <h3>Small Forward</h3>
@@ -598,36 +599,49 @@
 
     <!--Footer--> 
     <footer>
+
     </footer>
 
+    <div>
+        <ul id="mylogo" class="logo">
+
+        </ul>
+    </div>
+
     <script>
-        let slideIndex = 0;
-        showSlides();
 
-        function showSlides() 
-        {
-          let i;
-          let slides = document.getElementsByClassName("slide");
-          let mini = document.getElementsByClassName("m-one");
+        // let slideIndex = 0;
+        // showSlides();
 
-          for (i = 0; i < slides.length; i++) 
-          {
-            slides[i].style.display = "none";  
-          }
-          slideIndex++;
+        // function showSlides() 
+        // {
+        //   let i;
+        //   let slides = document.getElementsByClassName("slide");
+        //   let mini = document.getElementsByClassName("m-one");
 
-          if (slideIndex > slides.length) 
-          {slideIndex = 1}    
+        //   for (i = 0; i < slides.length; i++) 
+        //   {
+        //     slides[i].style.display = "none";  
+        //   }
+        //   slideIndex++;
 
-          for (i = 0; i < mini.length; i++) 
-          {
-            mini[i].className = mini[i].className.replace(" active", "");
-          }
+        //   if (slideIndex > slides.length) 
+        //   {slideIndex = 1}    
 
-          slides[slideIndex-1].style.display = "block";  
-          mini[slideIndex-1].className += " active";
-          setTimeout(showSlides, 5000); 
-        }
+        //   for (i = 0; i < mini.length; i++) 
+        //   {
+        //     mini[i].className = mini[i].className.replace(" active", "");
+        //   }
+
+        //   slides[slideIndex-1].style.display = "block";  
+        //   mini[slideIndex-1].className += " active";
+        //   setTimeout(showSlides, 5000); 
+        // }
+
+
+        const app = new App("mylogo");
+        app.init();
+
     </script>
 </body>
 </html>
