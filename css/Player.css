@@ -190,6 +190,54 @@ header {
     margin-right: 2rem;
   }
 }
+/*footer*/
+footer{
+  height: auto;
+  background-color: var(--main-bg-color);
+  margin-top: 5rem;
+  & .title{
+    color: var(--footer-color);
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-left: 18rem;
+    padding-top: 2rem;
+  }
+  & .main{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    color: var(--footer-color);
+    & .contact-us{
+      margin-right: 20rem;
+      & ul{
+        margin-top: 1rem;
+        & li{
+          list-style-type: none;
+          margin-bottom: 1rem;
+          align-items: center;
+        }
+        & img{
+          margin-right: 1rem;
+          
+        }
+
+      }
+    }
+    & .follow-us{
+      & h3{
+
+      }
+      & ul{
+        display: flex;
+        & li{
+          margin-top: 1rem;
+          margin-right: 1rem;
+          list-style-type: none;
+        }
+      }
+    }
+  }
+}
 
 
 
