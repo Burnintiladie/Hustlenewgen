@@ -273,3 +273,60 @@ footer {
   background-color: #0B193A;
   margin-top: 7rem;
 }
+
+@media only screen and (max-width: 768px) {
+  header {
+    height: auto;
+  }
+
+  header .logos img {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  header .menu a {
+    padding: 1rem 1.5rem 0.5rem;
+  }
+
+  .match-background {
+    height: auto;
+  }
+
+  .match-b-text {
+    margin: 1rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .logoteam1 {
+    height: 10rem;
+  }
+
+  .game {
+    height: auto;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .game img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .team_table {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .Player_card,
+  .employee_card {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .Team_roster,
+  footer {
+    margin: 1rem;
+  }
+}
