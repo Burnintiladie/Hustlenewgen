@@ -28,38 +28,43 @@ class PlayerCard {
     }
 
     async Init() {
-            try {
-                const response = await fetch(
-                    'https://jsonbin.io/v3/b/6567655054105e766fd74656',
-                    {
-                        method: 'GET',
-                        headers: {
-                            'Content-Type': 'players.json',
-                            'X-Master-Key': '$2a$10$CmcNutPQebbacvYxu62Dcu6qi7nQH7o9RCEJREhO6pJnH4ul1il9C',
-                        }
+        try {
+            const response = await fetch(
+                'https://api.jsonbin.io/v3/b/6567655054105e766fd74656',
+                {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Master-Key': '$2a$10$CmcNutPQebbacvYxu62Dcu6qi7nQH7o9RCEJREhO6pJnH4ul1il9C',
                     }
+                }
+            );
+            const data = await response.json();
+    
+            console.log(data); 
+    
+            const targetElement = document.querySelector('.slider');
+            const players = data.record.teams[0].Players;
+    
+            players.forEach(playerData => {
+                const playerCard = new PlayerCard(
+                    playerData.player_number,
+                    playerData["Тоглогчийн нэр"],
+                    playerData.age,
+                    playerData.position,
+                    playerData.height,
+                    playerData.weight
                 );
-                const data = await response.json();
     
-                const targetElement = document.querySelector('.slider');
-                const players = data.teams[0].Players;
-    
-                players.forEach(playerData => {
-                    const playerCard = new PlayerCard(
-                        playerData.player_number,
-                        playerData["Тоглогчийн нэр"],
-                        playerData.age,
-                        playerData.position,
-                        playerData.height,
-                        playerData.weight
-                    );
-    
-                    const articleHTML = playerCard.createHTML();
-                    targetElement.insertAdjacentHTML('beforeend', articleHTML);
-                });
-            } catch (error) {
-                console.error('Error on fetch:', error);
-            };
+                const articleHTML = playerCard.createHTML();
+                targetElement.insertAdjacentHTML('beforeend', articleHTML);
+            });
+        } catch (error) {
+            console.error('Error on fetch:', error);
+        }
+    }
+}    
+
 
 
         // const playerdata = {
@@ -197,5 +202,5 @@ class PlayerCard {
         //     const articleHTML = playerCard.createHTML();
         //     targetElement.insertAdjacentHTML('beforeend', articleHTML);
         // });
-    }
-}
+//     }
+// }
