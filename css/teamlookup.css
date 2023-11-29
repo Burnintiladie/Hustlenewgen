@@ -228,8 +228,9 @@ section h3 {
 
 .slider {
   display: flex;
-  gap: 20px;
-  transition: width 0.5s;
+  flex-wrap: wrap;
+  transition: transform 0.5 ease;
+  gap: 15px;
 }
 
 .Team_roster {
