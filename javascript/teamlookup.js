@@ -43,21 +43,26 @@ class PlayerCard {
     
             console.log(data); 
     
+            const urlParams = new URLSearchParams(window.location.search);
+            const positionFilter = urlParams.get('position');
+
             const targetElement = document.querySelector('.slider');
             const players = data.record.teams[0].Players;
-    
+
             players.forEach(playerData => {
-                const playerCard = new PlayerCard(
-                    playerData.player_number,
-                    playerData["Тоглогчийн нэр"],
-                    playerData.age,
-                    playerData.position,
-                    playerData.height,
-                    playerData.weight
-                );
-    
-                const articleHTML = playerCard.createHTML();
-                targetElement.insertAdjacentHTML('beforeend', articleHTML);
+                if (!positionFilter || positionFilter === playerData.position) {
+                    const playerCard = new PlayerCard(
+                        playerData.player_number,
+                        playerData["Тоглогчийн нэр"],
+                        playerData.age,
+                        playerData.position,
+                        playerData.height,
+                        playerData.weight
+                    );
+
+                    const articleHTML = playerCard.createHTML();
+                    targetElement.insertAdjacentHTML('beforeend', articleHTML);
+                }
             });
         } catch (error) {
             console.error('Error on fetch:', error);
