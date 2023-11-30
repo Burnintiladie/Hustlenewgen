@@ -1,6 +1,6 @@
 class PlayerCard {
     constructor(playerimg ,playerNumber, playerName, age, position, height, weight) {
-        this.playerimg = playerimg;
+        this.playerImage = playerimg;
         this.playerNumber = playerNumber;
         this.playerName = playerName;
         this.age = age;
@@ -8,11 +8,18 @@ class PlayerCard {
         this.height = height;
         this.weight = weight;
     }
-
+//map reduce ashigla
+//map reduce ashigla
+//map reduce ashigla
+//map reduce ashigla
+//map reduce ashigla
+//map reduce ashigla
+//map reduce ashigla
+//map reduce ashigla
     createHTML() {
         return `
         <article class="Player_card">
-          <div class="playercardimg"><img src="${this.playerimg}" alt="playerimg"></div>
+          <div class="playercardimg"><img src="${this.playerImage}" alt="playerImg"></div>
           <div class="player_number">${this.playerNumber}</div>
           <div class="player-card_info_container">
             <div class="player-card_info_table">
@@ -53,7 +60,7 @@ class PlayerCard {
             players.forEach(playerData => {
                 if (!positionFilter || positionFilter === playerData.position) {
                     const playerCard = new PlayerCard(
-                        playerData.playerimg,
+                        playerData.playercardimg,
                         playerData.player_number,
                         playerData["Тоглогчийн нэр"],
                         playerData.age,
