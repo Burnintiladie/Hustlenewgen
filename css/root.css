@@ -11,3 +11,15 @@
 
     
 }
+
+[data-theme="dark"] {
+    --main-bg-color: #c8cdd7;
+      --main-bg-color2: rgb(23, 6, 6);
+      --bg-color: #abaeb6e5;
+      --title-bg-color: #2067f4;
+      --games-bg-color: #040507;
+      --text-color: #190e0e;
+      --footer-color: #231a1a;
+      --main-font: Arial, Helvetica, sans-serif;
+      --font: 'Poppins', sans-serif;
+  }

@@ -23,7 +23,7 @@ class PlayerCard {
           <div class="player_number">${this.playerNumber}</div>
           <div class="player-card_info_container">
             <div class="player-card_info_table">
-              <h6>Тоглогчийн нэр: ${this.playerName}</h6>
+              <h4>${this.playerName}</h4>
               <div></div>
               <p>Age: ${this.age}</p>
               <p>Position: ${this.position}</p>
