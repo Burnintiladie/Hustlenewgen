@@ -504,7 +504,7 @@ nav{
 }
 
 /* Footer heseg */
-footer{
+.footer{
     height: 20rem;
     background-color: var(--main-bg-color);
     
