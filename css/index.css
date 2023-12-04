@@ -505,8 +505,6 @@ nav{
 
 /* Footer heseg */
 .footer{
-    height: 20rem;
-    background-color: var(--main-bg-color);
     
     & .theme-switch-wrapper {
         display: flex;
@@ -551,7 +549,7 @@ nav{
       }
       
     & input:checked + .slider {
-        background-color: #66bb6a;
+        background-color: var(--bg-color);
       }
       
     & input:checked + .slider:before {
@@ -565,6 +563,11 @@ nav{
     & .slider.round:before {
         border-radius: 50%;
       }
+}
+
+footer{
+    height: 20rem;
+    background-color: var(--main-bg-color);
 }
 
 @media screen and (max-width: 1024px) {
