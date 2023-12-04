@@ -8,14 +8,7 @@ class PlayerCard {
         this.height = height;
         this.weight = weight;
     }
-//map reduce ashigla
-//map reduce ashigla
-//map reduce ashigla
-//map reduce ashigla
-//map reduce ashigla
-//map reduce ashigla
-//map reduce ashigla
-//map reduce ashigla
+
     createHTML() {
         return `
         <article class="Player_card">
@@ -35,6 +28,22 @@ class PlayerCard {
       `;
     }
 
+    static reduceHTML(html1, html2) {
+        return html1 + html2;
+    }
+
+    static mapPlayerData(playerData) {
+        return new PlayerCard(
+            playerData.playercardimg,
+            playerData.player_number,
+            playerData["Тоглогчийн нэр"],
+            playerData.age,
+            playerData.position,
+            playerData.height,
+            playerData.weight
+        ).createHTML();
+    }
+
     async Init() {
         try {
             const response = await fetch(
@@ -50,34 +59,26 @@ class PlayerCard {
             const data = await response.json();
     
             console.log(data); 
-    
+
             const urlParams = new URLSearchParams(window.location.search);
             const positionFilter = urlParams.get('position');
-
+                    
             const targetElement = document.querySelector('.slider');
             const players = data.record.teams[0].Players;
 
-            players.forEach(playerData => {
-                if (!positionFilter || positionFilter === playerData.position) {
-                    const playerCard = new PlayerCard(
-                        playerData.playercardimg,
-                        playerData.player_number,
-                        playerData["Тоглогчийн нэр"],
-                        playerData.age,
-                        playerData.position,
-                        playerData.height,
-                        playerData.weight
-                    );
+            const playerHTMLs = players
+                .filter(playerData => !positionFilter || positionFilter === playerData.position)
+                .map(PlayerCard.mapPlayerData);
 
-                    const articleHTML = playerCard.createHTML();
-                    targetElement.insertAdjacentHTML('beforeend', articleHTML);
-                }
-            });
+            const finalHTML = playerHTMLs.reduce(PlayerCard.reduceHTML, '');
+            targetElement.insertAdjacentHTML('beforeend', finalHTML);
         } catch (error) {
             console.error('Error on fetch:', error);
         }
     }
 }    
+
+
 
 
 
