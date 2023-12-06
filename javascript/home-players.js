@@ -1,7 +1,7 @@
 class League {
     constructor(league) 
     {
-       this.teamname  = league.teamname;
+        this.teamname  = league.teamname;
         this.logo = league.logo;
         this.link = league.link;
         this.rosters = league.rosters;
