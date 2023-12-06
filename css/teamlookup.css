@@ -58,7 +58,7 @@ header {
 
 
 .match-background {
-  background-image: url(../assets/Teamcover.png);
+  background-image: url(../assets/team-cover.png);
   background-size: cover;
   height: 600px;
   align-items: center;
