@@ -140,12 +140,12 @@ header{
     }
 }
 
-nav{
+/* nav{
     display: flex;
     justify-content: space-around;
     font-family: var(--font);
     color: white;
-}
+} */
 .not{
     display: flex;
 
@@ -171,6 +171,10 @@ nav{
 /*1 tom zuragnii heseg*/
 .slide {
     display: none;
+    /* background: linear-gradient( to right,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0)
+    ); */
     & img{
         width: 100%;
         height: 80vh;
@@ -503,8 +507,8 @@ nav{
     }
 }
 
-/* Footer heseg */
-.footer{
+
+/* .footer{
     
     & .theme-switch-wrapper {
         display: flex;
@@ -563,7 +567,7 @@ nav{
     & .slider.round:before {
         border-radius: 50%;
       }
-}
+} */
 
 footer{
     height: 20rem;
