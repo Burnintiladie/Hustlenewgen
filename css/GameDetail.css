@@ -238,11 +238,15 @@ header{
         padding: 0.5rem 1rem;
     }
 }
-
-.teamz{
+.cent{
     display: flex;
     justify-content: center;
-    margin: 5rem 0rem;
+}
+.teamz{
+    display: grid;
+    grid-template-rows: auto auto;
+    margin-bottom: 3rem;
+
 
     & img{
         width: 2rem;
@@ -258,6 +262,7 @@ header{
     width: 80vw;
     color: white;
     gap: 0.5px;
+    padding-top: 5rem;
 
     & .head{
         display: flex;
@@ -305,6 +310,8 @@ header{
 
 .first{
     width: 15rem;
+    text-align: left;
+    padding-left: 0.9rem;
 }
 
 footer{

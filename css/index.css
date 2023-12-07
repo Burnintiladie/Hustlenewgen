@@ -140,12 +140,13 @@ header{
     }
 }
 
-/* nav{
+nav{
     display: flex;
     justify-content: space-around;
     font-family: var(--font);
     color: white;
-} */
+}
+
 .not{
     display: flex;
 
@@ -508,7 +509,7 @@ header{
 }
 
 
-/* .footer{
+.footer{
     
     & .theme-switch-wrapper {
         display: flex;
@@ -567,7 +568,7 @@ header{
     & .slider.round:before {
         border-radius: 50%;
       }
-} */
+}
 
 footer{
     height: 20rem;

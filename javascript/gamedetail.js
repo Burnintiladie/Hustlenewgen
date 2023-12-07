@@ -5,6 +5,7 @@ class PlayerStats
         this.teamname = playerstats.teamname;
         this.logo = playerstats.logo;
         this.players = playerstats.players;
+        this.benchplayers = playerstats.benchplayers;
     }
 
     Render()
@@ -36,6 +37,30 @@ class PlayerStats
                     <div>+/-</div>
                 </div>
                 ${this.RenderPlayers()}
+                ${this.RenderBench()}
+
+                <div class="mur a5">
+                 <div class="first">Totals</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                 <div>-</div>
+                </div>
         </div>`;
     }
 
@@ -71,6 +96,39 @@ class PlayerStats
             `;
         }
         return playersHTML;
+    }
+    RenderBench()
+    {
+        let benchHTML = "";
+        for(const benchplayer of this.benchplayers)
+        {
+            benchHTML +=`
+            <div class="mur a4">
+                    <div class="first">${benchplayer.playername}</div>
+                    <div>${benchplayer.minutes}</div>
+                    <div>${benchplayer.points}</div>
+                    <div>${benchplayer.offensive_rebound}</div>
+                    <div>${benchplayer.defensive_rebound}</div>
+                    <div>${benchplayer.rebound}</div>
+                    <div>${benchplayer.assist}</div>
+                    <div>${benchplayer.steal}</div>
+                    <div>${benchplayer.block}</div>
+                    <div>${benchplayer.field_goals_made}</div>
+                    <div>${benchplayer.field_goals_attempted}</div>
+                    <div>${benchplayer.field_golas_percentage}</div>
+                    <div>${benchplayer.three_point_made}</div>
+                    <div>${benchplayer.three_point_attempted}</div>
+                    <div>${benchplayer.three_point_percentage}</div>
+                    <div>${benchplayer.free_throws_made}</div>
+                    <div>${benchplayer.free_throws_attempted}</div>
+                    <div>${benchplayer.free_throws_percentage}</div>
+                    <div>${benchplayer.turnover}</div>
+                    <div>${benchplayer.personal_foul}</div>
+                    <div>${benchplayer.plus_minus}</div>
+            </div>
+            `;
+        }
+        return benchHTML;
     }
 }
 
@@ -203,6 +261,9 @@ class Appp
                         personal_foul: 5,
                         plus_minus: 4,
                     },
+                    
+                ],
+                benchplayers: [
                     {
                         playername: "Нэмэхбаяр Эрдэмтөгс",
                         minutes: "9:11",
@@ -318,224 +379,225 @@ class Appp
                         personal_foul: 1,
                         plus_minus: -18,
                     },
-                    
                 ]
         
         
             },
-            // {
-            //     teamname: "Erdenet Miners",
-            //     logo: "assets/miners.png",
-            //     players: [
-            //         {
-            //             playername: "Pendarvis Williams",
-            //             minutes: "34:40",
-            //             points: 19,
-            //             offensive_rebound: 2,
-            //             defensive_rebound: 4,
-            //             rebound: 6,
-            //             assist: 3,
-            //             steal: 5,
-            //             block: 2,
-            //             field_goals_made: 7,
-            //             field_goals_attempted: 14,
-            //             field_golas_percentage: 50.0,
-            //             three_point_made: 0,
-            //             three_point_attempted: 4,
-            //             three_point_percentage: 0.0,
-            //             free_throws_made: 5,
-            //             free_throws_attempted: 5,
-            //             free_throws_percentage: 100.0,
-            //             turnover: 1,
-            //             personal_foul: 2,
-            //             plus_minus: 1,
-            //         },
-            //         {
-            //             playername: "Энхбаатар Мөнхбаяр",
-            //             minutes: "15:53",
-            //             points: 8,
-            //             offensive_rebound: 1,
-            //             defensive_rebound: 0,
-            //             rebound: 1,
-            //             assist: 0,
-            //             steal: 0,
-            //             block: 1,
-            //             field_goals_made: 3,
-            //             field_goals_attempted: 5,
-            //             field_golas_percentage: 60.0,
-            //             three_point_made: 1,
-            //             three_point_attempted: 2,
-            //             three_point_percentage: 50.0,
-            //             free_throws_made: 1,
-            //             free_throws_attempted: 3,
-            //             free_throws_percentage: 33.3,
-            //             turnover: 3,
-            //             personal_foul: 4,
-            //             plus_minus: -5,
-            //         },
-            //         {
-            //             playername: "Энхбат Дорж-Арилд",
-            //             minutes: "12:08",
-            //             points: 2,
-            //             offensive_rebound: 0,
-            //             defensive_rebound: 0,
-            //             rebound: 0,
-            //             assist: 1,
-            //             steal: 0,
-            //             block: 0,
-            //             field_goals_made: 1,
-            //             field_goals_attempted: 1,
-            //             field_golas_percentage: 100.0,
-            //             three_point_made: 0,
-            //             three_point_attempted: 0,
-            //             three_point_percentage: 0,
-            //             free_throws_made: 0,
-            //             free_throws_attempted: 0,
-            //             free_throws_percentage: 0,
-            //             turnover: 1,
-            //             personal_foul: 1,
-            //             plus_minus: 1,
-            //         },
-            //         {
-            //             playername: "Оюунболд Очирбат",
-            //             minutes: "12:33",
-            //             points: 3,
-            //             offensive_rebound: 0,
-            //             defensive_rebound: 1,
-            //             rebound: 1,
-            //             assist: 0,
-            //             steal: 1,
-            //             block: 0,
-            //             field_goals_made: 1,
-            //             field_goals_attempted: 2,
-            //             field_golas_percentage: 50.0,
-            //             three_point_made: 0,
-            //             three_point_attempted: 0,
-            //             three_point_percentage: 0,
-            //             free_throws_made: 1,
-            //             free_throws_attempted: 2,
-            //             free_throws_percentage: 50.0,
-            //             turnover: 0,
-            //             personal_foul: 1,
-            //             plus_minus: 5,
-            //         },
-            //         {
-            //             playername: "Ганцолмон Болор-Эрдэнэ",
-            //             minutes: "28:13",
-            //             points: 7,
-            //             offensive_rebound: 1,
-            //             defensive_rebound: 0,
-            //             rebound: 1,
-            //             assist: 6,
-            //             steal: 3,
-            //             block: 0,
-            //             field_goals_made: 1,
-            //             field_goals_attempted: 6,
-            //             field_golas_percentage: 16.7,
-            //             three_point_made: 0,
-            //             three_point_attempted: 3,
-            //             three_point_percentage: 0.0,
-            //             free_throws_made: 5,
-            //             free_throws_attempted: 6,
-            //             free_throws_percentage: 83.3,
-            //             turnover: 5,
-            //             personal_foul: 5,
-            //             plus_minus: -4,
-            //         },
-            //         {
-            //             playername: "Ариунболд Тэмүүжин",
-            //             minutes: "31:24",
-            //             points: 13,
-            //             offensive_rebound: 0,
-            //             defensive_rebound: 6,
-            //             rebound: 6,
-            //             assist: 3,
-            //             steal: 1,
-            //             block: 0,
-            //             field_goals_made: 3,
-            //             field_goals_attempted: 5,
-            //             field_golas_percentage: 60.0,
-            //             three_point_made: 2,
-            //             three_point_attempted: 2,
-            //             three_point_percentage: 100.0,
-            //             free_throws_made: 5,
-            //             free_throws_attempted: 6,
-            //             free_throws_percentage: 83.3,
-            //             turnover: 2,
-            //             personal_foul: 2,
-            //             plus_minus: 9,
-            //         },
-            //         {
-            //             playername: "Ганцолмон Ган-эрдэнэ",
-            //             minutes: "31:59",
-            //             points: 13,
-            //             offensive_rebound: 3,
-            //             defensive_rebound: 3,
-            //             rebound: 6,
-            //             assist: 2,
-            //             steal: 0,
-            //             block: 0,
-            //             field_goals_made: 5,
-            //             field_goals_attempted: 9,
-            //             field_golas_percentage: 55.6,
-            //             three_point_made: 0,
-            //             three_point_attempted: 1,
-            //             three_point_percentage: 0.0,
-            //             free_throws_made: 3,
-            //             free_throws_attempted: 3,
-            //             free_throws_percentage: 100.0,
-            //             turnover: 4,
-            //             personal_foul: 2,
-            //             plus_minus: 7,
-            //         },
-            //         {
-            //             playername: "Намжилдорж Золжаргал",
-            //             minutes: "10:45",
-            //             points: 0,
-            //             offensive_rebound: 0,
-            //             defensive_rebound: 1,
-            //             rebound: 1,
-            //             assist: 1,
-            //             steal: 1,
-            //             block: 0,
-            //             field_goals_made: 0,
-            //             field_goals_attempted: 5,
-            //             field_golas_percentage: 0.0,
-            //             three_point_made: 0,
-            //             three_point_attempted: 4,
-            //             three_point_percentage: 0.0,
-            //             free_throws_made: 0,
-            //             free_throws_attempted: 0,
-            //             free_throws_percentage: 0,
-            //             turnover: 1,
-            //             personal_foul: 1,
-            //             plus_minus: 3,
-            //         },
-            //         {
-            //             playername: "Тунгалаг Санчир",
-            //             minutes: "22:25",
-            //             points: 19,
-            //             offensive_rebound: 0,
-            //             defensive_rebound: 4,
-            //             rebound: 4,
-            //             assist: 1,
-            //             steal: 2,
-            //             block: 0,
-            //             field_goals_made: 7,
-            //             field_goals_attempted: 14,
-            //             field_golas_percentage: 50.0,
-            //             three_point_made: 2,
-            //             three_point_attempted: 6,
-            //             three_point_percentage: 33.3,
-            //             free_throws_made: 3,
-            //             free_throws_attempted: 5,
-            //             free_throws_percentage: 60.0,
-            //             turnover: 1,
-            //             personal_foul: 2,
-            //             plus_minus: 0,
-            //         },
-            //     ]
-            // },
+            {
+                teamname: "Erdenet Miners",
+                logo: "assets/miners.png",
+                players: [
+                    {
+                        playername: "Pendarvis Williams",
+                        minutes: "34:40",
+                        points: 19,
+                        offensive_rebound: 2,
+                        defensive_rebound: 4,
+                        rebound: 6,
+                        assist: 3,
+                        steal: 5,
+                        block: 2,
+                        field_goals_made: 7,
+                        field_goals_attempted: 14,
+                        field_golas_percentage: "50.0",
+                        three_point_made: 0,
+                        three_point_attempted: 4,
+                        three_point_percentage: "0.0",
+                        free_throws_made: 5,
+                        free_throws_attempted: 5,
+                        free_throws_percentage: "100.0",
+                        turnover: 1,
+                        personal_foul: 2,
+                        plus_minus: 1,
+                    },
+                    {
+                        playername: "Энхбаатар Мөнхбаяр",
+                        minutes: "15:53",
+                        points: 8,
+                        offensive_rebound: 1,
+                        defensive_rebound: 0,
+                        rebound: 1,
+                        assist: 0,
+                        steal: 0,
+                        block: 1,
+                        field_goals_made: 3,
+                        field_goals_attempted: 5,
+                        field_golas_percentage: "60.0",
+                        three_point_made: 1,
+                        three_point_attempted: 2,
+                        three_point_percentage: "50.0",
+                        free_throws_made: 1,
+                        free_throws_attempted: 3,
+                        free_throws_percentage: "33.3",
+                        turnover: 3,
+                        personal_foul: 4,
+                        plus_minus: -5,
+                    },
+                    {
+                        playername: "Энхбат Дорж-Арилд",
+                        minutes: "12:08",
+                        points: 2,
+                        offensive_rebound: 0,
+                        defensive_rebound: 0,
+                        rebound: 0,
+                        assist: 1,
+                        steal: 0,
+                        block: 0,
+                        field_goals_made: 1,
+                        field_goals_attempted: 1,
+                        field_golas_percentage: "100.0",
+                        three_point_made: 0,
+                        three_point_attempted: 0,
+                        three_point_percentage: "0.0",
+                        free_throws_made: 0,
+                        free_throws_attempted: 0,
+                        free_throws_percentage: "0.0",
+                        turnover: 1,
+                        personal_foul: 1,
+                        plus_minus: 1,
+                    },
+                    {
+                        playername: "Оюунболд Очирбат",
+                        minutes: "12:33",
+                        points: 3,
+                        offensive_rebound: 0,
+                        defensive_rebound: 1,
+                        rebound: 1,
+                        assist: 0,
+                        steal: 1,
+                        block: 0,
+                        field_goals_made: 1,
+                        field_goals_attempted: 2,
+                        field_golas_percentage: "50.0",
+                        three_point_made: 0,
+                        three_point_attempted: 0,
+                        three_point_percentage: "0.0",
+                        free_throws_made: 1,
+                        free_throws_attempted: 2,
+                        free_throws_percentage: "50.0",
+                        turnover: 0,
+                        personal_foul: 1,
+                        plus_minus: 5,
+                    },
+                    {
+                        playername: "Ганцолмон Болор-Эрдэнэ",
+                        minutes: "28:13",
+                        points: 7,
+                        offensive_rebound: 1,
+                        defensive_rebound: 0,
+                        rebound: 1,
+                        assist: 6,
+                        steal: 3,
+                        block: 0,
+                        field_goals_made: 1,
+                        field_goals_attempted: 6,
+                        field_golas_percentage: 16.7,
+                        three_point_made: 0,
+                        three_point_attempted: 3,
+                        three_point_percentage: "0.0",
+                        free_throws_made: 5,
+                        free_throws_attempted: 6,
+                        free_throws_percentage: "83.3",
+                        turnover: 5,
+                        personal_foul: 5,
+                        plus_minus: -4,
+                    },
+                ],
+                benchplayers: [
+                    {
+                        playername: "Ариунболд Тэмүүжин",
+                        minutes: "31:24",
+                        points: 13,
+                        offensive_rebound: 0,
+                        defensive_rebound: 6,
+                        rebound: 6,
+                        assist: 3,
+                        steal: 1,
+                        block: 0,
+                        field_goals_made: 3,
+                        field_goals_attempted: 5,
+                        field_golas_percentage: "60.0",
+                        three_point_made: 2,
+                        three_point_attempted: 2,
+                        three_point_percentage: "100.0",
+                        free_throws_made: 5,
+                        free_throws_attempted: 6,
+                        free_throws_percentage: "83.3",
+                        turnover: 2,
+                        personal_foul: 2,
+                        plus_minus: 9,
+                    },
+                    {
+                        playername: "Ганцолмон Ган-эрдэнэ",
+                        minutes: "31:59",
+                        points: 13,
+                        offensive_rebound: 3,
+                        defensive_rebound: 3,
+                        rebound: 6,
+                        assist: 2,
+                        steal: 0,
+                        block: 0,
+                        field_goals_made: 5,
+                        field_goals_attempted: 9,
+                        field_golas_percentage: "55.6",
+                        three_point_made: 0,
+                        three_point_attempted: 1,
+                        three_point_percentage: "0.0",
+                        free_throws_made: 3,
+                        free_throws_attempted: 3,
+                        free_throws_percentage: "100.0",
+                        turnover: 4,
+                        personal_foul: 2,
+                        plus_minus: 7,
+                    },
+                    {
+                        playername: "Намжилдорж Золжаргал",
+                        minutes: "10:45",
+                        points: 0,
+                        offensive_rebound: 0,
+                        defensive_rebound: 1,
+                        rebound: 1,
+                        assist: 1,
+                        steal: 1,
+                        block: 0,
+                        field_goals_made: 0,
+                        field_goals_attempted: 5,
+                        field_golas_percentage: "0.0",
+                        three_point_made: 0,
+                        three_point_attempted: 4,
+                        three_point_percentage: "0.0",
+                        free_throws_made: 0,
+                        free_throws_attempted: 0,
+                        free_throws_percentage: "0.0",
+                        turnover: 1,
+                        personal_foul: 1,
+                        plus_minus: 3,
+                    },
+                    {
+                        playername: "Тунгалаг Санчир",
+                        minutes: "22:25",
+                        points: 19,
+                        offensive_rebound: 0,
+                        defensive_rebound: 4,
+                        rebound: 4,
+                        assist: 1,
+                        steal: 2,
+                        block: 0,
+                        field_goals_made: 7,
+                        field_goals_attempted: 14,
+                        field_golas_percentage: "50.0",
+                        three_point_made: 2,
+                        three_point_attempted: 6,
+                        three_point_percentage: "33.3",
+                        free_throws_made: 3,
+                        free_throws_attempted: 5,
+                        free_throws_percentage: "60.0",
+                        turnover: 1,
+                        personal_foul: 2,
+                        plus_minus: 0,
+                    },
+                ]
+            },
         ]
 
         const targetElement = document.getElementById(this.target);
