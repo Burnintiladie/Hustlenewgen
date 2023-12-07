@@ -213,7 +213,7 @@
       justify-content: center;
       color: var(--footer-color);
       & .contact-us {
-        margin-right: 10rem;
+        margin-right: 6rem;
         font-size: 0.7rem;
         & ul {
           margin-top: 1rem;
@@ -462,7 +462,7 @@
       justify-content: center;
       color: var(--footer-color);
       & .contact-us {
-        margin-right: 10rem;
+        margin-right: 8rem;
         font-size: 0.7rem;
         & ul {
           margin-top: 1rem;
@@ -563,7 +563,7 @@
     display: flex;
     height: 16rem;
     background-color: var(--games-bg-color);
-    border-radius: 2rem;
+    border-radius: 1rem;
     margin-top: 5rem;
     margin-left: 3rem;
     margin-right: 3rem;
@@ -614,8 +614,8 @@
   /*recent matches husnegt*/
   .recent-matches {
     background-color: var(--games-bg-color);
-    border-radius: 1rem;
-    margin-top: 5rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
     margin-left: 3rem;
     margin-right: 3rem;
     font-family: var(--font);
@@ -624,8 +624,9 @@
     & h1 {
       color: var(--main-bg-color2);
       background-color: var(--title-bg-color);
-      border-radius: 1rem;
-      padding: 1rem;
+      border-radius: 0.5rem;
+      padding: 0.2rem;
+      font-size: 1rem;
     }
 
     /*toglogchiin uzuulelt*/
@@ -634,14 +635,17 @@
       justify-content: space-between;
       margin-left: 2rem;
       margin-right: 2rem;
+      & p{
+        font-size: 0.5rem;
+      }
     }
   }
 
   /*season husnegt*/
   .season {
     background-color: var(--games-bg-color);
-    border-radius: 1rem;
-    margin-top: 5rem;
+    border-radius: 0.5rem;
+    margin-top: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
     font-family: var(--font);
@@ -650,8 +654,9 @@
     & h1 {
       color: var(--main-bg-color2);
       background-color: var(--title-bg-color);
-      border-radius: 1rem;
-      padding: 1rem;
+      border-radius: 0.5rem;
+      padding: 0.2rem;
+      font-size: 1rem;
     }
 
     /*toglogchiin uzuulelt*/
@@ -660,13 +665,16 @@
       justify-content: space-between;
       margin-left: 2rem;
       margin-right: 2rem;
+      & p{
+        font-size: 0.5rem;
+      }
     }
   }
 
   /*playoffs husnegt*/
   .playoffs {
     background-color: var(--games-bg-color);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     margin-top: 5rem;
     margin-left: 3rem;
     margin-right: 3rem;
@@ -676,8 +684,9 @@
     & h1 {
       color: var(--main-bg-color2);
       background-color: var(--title-bg-color);
-      border-radius: 1rem;
-      padding: 1rem;
+      border-radius: 0.5rem;
+      padding: 0.2rem;
+      font-size: 1rem;
     }
 
     /*toglogchiin uzuulelt*/
@@ -686,18 +695,21 @@
       justify-content: space-between;
       margin-left: 2rem;
       margin-right: 2rem;
+      & p{
+        font-size: 0.5rem;
+      }
     }
   }
   /*footer*/
   footer {
     height: auto;
     background-color: var(--main-bg-color);
-    margin-top: 5rem;
+    margin-top: 4rem;
     & .title {
       color: var(--footer-color);
       font-weight: 300;
-      font-size: 1.5rem;
-      margin-left: 5rem;
+      font-size: 1rem;
+      margin-left: 8rem;
       padding-top: 2rem;
     }
     & .main {
@@ -706,28 +718,35 @@
       justify-content: center;
       color: var(--footer-color);
       & .contact-us {
-        margin-right: 20rem;
+        margin-right: 8rem;
+        font-size: 0.7rem;
         & ul {
-          margin-top: 1rem;
+          margin-top: 0.5rem;
           & li {
             list-style-type: none;
             margin-bottom: 1rem;
             align-items: center;
+            font-size: 0.6rem;
           }
           & img {
             margin-right: 1rem;
+            width: 0.5rem;
+            height: 0.5rem;
           }
         }
       }
       & .follow-us {
-        & h3 {
-        }
+        font-size: 0.7rem;
         & ul {
           display: flex;
           & li {
-            margin-top: 1rem;
+            margin-top: 0.5rem;
             margin-right: 1rem;
             list-style-type: none;
+          }
+          & img {
+            width: 2rem;
+            height: 2rem;
           }
         }
       }
@@ -851,7 +870,7 @@
   .recent-matches {
     background-color: var(--games-bg-color);
     border-radius: 1rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
     font-family: var(--font);
@@ -861,7 +880,8 @@
       color: var(--main-bg-color2);
       background-color: var(--title-bg-color);
       border-radius: 1rem;
-      padding: 1rem;
+      padding: 0.4rem;
+      font-size: 1.2rem;
     }
 
     /*toglogchiin uzuulelt*/
@@ -870,6 +890,9 @@
       justify-content: space-between;
       margin-left: 2rem;
       margin-right: 2rem;
+      & p{
+        font-size: 0.8rem;
+      }
     }
   }
 
@@ -877,7 +900,7 @@
   .season {
     background-color: var(--games-bg-color);
     border-radius: 1rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
     font-family: var(--font);
@@ -887,7 +910,8 @@
       color: var(--main-bg-color2);
       background-color: var(--title-bg-color);
       border-radius: 1rem;
-      padding: 1rem;
+      padding: 0.4rem;
+      font-size: 1.2rem;
     }
 
     /*toglogchiin uzuulelt*/
@@ -896,6 +920,9 @@
       justify-content: space-between;
       margin-left: 2rem;
       margin-right: 2rem;
+      & p {
+        font-size: 0.8rem;
+      }
     }
   }
 
@@ -903,7 +930,7 @@
   .playoffs {
     background-color: var(--games-bg-color);
     border-radius: 1rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
     font-family: var(--font);
@@ -913,7 +940,8 @@
       color: var(--main-bg-color2);
       background-color: var(--title-bg-color);
       border-radius: 1rem;
-      padding: 1rem;
+      padding: 0.4rem;
+      font-size: 1.2rem;
     }
 
     /*toglogchiin uzuulelt*/
@@ -922,18 +950,21 @@
       justify-content: space-between;
       margin-left: 2rem;
       margin-right: 2rem;
+      & p{
+        font-size: 0.8rem;
+      }
     }
   }
   /*footer*/
   footer {
     height: auto;
     background-color: var(--main-bg-color);
-    margin-top: 5rem;
+    margin-top: 4rem;
     & .title {
       color: var(--footer-color);
       font-weight: 300;
-      font-size: 1.5rem;
-      margin-left: 5rem;
+      font-size: 1rem;
+      margin-left: 6rem;
       padding-top: 2rem;
     }
     & .main {
@@ -942,9 +973,10 @@
       justify-content: center;
       color: var(--footer-color);
       & .contact-us {
-        margin-right: 20rem;
+        margin-right: 12rem;
+        font-size: 0.7rem;
         & ul {
-          margin-top: 1rem;
+          margin-top: 0.5rem;
           & li {
             list-style-type: none;
             margin-bottom: 1rem;
@@ -952,18 +984,25 @@
           }
           & img {
             margin-right: 1rem;
+            width: 0.8rem;
+            height: 0.8rem;
           }
         }
       }
       & .follow-us {
+        font-size: 0.7rem;
         & h3 {
         }
         & ul {
           display: flex;
           & li {
-            margin-top: 1rem;
+            margin-top: 0.5rem;
             margin-right: 1rem;
             list-style-type: none;
+          }
+          & img{
+            width: 3rem;
+            height: 3rem;
           }
         }
       }
@@ -1036,7 +1075,7 @@
     height: 32rem;
     background-color: var(--games-bg-color);
     border-radius: 2rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
 
@@ -1077,7 +1116,6 @@
         font-size: 1rem;
         color: var(--main-bg-color);
         font-weight: 500;
-        font-size: large;
         letter-spacing: 1px;
         margin-top: 1.5rem;
       }
@@ -1088,7 +1126,7 @@
   .recent-matches {
     background-color: var(--games-bg-color);
     border-radius: 1rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
     font-family: var(--font);
@@ -1098,7 +1136,8 @@
       color: var(--main-bg-color2);
       background-color: var(--title-bg-color);
       border-radius: 1rem;
-      padding: 1rem;
+      padding: 0.5rem;
+      font-size: 1.3rem;
     }
 
     /*toglogchiin uzuulelt*/
@@ -1107,6 +1146,9 @@
       justify-content: space-between;
       margin-left: 2rem;
       margin-right: 2rem;
+      & p{
+        font-size: 0.9rem;
+      }
     }
   }
 
@@ -1114,7 +1156,7 @@
   .season {
     background-color: var(--games-bg-color);
     border-radius: 1rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
     font-family: var(--font);
@@ -1124,7 +1166,8 @@
       color: var(--main-bg-color2);
       background-color: var(--title-bg-color);
       border-radius: 1rem;
-      padding: 1rem;
+      padding: 0.5rem;
+      font-size: 1.3rem;
     }
 
     /*toglogchiin uzuulelt*/
@@ -1133,6 +1176,9 @@
       justify-content: space-between;
       margin-left: 2rem;
       margin-right: 2rem;
+      & p{
+        font-size: 0.9rem;
+      }
     }
   }
 
@@ -1140,7 +1186,7 @@
   .playoffs {
     background-color: var(--games-bg-color);
     border-radius: 1rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
     font-family: var(--font);
@@ -1150,7 +1196,8 @@
       color: var(--main-bg-color2);
       background-color: var(--title-bg-color);
       border-radius: 1rem;
-      padding: 1rem;
+      padding: 0.5rem;
+      font-size: 1.3rem;
     }
 
     /*toglogchiin uzuulelt*/
@@ -1159,18 +1206,21 @@
       justify-content: space-between;
       margin-left: 2rem;
       margin-right: 2rem;
+      & p{
+        font-size: 0.9rem;
+      }
     }
   }
   /*footer*/
   footer {
     height: auto;
     background-color: var(--main-bg-color);
-    margin-top: 5rem;
+    margin-top: 4rem;
     & .title {
       color: var(--footer-color);
       font-weight: 300;
-      font-size: 1.5rem;
-      margin-left: 5rem;
+      font-size: 1.3rem;
+      margin-left: 12rem;
       padding-top: 2rem;
     }
     & .main {
@@ -1179,7 +1229,8 @@
       justify-content: center;
       color: var(--footer-color);
       & .contact-us {
-        margin-right: 20rem;
+        margin-right: 14rem;
+        font-size: 0.9rem;
         & ul {
           margin-top: 1rem;
           & li {
@@ -1189,10 +1240,13 @@
           }
           & img {
             margin-right: 1rem;
+            width: 1rem;
+            height: 1rem;
           }
         }
       }
       & .follow-us {
+        font-size: 0.9rem;
         & h3 {
         }
         & ul {
@@ -1201,6 +1255,10 @@
             margin-top: 1rem;
             margin-right: 1rem;
             list-style-type: none;
+          }
+          & img{
+            width: 3.5rem;
+            height: 3.5rem;
           }
         }
       }
@@ -1273,7 +1331,7 @@
     height: 36rem;
     background-color: var(--games-bg-color);
     border-radius: 2rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-left: 3rem;
     margin-right: 3rem;
 
@@ -1314,7 +1372,6 @@
         font-size: 1rem;
         color: var(--main-bg-color);
         font-weight: 500;
-        font-size: large;
         letter-spacing: 1px;
         margin-top: 2rem;
       }
@@ -1325,7 +1382,7 @@
   .recent-matches {
     background-color: var(--games-bg-color);
     border-radius: 1rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-left: 3rem;
     margin-right: 3rem;
     font-family: var(--font);
@@ -1351,7 +1408,7 @@
   .season {
     background-color: var(--games-bg-color);
     border-radius: 1rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-left: 3rem;
     margin-right: 3rem;
     font-family: var(--font);
@@ -1377,7 +1434,7 @@
   .playoffs {
     background-color: var(--games-bg-color);
     border-radius: 1rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-left: 3rem;
     margin-right: 3rem;
     font-family: var(--font);
@@ -1402,11 +1459,11 @@
   footer {
     height: auto;
     background-color: var(--main-bg-color);
-    margin-top: 5rem;
+    margin-top: 4rem;
     & .title {
       color: var(--footer-color);
       font-weight: 300;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin-left: 12rem;
       padding-top: 2rem;
     }
@@ -1416,7 +1473,8 @@
       justify-content: center;
       color: var(--footer-color);
       & .contact-us {
-        margin-right: 20rem;
+        margin-right: 16rem;
+        font-size: 0.9rem;
         & ul {
           margin-top: 1rem;
           & li {
@@ -1426,10 +1484,13 @@
           }
           & img {
             margin-right: 1rem;
+            width: 1rem;
+            height: 1rem;
           }
         }
       }
       & .follow-us {
+        font-size: 0.9rem;
         & h3 {
         }
         & ul {
@@ -1438,6 +1499,10 @@
             margin-top: 1rem;
             margin-right: 1rem;
             list-style-type: none;
+          }
+          & img{
+            width: 3.5rem;
+            height: 3.5rem;
           }
         }
       }
@@ -1548,7 +1613,6 @@
         font-family: var(--font);
       }
       & p {
-        font-size: 1rem;
         color: var(--main-bg-color);
         font-weight: 500;
         font-size: large;
@@ -1653,7 +1717,7 @@
       justify-content: center;
       color: var(--footer-color);
       & .contact-us {
-        margin-right: 20rem;
+        margin-right: 18rem;
         & ul {
           margin-top: 1rem;
           & li {
@@ -1785,7 +1849,6 @@
         font-family: var(--font);
       }
       & p {
-        font-size: 1rem;
         color: var(--main-bg-color);
         font-weight: 500;
         font-size: large;
