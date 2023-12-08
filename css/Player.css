@@ -546,7 +546,7 @@
 
       /*Menu text*/
       & a {
-        padding: 1.55rem 1.8rem 0.45rem;
+        padding: 1.55rem 1.8rem 0.5rem;
         text-decoration: none;
         color: var(--main-bg-color2);
         border-bottom: 3px solid var(--main-bg-color);
@@ -578,7 +578,7 @@
 
     /*toglogchiin huviin dugaar*/
     & .number {
-      margin-left: 1rem;
+      margin-left: 0.5rem;
       margin-top: 2rem;
       font-size: 4rem;
       color: var(--main-bg-color);
@@ -588,7 +588,7 @@
     /*toglogchiin huviin medeelel*/
     & .info {
       margin-top: 3rem;
-      margin-left: 1rem;
+      margin-left: 0.5rem;
 
       & .lname {
         font-size: 1rem;
