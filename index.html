@@ -27,16 +27,19 @@
                 app.init();
             </script>
         </div>
+
         <!--Main menu bar--> 
         <nav>
             
-            <div class="footer">
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                  </label>
-                </div>
+            <div class="dark">
+                <label class="switch" for="checkbox">
+                    <input type="checkbox" id="checkbox">
+                    <div class="shil round">
+                        <span class="material-symbols-outlined" id="dark">nights_stay</span>
+                        <span class="material-symbols-outlined" id="light">partly_cloudy_day</span>
+                    </div>
+                </label>
+                <script src="javascript/darkmode.js"></script>
             </div>
             
             <ul class="menu">
@@ -46,13 +49,25 @@
             </ul>
             
             <div class="not">
-                <div><span class="material-symbols-outlined">
-                    notifications
-                    </span></div>
-                <div>Notify</div>
-            </div>
+                <div class="honh">
+                    <span class="material-symbols-outlined">notifications</span>
+                </div>
+                <div class="not-sec">
+                    <button class="notbut" onclick="emaildrop()" id="notbtn">
+                        <span class="material-symbols-outlined">email</span>
+                        Notify
+                    </button>
 
-            <script src="javascript/darkmode.js"></script>
+                    <div class="email" id="email-drop">
+                        <form action="">
+                            <label for="">Email:</label>
+                            <input type="email" class="email-input" placeholder="youremail@example.com">
+                            <input type="submit" class="email-btn" value="submit">
+                        </form>
+                    </div>
+                    <script src="javascript/email.js"></script>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -63,26 +78,17 @@
 
             <!-- Tom zurag -->
             <div class="big">
-
                 <!-- Poster 1 -->
-                <div class="slide a">
-                   <img src="assets/cover.jpeg">
-                </div>
+                <div class="slide a1"></div>
 
                  <!-- Poster 2 -->
-                <div class="slide a">
-                    <img src="assets/mgl.jpg">
-                </div>
+                <div class="slide a2"></div>
                 
                  <!-- Poster 3 -->
-                <div class="slide a">
-                    <img src="assets/allstar-cover.jpg">
-                 </div>
+                <div class="slide a3"></div>
 
                   <!-- Poster 4 -->
-                <div class="slide a">
-                    <img src="assets/2023.jpg">
-                </div>   
+                <div class="slide a4"></div>   
             </div>
 
             <!-- Jijig zuragnuud -->
@@ -95,7 +101,7 @@
 
                   <!-- Poster 2 -->
                 <div class="m-one">
-                    <img src="assets/mgl.jpg">
+                    <img src="assets/start.jpg">
                 </div>
 
                  <!-- Poster 3 -->
@@ -105,7 +111,7 @@
 
                  <!-- Poster 4 -->
                 <div class="m-one">
-                    <img src="assets/2023.jpg">
+                    <img src="assets/monh.jpg">
                 </div>
             </div>
             <script src="javascript/home-cover.js"></script>
@@ -350,7 +356,18 @@
 
     <!--Footer--> 
     <footer>
-        
+        <!-- <div class="dark">
+            <div class="light">
+                <label class="switch" for="checkbox">
+                    <input type="checkbox" id="checkbox">
+                    <div class="shil round">
+                        <span class="material-symbols-outlined" id="dark">nights_stay</span>
+                        <span class="material-symbols-outlined" id="light">partly_cloudy_day</span>
+                    </div>
+                </label>
+            </div>
+            <script src="javascript/darkmode.js"></script>
+        </div> -->
     </footer>
     
     
