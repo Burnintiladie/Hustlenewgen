@@ -31,33 +31,30 @@
         <!--Main menu bar--> 
         <nav>
             
-            <div class="dark">
-                <label class="switch" for="checkbox">
-                    <input type="checkbox" id="checkbox">
-                    <div class="shil round">
-                        <span class="material-symbols-outlined" id="dark">nights_stay</span>
-                        <span class="material-symbols-outlined" id="light">partly_cloudy_day</span>
-                    </div>
-                </label>
-                <script src="javascript/darkmode.js"></script>
-            </div>
-            
+            <!-- menu heseg -->
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Games.html">Games</a></li>
                 <li><a href="League.html">League</a></li>
             </ul>
-            
+
+            <!-- button heseg(honh, email, dark light) -->
             <div class="not">
+
+                <!-- honh -->
                 <div class="honh">
                     <span class="material-symbols-outlined">notifications</span>
                 </div>
+
+                <!-- email button heseg -->
                 <div class="not-sec">
+                    <!-- email button -->
                     <button class="notbut" onclick="emaildrop()" id="notbtn">
                         <span class="material-symbols-outlined">email</span>
                         Notify
                     </button>
-
+                     
+                    <!-- daranguut unaj ireh heseg -->
                     <div class="email" id="email-drop">
                         <form action="">
                             <label for="">Email:</label>
@@ -67,7 +64,21 @@
                     </div>
                     <script src="javascript/email.js"></script>
                 </div>
+
+                <!-- dark light mode button -->
+                <div class="dark">
+                    <label class="switch" for="checkbox">
+                        <input type="checkbox" id="checkbox">
+
+                        <div class="shil round">
+                            <span class="material-symbols-outlined" id="dark">nights_stay</span>
+                            <span class="material-symbols-outlined" id="light">partly_cloudy_day</span>
+                        </div>
+                    </label>
+                    <script src="javascript/darkmode.js"></script>
+                </div>
             </div>
+        
         </nav>
     </header>
 

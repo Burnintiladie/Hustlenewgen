@@ -116,6 +116,14 @@ header{
     }
 } 
 
+/* nav heseg menu bolon honh, notification button  */
+nav{
+    display: grid;
+    grid-template-rows: auto auto;
+    font-family: var(--font);
+    color: white;
+}
+
 /*Menu heseg*/
 .menu{
     height: 5vh;
@@ -140,60 +148,35 @@ header{
     }
 }
 
-nav{
-    display: flex;
-    justify-content: space-around;
-    font-family: var(--font);
-    color: white;
-}
-
-.dark{
-    & .switch{
-        display: flex;
-        justify-content: center;
-        height: 2.2rem;
-        width: 2.2rem;
-        border: 2px solid white;
-        border-radius: 2px;
-        /* background-color: #0B193A; */
-      }
-      
-    & .switch input {
-        display: none;
-      }
-}
-
-.shil{
-    padding-top: 4px;
-    display: flex;
-}
-
-#dark{
-    display: flex;
-}
-
-#light{
-    display: none;
-}
-
+/* not button heseg buheldee */
 .not{
+    margin-top: -2.5rem;
+    justify-content: flex-end;
     display: flex;
-    padding-bottom: 3px;
-    & div{
-        padding-left: 1rem;
+    padding-right: 7.2rem;
+    & .not-sec{
+        padding-left: 0.5rem;
     }
+
 }
 
+/* honhnii heseg */
 .honh{
-    padding-top: 2px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    height: 1.8rem;
+    width: 2.1rem;
+    display: flex;
+    border: 2px solid white;
+    border-radius: 4px;
 }
 
-.honh-after{
-    color: red;
-    fill: red;
-}
+/* email button */
 .notbut{
-    border: none;
+    height: 2.36rem;
+    padding-top: 5px;
+    border: 2px solid white;
     border-radius: 5px;
     background-color: var(--main-bg-color);
     color: white;
@@ -206,6 +189,7 @@ nav{
     }
 }
 
+/* email button daranguut unah form heseg */
 .email{
     display: none;
     background-color: white;
@@ -214,7 +198,7 @@ nav{
     z-index: 1;
     width: 22rem;
     padding: 1.5rem;
-    margin-top: 0.68rem;
+    margin-top: 0.2rem;
     margin-right: 1.1rem;
     justify-content: center;
     right: 0;
@@ -222,6 +206,7 @@ nav{
     font-size: 16px;
 }
 
+/* email bichih input heseg */
 .email-input{
     width: 12rem;
     height: 1.3rem;
@@ -229,6 +214,7 @@ nav{
     border: 1px solid var(--main-bg-color) ;
 }
 
+/* email-iin submit button */
 .email-btn{
     height: 1.5rem;
     background-color: #050c1c;
@@ -237,6 +223,40 @@ nav{
     border: none;
     border-radius: 3px;
     
+}
+
+/* dark light button heseg */
+.dark{
+    padding-left: 0.5rem;
+    & .switch{
+        display: flex;
+        justify-content: center;
+        height: 2.1rem;
+        width: 2.2rem;
+        border: 2px solid white;
+        border-radius: 4px;
+        /* background-color: #0B193A; */
+      }
+      
+    & .switch input {
+        display: none;
+      }
+}
+
+/* sar bolon nar heseg */
+.shil{
+    padding-top: 3px;
+    display: flex;
+    justify-content: center;
+}
+
+#dark{
+    display: flex;
+}
+
+#light{
+    display: none;
+    margin-top: 2px;
 }
 
 
