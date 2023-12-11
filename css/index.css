@@ -181,7 +181,7 @@ nav{
     background-color: var(--main-bg-color);
     color: white;
     font-family: var(--font);
-    font-size: 17px;
+    font-size: 15px;
     display: flex;
 
     & span{
@@ -531,26 +531,79 @@ nav{
     & .item2{
         background-color: var(--bg-color);
         width: 25vw;
+        height: 25rem;
         grid-row: 2 / span 2;
 
         & ul{
+            width: 100%;
             list-style-type: none;
             display: flex;
-            justify-content: space-around;
             padding: 0;
         }
         & li{
-            margin: 0.6rem;
+            width: 100%;
             font-size: 1vw;
+            display: block;
+
+            & .stat2{
+                display: none;
+                margin-left: -4.5rem;
+            }
+            & .stat3{
+                display: none;
+                margin-left: -9rem;
+            }
+            & .stat4{
+                display: none;
+                margin-left: -13.5rem;
+            }
+            & .stat5{
+                display: none;
+                margin-left: -18rem;
+            }
         }
         & p{
             background-color: var(--title-bg-color);
+        }
+        & .head-btn{
+            width: 100%;
+            padding: 0.7rem 0.5rem;
+            border: 5px solid var(--title-bg-color);
+            background-color: var(--bg-color);
+            color: white;
+            font-family: var(--font);
+            font-size: 15px;
+        }
+
+        & .unalt{
+            margin-top: 0.4rem;
+            width: 22.6rem;
+            position: absolute;
+            font-family: var(--main-font);
+            color: var(--main-bg-color);
+        }
+
+        & p{
+            border-radius: 5px;
+            background-color: white;
+            height: 3.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0.5rem;
+            padding: 0rem 0.5rem;
+            font-weight: bold;
+        }
+
+        & span{
+            font-family: var(--font);
         }
     }
 
     /* Search heseg */
     & .item3{
         width: 40vw;
+        height: 5rem;
         grid-row: 2 ;
         background-color: var(--title-bg-color);
         height: 2.5rem;
@@ -565,6 +618,7 @@ nav{
 
         /* Zuragnii heseg */
         & .pic{
+            height: 16rem;
             display: flex;
             justify-content: space-around;
         }
@@ -597,12 +651,13 @@ nav{
 
         /* Player statistic heseg */
         & .profile{
-            height: 6.25rem;
+            height: 5rem;
             background-color: var(--title-bg-color);
             color: white;
             display: flex;
             padding: 0.6rem;
             justify-content: space-between;
+            border-radius: 5px;
 
             & div{
                 text-align: center;
@@ -626,37 +681,6 @@ footer{
     height: 20rem;
     background-color: var(--main-bg-color);
 }
-/* .dark{
-    padding-top: 10rem;
-    padding-left: 5rem;
-    color: white;
-    & .switch{
-        display: flex;
-        justify-content: center;
-        height: 2.2rem;
-        width: 2.2rem;
-        border: 2px solid white;
-        border-radius: 2px;
-    }
-      
-    & .switch input{
-        display: none;
-    }
-}
-
-.shil{
-    padding-top: 4px;
-    display: flex;
-}
-
-#dark{
-    display: flex;
-}
-
-#light{
-    display: none;
-} */
-
 @media screen and (max-width: 1024px) {
 
     .logo{

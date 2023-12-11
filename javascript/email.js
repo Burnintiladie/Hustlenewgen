@@ -2,7 +2,7 @@ function emaildrop()
 {
     // document.getElementById("email-drop").style.display = "flex"; 
 
-    var mydrop= document.getElementById("email-drop");
+    var mydrop = document.getElementById("email-drop");
     var myDropDisp = mydrop.style.display;
 
     var btn = document.getElementById("notbtn");
