@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,129 +10,148 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Home</title>
     <script>
-        
+
     </script>
 </head>
+
 <body>
-    <!--Menu--> 
+    <!--Menu-->
     <header>
-        <!--Team logos--> 
+        <!--Team logos-->
         <div>
             <ul class="logo" id="mylogo"></ul>
             <script src="javascript/home-players.js"></script>
-            <script >
+            <script>
                 const app = new App("mylogo");
                 app.init();
             </script>
         </div>
-        <!--Main menu bar--> 
+
+        <!--Main menu bar-->
         <nav>
-            
-            <div class="footer">
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                  </label>
-                </div>
-            </div>
-            
+
+            <!-- menu heseg -->
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Games.html">Games</a></li>
                 <li><a href="League.html">League</a></li>
             </ul>
-            
+
+            <!-- button heseg(honh, email, dark light) -->
             <div class="not">
-                <div><span class="material-symbols-outlined">
-                    notifications
-                    </span></div>
-                <div>Notify</div>
+
+                <!-- honh -->
+                <div class="honh">
+                    <span class="material-symbols-outlined">notifications</span>
+                </div>
+
+                <!-- email button heseg -->
+                <div class="not-sec">
+                    <!-- email button -->
+                    <button class="notbut" onclick="emaildrop()" id="notbtn">
+                        <span class="material-symbols-outlined">email</span>
+                        Notify
+                    </button>
+
+                    <!-- daranguut unaj ireh heseg -->
+                    <div class="email" id="email-drop">
+                        <form action="">
+                            <label for="">Email:</label>
+                            <input type="email" class="email-input" placeholder="youremail@example.com">
+                            <input type="button" class="email-btn" value="submit">
+                        </form>
+                    </div>
+                    <script src="javascript/email.js"></script>
+                </div>
+
+                <!-- dark light mode button -->
+                <div class="dark">
+                    <label class="switch" for="checkbox">
+                        <input type="checkbox" id="checkbox">
+
+                        <div class="shil round">
+                            <span class="material-symbols-outlined" id="dark">nights_stay</span>
+                            <span class="material-symbols-outlined" id="light">partly_cloudy_day</span>
+                        </div>
+                    </label>
+                    <script src="javascript/darkmode.js"></script>
+                </div>
             </div>
 
-            <script src="javascript/darkmode.js"></script>
         </nav>
     </header>
 
-    <!--Main--> 
+    <!--Main-->
     <main>
-        <!--Poster/Wallpaper--> 
+        <!--Poster/Wallpaper-->
         <div class="cover">
 
             <!-- Tom zurag -->
             <div class="big">
-
                 <!-- Poster 1 -->
-                <div class="slide a">
-                   <img src="assets/cover.jpeg">
-                </div>
+                <div class="slide a1"></div>
 
-                 <!-- Poster 2 -->
-                <div class="slide a">
-                    <img src="assets/mgl.jpg">
-                </div>
-                
-                 <!-- Poster 3 -->
-                <div class="slide a">
-                    <img src="assets/allstar-cover.jpg">
-                 </div>
+                <!-- Poster 2 -->
+                <div class="slide a2"></div>
 
-                  <!-- Poster 4 -->
-                <div class="slide a">
-                    <img src="assets/2023.jpg">
-                </div>   
+                <!-- Poster 3 -->
+                <div class="slide a3"></div>
+
+                <!-- Poster 4 -->
+                <div class="slide a4"></div>
             </div>
 
             <!-- Jijig zuragnuud -->
-            <div  class="mini">
+            <div class="mini">
 
-                 <!-- Poster 1 -->
+                <!-- Poster 1 -->
                 <div class="m-one">
                     <img src="assets/cover.jpeg">
-                 </div>
-
-                  <!-- Poster 2 -->
-                <div class="m-one">
-                    <img src="assets/mgl.jpg">
                 </div>
 
-                 <!-- Poster 3 -->
+                <!-- Poster 2 -->
+                <div class="m-one">
+                    <img src="assets/start.jpg">
+                </div>
+
+                <!-- Poster 3 -->
                 <div class="m-one">
                     <img src="assets/allstar-cover.jpg">
                 </div>
 
-                 <!-- Poster 4 -->
+                <!-- Poster 4 -->
                 <div class="m-one">
-                    <img src="assets/2023.jpg">
+                    <img src="assets/monh.jpg">
                 </div>
             </div>
             <script src="javascript/home-cover.js"></script>
         </div>
 
-    
+
 
         <!--Recent matches-->
         <div class="match">
-            <!--Match 1--> 
+            <!--Match 1-->
             <div class="buhel">
                 <div class="game">
                     <section>
                         <img src="assets/garid.png" alt="team1 logo">
                         <p>Garid</p>
                     </section>
-    
+
                     <section class="final">
                         <p class="final-text">Q2 03:12</p>
                         <div class="team">
-                                <p>34</p>
-                                <p>:</p>
-                                <p>41</p>
+                            <p>34</p>
+                            <p>:</p>
+                            <p>41</p>
                         </div>
                     </section>
-    
+
                     <section>
                         <img src="assets/metal.png" alt="team2 logo">
                         <p>Metal</p>
@@ -139,27 +159,29 @@
                 </div>
 
                 <div class="detail">
-                    <a href="Gamedetail.html"><p>Game Detail</p></a>
+                    <a href="Gamedetail.html">
+                        <p>Game Detail</p>
+                    </a>
                 </div>
             </div>
 
-            <!--Match 2--> 
+            <!--Match 2-->
             <div class="buhel">
                 <div class="game">
                     <section>
                         <img src="assets/bison.png" alt="team1 logo">
                         <p>Bison</p>
                     </section>
-    
+
                     <section class="final">
                         <p class="final-text">Q4 02:15</p>
                         <div class="team">
-                                <p>99</p>
-                                <p>:</p>
-                                <p>93</p>
+                            <p>99</p>
+                            <p>:</p>
+                            <p>93</p>
                         </div>
                     </section>
-    
+
                     <section>
                         <img src="assets/brothers.png" alt="team2 logo">
                         <p>Brothers</p>
@@ -167,55 +189,59 @@
                 </div>
 
                 <div class="detail">
-                    <a href="Gamedetail.html"><p>Game Detail</p></a>
+                    <a href="Gamedetail.html">
+                        <p>Game Detail</p>
+                    </a>
                 </div>
             </div>
 
-            <!--Match 3--> 
+            <!--Match 3-->
             <div class="buhel">
                 <div class="game">
                     <section>
                         <img src="assets/ihc.png" alt="team1 logo">
                         <p>Apes</p>
                     </section>
-    
+
                     <section class="final">
                         <p class="final-text">FINAL</p>
                         <div class="team">
-                                <p>85</p>
-                                <p>:</p>
-                                <p>83</p>
+                            <p>85</p>
+                            <p>:</p>
+                            <p>83</p>
                         </div>
                     </section>
-    
+
                     <section>
                         <img src="assets/daichid.png" alt="team2 logo">
                         <p>Warriors</p>
                     </section>
-    
+
                 </div>
                 <div class="detail">
-                    <a href="Gamedetail.html"><p>Game Detail</p></a>
+                    <a href="Gamedetail.html">
+                        <p>Game Detail</p>
+                    </a>
                 </div>
             </div>
 
-            <!--Match 4--> 
+            <!--Match 4-->
             <div class="buhel">
                 <div class="game">
                     <section>
                         <img src="assets/miners.png" alt="team1 logo">
                         <p>Miners</p>
                     </section>
-    
+
                     <section class="final">
                         <p class="final-text">FINAL</p>
                         <div class="team">
-                                <p>108</p>
-                                <p>:</p>
-                                <p>102</p>
+                            <p>108</p>
+                            <p>:</p>
+                            <p>102</p>
                         </div>
                     </section>
-    
+
                     <section>
                         <img src="assets/huleguud.png" alt="team2 logo">
                         <p>Broncos</p>
@@ -223,92 +249,142 @@
                 </div>
 
                 <div class="detail">
-                    <a href="Gamedetail.html"><p>Game Detail</p></a>
+                    <a href="Gamedetail.html">
+                        <p>Game Detail</p>
+                    </a>
                 </div>
             </div>
         </div>
-        
-        <!--News story--> 
+
+        <!--News story-->
         <div class="news">
-            <!--News 1--> 
+            <!--News 1-->
             <article class="medee">
                 <img src="assets/news1.png" alt="news1" class="zurag">
                 <div class="title">
                     <h5>Сагсан бөмбөгийн шигшээ баг эцсийн мөчид ялагдлаа</h5>
-                    <p class="desc">Азийн наадмын сагсан бөмбөгийн хэсгийн тоглолтууд үргэлжилж манай шигшээ хоёр дахь тоглолтоо Хонгконгын эсрэг тоглож эцсийн мөчид хожигдол амслаа. 
-                        Хоёрдугаар үед эсрэг багийн төвийн тоглогч болон хурдан довтолгоог хамгаалж чадалгүй дуусав. </p>
+                    <p class="desc">Азийн наадмын сагсан бөмбөгийн хэсгийн тоглолтууд үргэлжилж манай шигшээ хоёр дахь
+                        тоглолтоо Хонгконгын эсрэг тоглож эцсийн мөчид хожигдол амслаа.
+                        Хоёрдугаар үед эсрэг багийн төвийн тоглогч болон хурдан довтолгоог хамгаалж чадалгүй дуусав.
+                    </p>
                 </div>
             </article>
 
-            <!--News 2--> 
+            <!--News 2-->
             <article class="medee">
                 <img src="assets/sanchir.jpg" alt="news3" class="zurag">
                 <div class="title">
                     <h5>Дээд лигийн үнэ цэнтэй тоглогчоор Т.Санчир тодорлоо</h5>
-                    <p class="desc">Эрэгтэй Дээд лигийн улирлын шилдэг дасгалжуулагч Эрдэнэт Майнерс багийн ахлах дасгалжуулагч Грек эрхэм Фрагиас Василиус, шилдэг зургаа дахь тоглогч М Гарьд багийн довтлогч Д.Дөлгөөнмөрөн, шилдэг шинэ тоглогч Налайх Бизон багийн холбогч Э.Тулга, улирлын шилдэг хамгаалан тоглогч Хасын Хүлэгүүд багийн хамгаалагч Т.Мэндбаяр нар тус тус нэрлэгдлээ.</p>
+                    <p class="desc">Эрэгтэй Дээд лигийн улирлын шилдэг дасгалжуулагч Эрдэнэт Майнерс багийн ахлах
+                        дасгалжуулагч Грек эрхэм Фрагиас Василиус, шилдэг зургаа дахь тоглогч М Гарьд багийн довтлогч
+                        Д.Дөлгөөнмөрөн, шилдэг шинэ тоглогч Налайх Бизон багийн холбогч Э.Тулга, улирлын шилдэг
+                        хамгаалан тоглогч Хасын Хүлэгүүд багийн хамгаалагч Т.Мэндбаяр нар тус тус нэрлэгдлээ.</p>
                 </div>
             </article>
 
-            <!--News 3--> 
+            <!--News 3-->
             <article class="medee">
                 <img src="assets/bilguun.jpg" alt="news3" class="zurag">
                 <div class="title">
                     <h5>Б.Билгүүн: Тамирчид нэг лигт тоглох хүртэл би Хүлэгүүд багийн бүрэлдэхүүнд тоглохгүй</h5>
-                    <p class="desc">Мөн Хасын Хүлэгүүд багийн тоглогч Б.Билгүүн "Манайд баг лигт орох нь хэвээрээ боловч тамирчид нэг байр суурьтай байх ёстой. Тамирчид нэг лигтээ тоглохоор бэлтгэлээ хийж байсан ч тулсан үед ийм шийдвэр гарч байгаа нь харамсалтай байна. Тамирчид нэг лигт тоглох хүртэл би Хүлэгүүд багийн бүрэлдэхүүнд тоглохгүй" хэмээн мэдэгдлээ.</p>
+                    <p class="desc">Мөн Хасын Хүлэгүүд багийн тоглогч Б.Билгүүн "Манайд баг лигт орох нь хэвээрээ боловч
+                        тамирчид нэг байр суурьтай байх ёстой. Тамирчид нэг лигтээ тоглохоор бэлтгэлээ хийж байсан ч
+                        тулсан үед ийм шийдвэр гарч байгаа нь харамсалтай байна. Тамирчид нэг лигт тоглох хүртэл би
+                        Хүлэгүүд багийн бүрэлдэхүүнд тоглохгүй" хэмээн мэдэгдлээ.</p>
                 </div>
             </article>
 
-            <!--News 4--> 
+            <!--News 4-->
             <article class="medee">
                 <img src="assets/MGL.jpeg" alt="news3" class="zurag">
                 <div class="title">
                     <h5>Сагсан бөмбөгийн тамирчдын холбоо сүүлийн үед үүсээд байгаа асуудлын талаар мэдэгдэл хийлээ</h5>
-                    <p class="desc">Монголын Үндэсний дээд лиг, багуудын эздийн холбоо нарын хооронд үүссэн үл ойлголцлын улмаас Үндэсний дээд лигт өмнөх улиралд оролцож байсан зургаан баг энэ улирлын Дээд лигт оролцоход хүндрэлтэй нөхцөл байдал тулгарсан билээ.  </p>
+                    <p class="desc">Монголын Үндэсний дээд лиг, багуудын эздийн холбоо нарын хооронд үүссэн үл
+                        ойлголцлын улмаас Үндэсний дээд лигт өмнөх улиралд оролцож байсан зургаан баг энэ улирлын Дээд
+                        лигт оролцоход хүндрэлтэй нөхцөл байдал тулгарсан билээ. </p>
                 </div>
             </article>
         </div>
 
-        <!--Leaderboard/AD--> 
+        <!--Leaderboard/AD-->
         <div class="lsec">
 
-            <!--AD--> 
+            <!--AD-->
             <div class="ad">
                 <img src="assets/earlybird.png" alt="AD1">
             </div>
-            
-                <!--Leaderboard--> 
+
+            <!--Leaderboard-->
             <div class="grid">
 
-                <div class="sons item1"><h3>Leaderboard</h3></div>
-          
-                <div class="sons item2">
-                        <ul>
-                            <li>
-                                PTS
-                                <!-- <div>
-                                    <p>Баттүвшин Билгүүн</p>
-                                    <p>Оюунзул Баянбаатар</p>
-                                    <p>Мягмарсүрэн Өлзий-Орших</p>
-                                    <p>Тунгалаг Санчир</p>
-                                    <p>Очирбат Эрдэнэцогт</p>
-                                    <p>Энхбат Дөлгөөн</p>
-                                    <p>Даваасамбуу Дэлгэрням</p>
-                                    <p>Чулуунбаатар Ихбаяр</p>
-                                </div> -->
-                            </li>
-                            <li>REB</li>
-                            <li>AST</li>
-                            <li>STL</li>
-                            <li>BLK</li>
-                        </ul>
+                <div class="sons item1">
+                    <h3>Leaderboard</h3>
                 </div>
 
-                    <!--Search/Player Picture--> 
+                <div class="sons item2">
+                    <ul>
+                        <li>
+                            <button class="head-btn" onclick="leaderboard()" id="head">PTS</button>
+
+                            <div class="unalt stats1" id="unalt-sec">
+                                <p><span>1.</span>Pendarvis Williams<span>23.5</span></p>
+                                <p><span>2.</span>Anthony Harris<span>22.6</span></p>
+                                <p><span>3.</span>William Stanford JR<span>21.7</span></p>
+                                <p><span>4.</span>Devoe Joseph<span>21.5</span></p>
+                                <p><span>5.</span>Хүрэлтогоо Номин-Эрдэнэ<span>21.5</span></p>
+                            </div>
+                            <script src="javascript/leaderboard.js"></script>
+                        </li>
+                        <li>
+                            <button class="head-btn" onclick="" id="head-btn">REB</button>
+                            <div class="unalt stat2" id="unalt-sec2">
+                                <p><span>1.</span>Алтанцаг Базаргүр<span>11.3</span></p>
+                                <p><span>2.</span>Онолбаатар Энхбаатар<span>10.5</span></p>
+                                <p><span>3.</span>Nikola Tadic<span>10.2</span></p>
+                                <p><span>4.</span>Anthony Smith<span>9.5</span></p>
+                                <p><span>5.</span>Санчигдан Өрнүүнбилэг<span>9.2</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="head-btn" onclick="" id="head-btn">AST</button>
+                            <div class="unalt stat3" id="unalt-sec3">
+                                <p><span>1.</span>Anthony Harris<span>6.6</span></p>
+                                <p><span>2.</span>Мягмарсүрэн Өлзий-Орших<span>6.0</span></p>
+                                <p><span>3.</span>Jahlil Tripp<span>5.8</span></p>
+                                <p><span>4.</span>Очирбат Эрдэнэцогт<span>5.5</span></p>
+                                <p><span>5.</span>Батмөнх Төгөлдөр<span>5.3</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="head-btn"  onclick="" id="head-btn">STL</button>
+                            <div class="unalt stat4" id="unalt-sec4">
+                                <p><span>1.</span>Түмэнбаяр Ууганбаяр<span>3.6</span></p>
+                                <p><span>2.</span>Элбэг Тулга<span>3.4</span></p>
+                                <p><span>3.</span>Туул Мэндбаяр<span>3.4</span></p>
+                                <p><span>4.</span>Ганболд Лхагвацэнд<span>3.2</span></p>
+                                <p><span>5.</span>Хүрэлтогоо Эрдэнэ-Очир<span>2.8</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="head-btn"  onclick="" id="head-btn">BLK</button>
+                            <div class="unalt stat5" id="unalt-sec5">
+                                <p><span>1.</span>Батнасан Мөнхбат<span>2.0</span></p>
+                                <p><span>2.</span>Баттүвшин Билгүүн<span>1.7</span></p>
+                                <p><span>3.</span>Benson Keith<span>1.7</span></p>
+                                <p><span>4.</span>Lamontray Harris<span>1.5</span></p>
+                                <p><span>5.</span>Онолбаатар Энхбаатар<span>1.5</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                    <script src="javascript/leaderboard.js"></script>
+                </div>
+
+                <!--Search/Player Picture-->
                 <div class="sons item3">
                     <input type="search">
                 </div>
 
-                <!--Player Proflie--> 
+                <!--Player Proflie-->
                 <div class="sons item4">
                     <div class="pic">
                         <img src="assets/tommy.png" alt="Player Profile Picture" class="playerpro">
@@ -319,7 +395,7 @@
                             <p class="bairlal">#10 | SMALL FORWARD</p>
                         </div>
                     </div>
-    
+
                     <div class="profile">
                         <div>
                             <p class="tit">PTS</p>
@@ -348,11 +424,11 @@
         </div>
     </main>
 
-    <!--Footer--> 
+    <!--Footer-->
     <footer>
-        
     </footer>
-    
-    
+
+
 </body>
+
 </html>

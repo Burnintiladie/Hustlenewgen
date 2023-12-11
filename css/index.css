@@ -116,6 +116,14 @@ header{
     }
 } 
 
+/* nav heseg menu bolon honh, notification button  */
+nav{
+    display: grid;
+    grid-template-rows: auto auto;
+    font-family: var(--font);
+    color: white;
+}
+
 /*Menu heseg*/
 .menu{
     height: 5vh;
@@ -140,20 +148,117 @@ header{
     }
 }
 
-nav{
+/* not button heseg buheldee */
+.not{
+    margin-top: -2.5rem;
+    justify-content: flex-end;
     display: flex;
-    justify-content: space-around;
-    font-family: var(--font);
-    color: white;
+    padding-right: 7.2rem;
+    & .not-sec{
+        padding-left: 0.5rem;
+    }
+
 }
 
-.not{
+/* honhnii heseg */
+.honh{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    height: 1.8rem;
+    width: 2.1rem;
+    display: flex;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+/* email button */
+.notbut{
+    height: 2.36rem;
+    padding-top: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: var(--main-bg-color);
+    color: white;
+    font-family: var(--font);
+    font-size: 15px;
     display: flex;
 
-    & div{
-        padding-left: 1rem;
+    & span{
+        margin-right: 3px;
     }
 }
+
+/* email button daranguut unah form heseg */
+.email{
+    display: none;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    width: 22rem;
+    padding: 1.5rem;
+    margin-top: 0.2rem;
+    margin-right: 1.1rem;
+    justify-content: center;
+    right: 0;
+    color: black;
+    font-size: 16px;
+}
+
+/* email bichih input heseg */
+.email-input{
+    width: 12rem;
+    height: 1.3rem;
+    padding: 2px 4px;
+    border: 1px solid var(--main-bg-color) ;
+}
+
+/* email-iin submit button */
+.email-btn{
+    height: 1.5rem;
+    background-color: #050c1c;
+    color: white;
+    font-family: var(--font);
+    border: none;
+    border-radius: 3px;
+    
+}
+
+/* dark light button heseg */
+.dark{
+    padding-left: 0.5rem;
+    & .switch{
+        display: flex;
+        justify-content: center;
+        height: 2.1rem;
+        width: 2.2rem;
+        border: 2px solid white;
+        border-radius: 4px;
+        /* background-color: #0B193A; */
+      }
+      
+    & .switch input {
+        display: none;
+      }
+}
+
+/* sar bolon nar heseg */
+.shil{
+    padding-top: 3px;
+    display: flex;
+    justify-content: center;
+}
+
+#dark{
+    display: flex;
+}
+
+#light{
+    display: none;
+    margin-top: 2px;
+}
+
 
 /*Cover heseg*/
 .cover{
@@ -167,19 +272,37 @@ nav{
 .big{
     position: relative;
     width: 100%;
+    & .a1{
+        background-image: linear-gradient(to right , rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
+         url('/assets/cover.jpeg');
+    }
+    & .a2{
+        background-image: linear-gradient(to right, rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
+        url('/assets/start.jpg');
+    }
+    & .a3{
+        background-image: linear-gradient(to right, rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
+        url('/assets/allstar-cover.jpg');
+    }
+    & .a4{
+        background-image: linear-gradient(to right, rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
+        url('/assets/monh.jpg');
+    }
   }
 
 /*1 tom zuragnii heseg*/
 .slide {
     display: none;
-    /* background: linear-gradient( to right,
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0)
-    ); */
-    & img{
-        width: 100%;
-        height: 80vh;
-        object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: zoomlelt 6s infinite;
+}
+
+@keyframes zoomlelt {
+    50% {
+        scale: 1.1;
     }
 }
 
@@ -194,7 +317,6 @@ nav{
 /*1 mini heseg*/
 .m-one {
     opacity: 0.8;
-    /* transition: opacity 0.6s ease; */
     & img{
        margin-top: 0.7rem;
        width: 35%;
@@ -203,25 +325,17 @@ nav{
   }
   
 .active {
-    opacity: 1;
+    animation: a 6s infinite;
   } 
-  
-
-/* .a {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
   
 @keyframes a {
     0% {
-        opacity: 0.8;
-    } 
-    100% {
-        opacity: 1;
+        opacity: 0.4;
     }
-  } */
-
-
+    100% {
+        opacity: 0;
+    }
+  }
 
 /*Togloltiin heseg*/
 .match{
@@ -417,26 +531,79 @@ nav{
     & .item2{
         background-color: var(--bg-color);
         width: 25vw;
+        height: 25rem;
         grid-row: 2 / span 2;
 
         & ul{
+            width: 100%;
             list-style-type: none;
             display: flex;
-            justify-content: space-around;
             padding: 0;
         }
         & li{
-            margin: 0.6rem;
+            width: 100%;
             font-size: 1vw;
+            display: block;
+
+            & .stat2{
+                display: none;
+                margin-left: -4.5rem;
+            }
+            & .stat3{
+                display: none;
+                margin-left: -9rem;
+            }
+            & .stat4{
+                display: none;
+                margin-left: -13.5rem;
+            }
+            & .stat5{
+                display: none;
+                margin-left: -18rem;
+            }
         }
         & p{
             background-color: var(--title-bg-color);
+        }
+        & .head-btn{
+            width: 100%;
+            padding: 0.7rem 0.5rem;
+            border: 5px solid var(--title-bg-color);
+            background-color: var(--bg-color);
+            color: white;
+            font-family: var(--font);
+            font-size: 15px;
+        }
+
+        & .unalt{
+            margin-top: 0.4rem;
+            width: 22.6rem;
+            position: absolute;
+            font-family: var(--main-font);
+            color: var(--main-bg-color);
+        }
+
+        & p{
+            border-radius: 5px;
+            background-color: white;
+            height: 3.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0.5rem;
+            padding: 0rem 0.5rem;
+            font-weight: bold;
+        }
+
+        & span{
+            font-family: var(--font);
         }
     }
 
     /* Search heseg */
     & .item3{
         width: 40vw;
+        height: 5rem;
         grid-row: 2 ;
         background-color: var(--title-bg-color);
         height: 2.5rem;
@@ -451,6 +618,7 @@ nav{
 
         /* Zuragnii heseg */
         & .pic{
+            height: 16rem;
             display: flex;
             justify-content: space-around;
         }
@@ -483,12 +651,13 @@ nav{
 
         /* Player statistic heseg */
         & .profile{
-            height: 6.25rem;
+            height: 5rem;
             background-color: var(--title-bg-color);
             color: white;
             display: flex;
             padding: 0.6rem;
             justify-content: space-between;
+            border-radius: 5px;
 
             & div{
                 text-align: center;
@@ -508,73 +677,10 @@ nav{
     }
 }
 
-
-.footer{
-    
-    & .theme-switch-wrapper {
-        display: flex;
-        align-items: center;
-      
-        em {
-          margin-left: 10px;
-          font-size: 1rem;
-        }
-      }
-    & .theme-switch {
-        display: inline-block;
-        height: 34px;
-        position: relative;
-        width: 60px;
-      }
-      
-    & .theme-switch input {
-        display:none;
-      }
-      
-    & .slider {
-        background-color: #ccc;
-        bottom: 0;
-        cursor: pointer;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        transition: .4s;
-      }
-      
-    & .slider:before {
-        background-color: #fff;
-        bottom: 4px;
-        content: "";
-        height: 26px;
-        left: 4px;
-        position: absolute;
-        transition: .4s;
-        width: 26px;
-      }
-      
-    & input:checked + .slider {
-        background-color: var(--bg-color);
-      }
-      
-    & input:checked + .slider:before {
-        transform: translateX(26px);
-      }
-      
-    & .slider.round {
-        border-radius: 34px;
-      }
-      
-    & .slider.round:before {
-        border-radius: 50%;
-      }
-}
-
 footer{
     height: 20rem;
     background-color: var(--main-bg-color);
 }
-
 @media screen and (max-width: 1024px) {
 
     .logo{
