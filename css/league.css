@@ -1,144 +1,146 @@
 @import url(root.css);
-*{
-    margin: 0%;
-    padding: 0%;
-}
-
-header {
-    height: 7.5rem;
-    background-color: var(--main-bg-color);
-    font-family: var(--main-font);
-
-    /*team logos*/
-    & .logos {
-        display: flex;
-        list-style-type: none;
-        justify-content: center;
-
-        /*Logonii hemjee*/
-        & img {
-        width: 3.1rem;
-        height: 3.1rem;
-        padding: 0.6rem 1.2rem;
-        transition: transform 500ms;
-        }
-
-        & img:hover {
-        width: 3.2rem;
-        height: 3.2rem;
-        border-bottom: 1px solid var(--main-bg-color2);
-        transform: translateY(-0.3rem);
-        }
-    }
-    /*menu*/
-    & .menu {
-        padding: 0.58rem;
-        display: flex;
-        list-style-type: none;
-        justify-content: center;
-        font-size: 17px;
-        font-family: var(--font);
-
-        /*Menu text*/
-        & a {
-        padding: 1.55rem 1.8rem 0.65rem;
-        text-decoration: none;
-        color: var(--main-bg-color2);
-        border-bottom: 3px solid var(--main-bg-color);
-        }
-
-        /*Menu hover*/
-        & a:hover {
-        border-bottom: 3px solid var(--main-bg-color2);
-        }
-    }
-}
-
-main{
-
-    /*AD section*/
-    .ad{
-        display: flex;
-        margin: 5rem;
-
-        & img{
-            margin-left: 5rem;
-            border-radius: 1rem;
-            width: 35rem;
-        }
-
-        & .league-event-box{
-            margin-right: 5rem;
-            background-color: var(--games-bg-color);
-            border-radius: 1rem;
-            width: 60%;
-            height: 35rem;
-            margin-left: 15rem;
-            & h1{
-                background-color: var(--bg-color);
-                border-radius: 1rem;
-                padding: 1.5rem;
-                color: var(--main-bg-color2);
-                font-family: var(--font);
-                text-align: center;
-            }
-            & .ads{
-                justify-content: center;
-                & li{
-                    list-style-type: none;
-                    background-color: var(--league-ad-color);
-                    margin-top: 3rem;
-                    padding: 1rem;
-                    width: 70%;
-                    margin-left: 5rem;
-                    border-radius: 1rem;
-
-                     & figure{
-                        
-                        & img{
-                            margin-left: 20rem;
-                        }
-                        & figcaption{
-                            margin-left: 2rem;
-                        }
-                     }
-                }
-            }
-        }
-    }
-
-    /*News story*/
-    .news{
-        background-color: var(--bg-color);
-        display: flex;
-        padding: 3rem;
-        justify-content: center;
+@media only screen and (max-width: 480px){
+    * {
+        margin: 0%;
+        padding: 0%;
+      }
     
-    /* 1 medeenii heseg */
-    & .medee{
-        font-family: var(--font);
-        margin: 1.25rem;
-        background-color: white;
-        border-radius: 5px;  
-        height: 24rem;
-        width: 25%;
-        overflow: hidden;
+      header {
+        height: auto;
+        background-color: var(--main-bg-color);
+        font-family: var(--main-font);
+    
+        /*team logos*/
+        & .logos {
+          display: flex;
+          list-style-type: none;
+          justify-content: center;
+    
+          /*Logonii hemjee*/
+          & img {
+            width: 2rem;
+            height: 2rem;
+            padding: 0.1rem 0.4rem;
+            transition: transform 500ms;
+          }
+    
+          & img:hover {
+            width: 3.2rem;
+            height: 3.2rem;
+            border-bottom: 1px solid var(--main-bg-color2);
+            transform: translateY(-0.3rem);
+          }
+        }
+        /*menu*/
+        & .menu {
+          padding: 0.58rem;
+          display: flex;
+          list-style-type: none;
+          justify-content: center;
+          font-size: 12px;
+          font-family: var(--font);
+    
+          /*Menu text*/
+          & a {
+            padding: 1.55rem 1.8rem 0.45rem;
+            text-decoration: none;
+            color: var(--main-bg-color2);
+            border-bottom: 3px solid var(--main-bg-color);
+          }
+    
+          /*Menu hover*/
+          & a:hover {
+            border-bottom: 3px solid var(--main-bg-color2);
+          }
+        }
+      }
+    
+      main {
+        /*AD section*/
+        .ad {
+          margin-top: 2rem;
+    
+          & img {
+            display: flex;
+            border-radius: 0.5rem;
+            width: 18rem;
+            margin: 0 auto;
+          }
+    
+          & .league-event-box {
+            margin: 0 auto;
+            margin-top: 2rem;
+            background-color: var(--games-bg-color);
+            border-radius: 0.7rem;
+            width: 21rem;
+            height: 18rem;
+            & h1 {
+              background-color: var(--title-bg-color);
+              border-radius: 0.7rem;
+              padding: 0.4rem;
+              color: var(--main-bg-color2);
+              font-family: var(--font);
+              text-align: center;
+              font-size: 0.8rem;
+            }
+            & .ads {
+              justify-content: center;
+              & li {
+                list-style-type: none;
+                background-color: var(--league-ad-color);
+                margin-top: 1rem;
+                padding: 0rem;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                border-radius: 1rem;
+    
+                & figure {
+                  margin-top: 1rem;
+                  & img {
+                    margin-left: 8rem;
+                  }
+                  & figcaption {
+                    margin-left: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+    
+        /*News story*/
+        .news {
+          margin-top: 3rem;
+          background-color: var(--bg-color);
+          display: flex;
+          padding: 3rem;
+          justify-content: center;
+    
+          /* 1 medeenii heseg */
+          & .medee {
+            font-family: var(--font);
+            margin: 1.25rem;
+            background-color: white;
+            border-radius: 5px;
+            height: 24rem;
+            width: 25%;
+            overflow: hidden;
     
             /* Medeenii zurag */
-            & img{
-                object-fit: cover;
-                height: 60%;
-                width: 100%;
+            & img {
+              object-fit: cover;
+              height: 60%;
+              width: 100%;
             }
+          }
         }
-    }
-    /* Medeenii text heseg */
-    .title{
-        background-color: white;
-        padding: 1.25rem;
+        /* Medeenii text heseg */
+        .title {
+          background-color: white;
+          padding: 1.25rem;
     
-        /* Garchignii doodoh zuraas */
-        & h5::after{
+          /* Garchignii doodoh zuraas */
+          & h5::after {
             display: block;
             content: "";
             height: 2px;
@@ -146,47 +148,1932 @@ main{
             border-radius: 3px;
             background: var(--main-bg-color);
             margin-top: 1.25rem;
+          }
         }
-    }
     
-    /* Medeenii zuragnii hover */
-    .medee:hover .zurag{
-        height: 30%;
-        transition-duration: 0.6s;
-        transition-timing-function: ease-in;
-    }
+        /* Medeenii zuragnii hover */
+        .medee:hover .zurag {
+          height: 30%;
+          transition-duration: 0.6s;
+          transition-timing-function: ease-in;
+        }
     
-    /* Medeenii title hover */
-    .medee:hover .title{
-        height: 70%;
-        border-radius: 5px;
-    }
-    .desc{
-        padding-top: 0.6rem;
-        display: none;
-        color: #666C74;
-        font-size: 10px;
-        text-align: justify;
-    }
+        /* Medeenii title hover */
+        .medee:hover .title {
+          height: 70%;
+          border-radius: 5px;
+        }
+        .desc {
+          padding-top: 0.6rem;
+          display: none;
+          color: #666c74;
+          font-size: 10px;
+          text-align: justify;
+        }
     
-    /* Medeenii delgerengui hesgiin hover */
-    .medee:hover .desc{
-        display: block;
-    }
+        /* Medeenii delgerengui hesgiin hover */
+        .medee:hover .desc {
+          display: block;
+        }
     
-    main{
-        display: grid;
+        main {
+          display: grid;
     
-        & #adimg{
+          & #adimg {
             padding: 3rem;
+          }
         }
+    
+        /*Table of teams position*/
+        .position {
+          background-color: var(--games-bg-color);
+          border-radius: 0.7rem;
+          margin-top: 2rem;
+          margin-left: 3rem;
+          margin-right: 3rem;
+          font-family: var(--font);
+    
+          & h1 {
+            color: var(--main-bg-color2);
+            background-color: var(--title-bg-color);
+            border-radius: 0.7rem;
+            padding: 0.4rem;
+            font-size: 0.8rem;
+          }
+    
+          & article {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            font-size: 0.5rem;
+    
+            & p {
+              margin: 0.2rem;
+              font-size: 0.5rem;
+            }
+          }
+        }
+      }
+      /*footer*/
+      footer {
+        height: auto;
+        background-color: var(--main-bg-color);
+        margin-top: 2rem;
+        & .title {
+          color: var(--footer-color);
+          font-weight: 300;
+          font-size: 1rem;
+          margin-left: 8rem;
+          padding-top: 2rem;
+        }
+        & .main {
+          margin-top: 2rem;
+          display: flex;
+          justify-content: center;
+          color: var(--footer-color);
+          & .contact-us {
+            margin-right: 8rem;
+            font-size: 0.7rem;
+            & ul {
+              margin-top: 0.5rem;
+              & li {
+                list-style-type: none;
+                margin-bottom: 1rem;
+                align-items: center;
+                font-size: 0.6rem;
+              }
+              & img {
+                margin-right: 1rem;
+                width: 0.5rem;
+                height: 0.5rem;
+              }
+            }
+          }
+          & .follow-us {
+            font-size: 0.7rem;
+            & ul {
+              display: flex;
+              & li {
+                margin-top: 0.5rem;
+                margin-right: 1rem;
+                list-style-type: none;
+              }
+              & img {
+                width: 2rem;
+                height: 2rem;
+              }
+            }
+          }
+        }
+    } 
+}
+
+@media only screen and (min-width: 481px) and (max-width: 549px){
+    * {
+        margin: 0%;
+        padding: 0%;
+      }
+    
+      header {
+        height: auto;
+        background-color: var(--main-bg-color);
+        font-family: var(--main-font);
+    
+        /*team logos*/
+        & .logos {
+          display: flex;
+          list-style-type: none;
+          justify-content: center;
+    
+          /*Logonii hemjee*/
+          & img {
+            width: 2rem;
+            height: 2rem;
+            padding: 0.1rem 0.4rem;
+            transition: transform 500ms;
+          }
+    
+          & img:hover {
+            width: 3.2rem;
+            height: 3.2rem;
+            border-bottom: 1px solid var(--main-bg-color2);
+            transform: translateY(-0.3rem);
+          }
+        }
+        /*menu*/
+        & .menu {
+          padding: 0.58rem;
+          display: flex;
+          list-style-type: none;
+          justify-content: center;
+          font-size: 12px;
+          font-family: var(--font);
+    
+          /*Menu text*/
+          & a {
+            padding: 1.55rem 1.8rem 0.45rem;
+            text-decoration: none;
+            color: var(--main-bg-color2);
+            border-bottom: 3px solid var(--main-bg-color);
+          }
+    
+          /*Menu hover*/
+          & a:hover {
+            border-bottom: 3px solid var(--main-bg-color2);
+          }
+        }
+      }
+    
+      main {
+        /*AD section*/
+        .ad {
+          margin-top: 2rem;
+    
+          & img {
+            display: flex;
+            border-radius: 0.5rem;
+            width: 20rem;
+            margin: 0 auto;
+          }
+    
+          & .league-event-box {
+            margin: 0 auto;
+            margin-top: 2rem;
+            background-color: var(--games-bg-color);
+            border-radius: 0.7rem;
+            width: 25rem;
+            height: 18rem;
+            & h1 {
+              background-color: var(--title-bg-color);
+              border-radius: 0.7rem;
+              padding: 0.4rem;
+              color: var(--main-bg-color2);
+              font-family: var(--font);
+              text-align: center;
+              font-size: 0.8rem;
+            }
+            & .ads {
+              justify-content: center;
+              & li {
+                list-style-type: none;
+                background-color: var(--league-ad-color);
+                margin-top: 1rem;
+                padding: 0rem;
+                margin-left: 4.5rem;
+                margin-right: 4.5rem;
+                border-radius: 1rem;
+    
+                & figure {
+                  margin-top: 1rem;
+                  & img {
+                    margin-left: 10rem;
+                  }
+                  & figcaption {
+                    margin-left: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+    
+        /*News story*/
+        .news {
+          margin-top: 3rem;
+          background-color: var(--bg-color);
+          display: flex;
+          padding: 3rem;
+          justify-content: center;
+    
+          /* 1 medeenii heseg */
+          & .medee {
+            font-family: var(--font);
+            margin: 1.25rem;
+            background-color: white;
+            border-radius: 5px;
+            height: 24rem;
+            width: 25%;
+            overflow: hidden;
+    
+            /* Medeenii zurag */
+            & img {
+              object-fit: cover;
+              height: 60%;
+              width: 100%;
+            }
+          }
+        }
+        /* Medeenii text heseg */
+        .title {
+          background-color: white;
+          padding: 1.25rem;
+    
+          /* Garchignii doodoh zuraas */
+          & h5::after {
+            display: block;
+            content: "";
+            height: 2px;
+            width: 100%;
+            border-radius: 3px;
+            background: var(--main-bg-color);
+            margin-top: 1.25rem;
+          }
+        }
+    
+        /* Medeenii zuragnii hover */
+        .medee:hover .zurag {
+          height: 30%;
+          transition-duration: 0.6s;
+          transition-timing-function: ease-in;
+        }
+    
+        /* Medeenii title hover */
+        .medee:hover .title {
+          height: 70%;
+          border-radius: 5px;
+        }
+        .desc {
+          padding-top: 0.6rem;
+          display: none;
+          color: #666c74;
+          font-size: 10px;
+          text-align: justify;
+        }
+    
+        /* Medeenii delgerengui hesgiin hover */
+        .medee:hover .desc {
+          display: block;
+        }
+    
+        main {
+          display: grid;
+    
+          & #adimg {
+            padding: 3rem;
+          }
+        }
+    
+        /*Table of teams position*/
+        .position {
+          background-color: var(--games-bg-color);
+          border-radius: 0.7rem;
+          margin-top: 2rem;
+          margin-left: 3rem;
+          margin-right: 3rem;
+          font-family: var(--font);
+    
+          & h1 {
+            color: var(--main-bg-color2);
+            background-color: var(--title-bg-color);
+            border-radius: 0.7rem;
+            padding: 0.4rem;
+            font-size: 0.8rem;
+          }
+    
+          & article {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            font-size: 0.5rem;
+    
+            & p {
+              margin: 0.5rem;
+              font-size: 0.5rem;
+            }
+          }
+        }
+      }
+      /*footer*/
+      footer {
+        height: auto;
+        background-color: var(--main-bg-color);
+        margin-top: 2rem;
+        & .title {
+          color: var(--footer-color);
+          font-weight: 300;
+          font-size: 1rem;
+          margin-left: 8rem;
+          padding-top: 2rem;
+        }
+        & .main {
+          margin-top: 2rem;
+          display: flex;
+          justify-content: center;
+          color: var(--footer-color);
+          & .contact-us {
+            margin-right: 8rem;
+            font-size: 0.7rem;
+            & ul {
+              margin-top: 1rem;
+              & li {
+                list-style-type: none;
+                margin-bottom: 1rem;
+                align-items: center;
+                font-size: 0.6rem;
+              }
+              & img {
+                margin-right: 1rem;
+                width: 0.5rem;
+                height: 0.5rem;
+              }
+            }
+          }
+          & .follow-us {
+            font-size: 0.7rem;
+            & ul {
+              display: flex;
+              & li {
+                margin-top: 1rem;
+                margin-right: 1rem;
+                list-style-type: none;
+              }
+              & img {
+                width: 2rem;
+                height: 2rem;
+              }
+            }
+          }
+        }
+    } 
+}
+
+@media only screen and (min-width: 550px) and (max-width: 749px){
+    * {
+        margin: 0%;
+        padding: 0%;
+      }
+    
+      header {
+        height: auto;
+        background-color: var(--main-bg-color);
+        font-family: var(--main-font);
+    
+        /*team logos*/
+        & .logos {
+          display: flex;
+          list-style-type: none;
+          justify-content: center;
+    
+          /*Logonii hemjee*/
+          & img {
+            width: 2rem;
+            height: 2rem;
+            padding: 0.5rem 0.9rem;
+            transition: transform 500ms;
+          }
+    
+          & img:hover {
+            width: 3.2rem;
+            height: 3.2rem;
+            border-bottom: 1px solid var(--main-bg-color2);
+            transform: translateY(-0.3rem);
+          }
+        }
+        /*menu*/
+        & .menu {
+          padding: 0.58rem;
+          display: flex;
+          list-style-type: none;
+          justify-content: center;
+          font-size: 17px;
+          font-family: var(--font);
+    
+          /*Menu text*/
+          & a {
+            padding: 1.55rem 1.8rem 0.5rem;
+            text-decoration: none;
+            color: var(--main-bg-color2);
+            border-bottom: 3px solid var(--main-bg-color);
+          }
+    
+          /*Menu hover*/
+          & a:hover {
+            border-bottom: 3px solid var(--main-bg-color2);
+          }
+        }
+      }
+    
+      main {
+        /*AD section*/
+        .ad {
+          margin-top: 3rem;
+    
+          & img {
+            display: flex;
+            border-radius: 0.5rem;
+            width: 25rem;
+            margin: 0 auto;
+          }
+    
+          & .league-event-box {
+            margin: 0 auto;
+            margin-top: 3rem;
+            background-color: var(--games-bg-color);
+            border-radius: 0.5rem;
+            width: 30rem;
+            height: 22rem;
+            & h1 {
+              background-color: var(--title-bg-color);
+              border-radius: 0.5rem;
+              padding: 0.2rem;
+              color: var(--main-bg-color2);
+              font-family: var(--font);
+              text-align: center;
+              font-size: 1rem;
+            }
+            & .ads {
+              justify-content: center;
+              & li {
+                list-style-type: none;
+                background-color: var(--league-ad-color);
+                margin-top: 1rem;
+                padding: 0.2rem;
+                margin-left: 4.5rem;
+                margin-right: 4.5rem;
+                border-radius: 1rem;
+    
+                & figure {
+                  margin-top: 1rem;
+                  & img {
+                    margin-left: 15rem;
+                  }
+                  & figcaption {
+                    margin-left: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+    
+        /*News story*/
+        .news {
+          margin-top: 3rem;
+          background-color: var(--bg-color);
+          display: flex;
+          padding: 3rem;
+          justify-content: center;
+    
+          /* 1 medeenii heseg */
+          & .medee {
+            font-family: var(--font);
+            margin: 1.25rem;
+            background-color: white;
+            border-radius: 5px;
+            height: 24rem;
+            width: 25%;
+            overflow: hidden;
+    
+            /* Medeenii zurag */
+            & img {
+              object-fit: cover;
+              height: 60%;
+              width: 100%;
+            }
+          }
+        }
+        /* Medeenii text heseg */
+        .title {
+          background-color: white;
+          padding: 1.25rem;
+    
+          /* Garchignii doodoh zuraas */
+          & h5::after {
+            display: block;
+            content: "";
+            height: 2px;
+            width: 100%;
+            border-radius: 3px;
+            background: var(--main-bg-color);
+            margin-top: 1.25rem;
+          }
+        }
+    
+        /* Medeenii zuragnii hover */
+        .medee:hover .zurag {
+          height: 30%;
+          transition-duration: 0.6s;
+          transition-timing-function: ease-in;
+        }
+    
+        /* Medeenii title hover */
+        .medee:hover .title {
+          height: 70%;
+          border-radius: 5px;
+        }
+        .desc {
+          padding-top: 0.6rem;
+          display: none;
+          color: #666c74;
+          font-size: 10px;
+          text-align: justify;
+        }
+    
+        /* Medeenii delgerengui hesgiin hover */
+        .medee:hover .desc {
+          display: block;
+        }
+    
+        main {
+          display: grid;
+    
+          & #adimg {
+            padding: 3rem;
+          }
+        }
+    
+        /*Table of teams position*/
+        .position {
+          background-color: var(--games-bg-color);
+          border-radius: 0.5rem;
+          margin-top: 2rem;
+          margin-left: 3rem;
+          margin-right: 3rem;
+          font-family: var(--font);
+    
+          & h1 {
+            color: var(--main-bg-color2);
+            background-color: var(--title-bg-color);
+            border-radius: 0.5rem;
+            padding: 0.2rem;
+            font-size: 1rem;
+          }
+    
+          & article {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 2rem;
+            margin-right: 2rem;
+    
+            & p {
+              margin: 0.5rem;
+              font-size: 0.5rem;
+            }
+          }
+        }
+      }
+      /*footer*/
+      footer {
+        height: auto;
+        background-color: var(--main-bg-color);
+        margin-top: 4rem;
+        & .title {
+          color: var(--footer-color);
+          font-weight: 300;
+          font-size: 1rem;
+          margin-left: 6rem;
+          padding-top: 2rem;
+        }
+        & .main {
+          margin-top: 2rem;
+          display: flex;
+          justify-content: center;
+          color: var(--footer-color);
+          & .contact-us {
+            margin-right: 12rem;
+            font-size: 0.7rem;
+            & ul {
+              margin-top: 0.5rem;
+              & li {
+                list-style-type: none;
+                margin-bottom: 1rem;
+                align-items: center;
+              }
+              & img {
+                margin-right: 1rem;
+                width: 0.8rem;
+                height: 0.8rem;
+              }
+            }
+          }
+          & .follow-us {
+            font-size: 0.7rem;
+            & ul {
+              display: flex;
+              & li {
+                margin-top: 0.5rem;
+                margin-right: 1rem;
+                list-style-type: none;
+              }
+              & img {
+                width: 3rem;
+                height: 3rem;
+              }
+            }
+          }
+        }
+    } 
+}
+
+@media only screen and (min-width: 750px) and (max-width: 999px) {
+    * {
+        margin: 0%;
+        padding: 0%;
+      }
+    
+      header {
+        height: 7.5rem;
+        background-color: var(--main-bg-color);
+        font-family: var(--main-font);
+    
+        /*team logos*/
+        & .logos {
+          display: flex;
+          list-style-type: none;
+          justify-content: center;
+    
+          /*Logonii hemjee*/
+          & img {
+            width: 3.1rem;
+            height: 3.1rem;
+            padding: 0.6rem 1.2rem;
+            transition: transform 500ms;
+          }
+    
+          & img:hover {
+            width: 3.2rem;
+            height: 3.2rem;
+            border-bottom: 1px solid var(--main-bg-color2);
+            transform: translateY(-0.3rem);
+          }
+        }
+        /*menu*/
+        & .menu {
+          padding: 0.58rem;
+          display: flex;
+          list-style-type: none;
+          justify-content: center;
+          font-size: 17px;
+          font-family: var(--font);
+    
+          /*Menu text*/
+          & a {
+            padding: 1.55rem 1.8rem 0.65rem;
+            text-decoration: none;
+            color: var(--main-bg-color2);
+            border-bottom: 3px solid var(--main-bg-color);
+          }
+    
+          /*Menu hover*/
+          & a:hover {
+            border-bottom: 3px solid var(--main-bg-color2);
+          }
+        }
+      }
+    
+      main {
+        /*AD section*/
+        .ad {
+          margin-top: 3rem;
+    
+          & img {
+            display: flex;
+            border-radius: 1rem;
+            width: 32rem;
+            margin: 0 auto;
+          }
+    
+          & .league-event-box {
+            margin: 0 auto;
+            margin-top: 3rem;
+            background-color: var(--games-bg-color);
+            border-radius: 1rem;
+            width: 40rem;
+            height: 30rem;
+            & h1 {
+              background-color: var(--title-bg-color);
+              border-radius: 1rem;
+              padding: 0.4rem;
+              color: var(--main-bg-color2);
+              font-family: var(--font);
+              text-align: center;
+              font-size: 1.2rem;
+            }
+            & .ads {
+              justify-content: center;
+              & li {
+                list-style-type: none;
+                background-color: var(--league-ad-color);
+                margin-top: 2rem;
+                padding: 0.8rem;
+                margin-left: 4.5rem;
+                margin-right: 4.5rem;
+                border-radius: 1rem;
+    
+                & figure {
+                  margin-top: 1rem;
+                  & img {
+                    margin-left: 15rem;
+                  }
+                  & figcaption {
+                    margin-left: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+    
+        /*News story*/
+        .news {
+          margin-top: 3rem;
+          background-color: var(--bg-color);
+          display: flex;
+          padding: 3rem;
+          justify-content: center;
+    
+          /* 1 medeenii heseg */
+          & .medee {
+            font-family: var(--font);
+            margin: 1.25rem;
+            background-color: white;
+            border-radius: 5px;
+            height: 24rem;
+            width: 25%;
+            overflow: hidden;
+    
+            /* Medeenii zurag */
+            & img {
+              object-fit: cover;
+              height: 60%;
+              width: 100%;
+            }
+          }
+        }
+        /* Medeenii text heseg */
+        .title {
+          background-color: white;
+          padding: 1.25rem;
+    
+          /* Garchignii doodoh zuraas */
+          & h5::after {
+            display: block;
+            content: "";
+            height: 2px;
+            width: 100%;
+            border-radius: 3px;
+            background: var(--main-bg-color);
+            margin-top: 1.25rem;
+          }
+        }
+    
+        /* Medeenii zuragnii hover */
+        .medee:hover .zurag {
+          height: 30%;
+          transition-duration: 0.6s;
+          transition-timing-function: ease-in;
+        }
+    
+        /* Medeenii title hover */
+        .medee:hover .title {
+          height: 70%;
+          border-radius: 5px;
+        }
+        .desc {
+          padding-top: 0.6rem;
+          display: none;
+          color: #666c74;
+          font-size: 10px;
+          text-align: justify;
+        }
+    
+        /* Medeenii delgerengui hesgiin hover */
+        .medee:hover .desc {
+          display: block;
+        }
+    
+        main {
+          display: grid;
+    
+          & #adimg {
+            padding: 3rem;
+          }
+        }
+    
+        /*Table of teams position*/
+        .position {
+          background-color: var(--games-bg-color);
+          border-radius: 1rem;
+          margin-top: 3rem;
+          margin-left: 3rem;
+          margin-right: 3rem;
+          font-family: var(--font);
+    
+          & h1 {
+            color: var(--main-bg-color2);
+            background-color: var(--title-bg-color);
+            border-radius: 1rem;
+            padding: 0.4rem;
+            font-size: 1.2rem;
+          }
+    
+          & article {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 2rem;
+            margin-right: 2rem;
+    
+            & p {
+              margin: 0.8rem;
+            }
+          }
+        }
+      }
+      /*footer*/
+      footer {
+        height: auto;
+        background-color: var(--main-bg-color);
+        margin-top: 4rem;
+        & .title {
+          color: var(--footer-color);
+          font-weight: 300;
+          font-size: 1rem;
+          margin-left: 6rem;
+          padding-top: 2rem;
+        }
+        & .main {
+          margin-top: 2rem;
+          display: flex;
+          justify-content: center;
+          color: var(--footer-color);
+          & .contact-us {
+            margin-right: 12rem;
+            font-size: 0.7rem;
+            & ul {
+              margin-top: 0.5rem;
+              & li {
+                list-style-type: none;
+                margin-bottom: 1rem;
+                align-items: center;
+              }
+              & img {
+                margin-right: 1rem;
+                width: 0.8rem;
+                height: 0.8rem;
+              }
+            }
+          }
+          & .follow-us {
+            font-size: 0.7rem;
+            & ul {
+              display: flex;
+              & li {
+                margin-top: 0.5rem;
+                margin-right: 1rem;
+                list-style-type: none;
+              }
+              & img {
+                width: 3rem;
+                height: 3rem;
+              }
+            }
+          }
+        }
+    } 
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+  * {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  header {
+    height: 7.5rem;
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
+
+    /*team logos*/
+    & .logos {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+
+      /*Logonii hemjee*/
+      & img {
+        width: 3.1rem;
+        height: 3.1rem;
+        padding: 0.6rem 1.2rem;
+        transition: transform 500ms;
+      }
+
+      & img:hover {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-bottom: 1px solid var(--main-bg-color2);
+        transform: translateY(-0.3rem);
+      }
+    }
+    /*menu*/
+    & .menu {
+      padding: 0.58rem;
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      font-size: 17px;
+      font-family: var(--font);
+
+      /*Menu text*/
+      & a {
+        padding: 1.55rem 1.8rem 0.65rem;
+        text-decoration: none;
+        color: var(--main-bg-color2);
+        border-bottom: 3px solid var(--main-bg-color);
+      }
+
+      /*Menu hover*/
+      & a:hover {
+        border-bottom: 3px solid var(--main-bg-color2);
+      }
+    }
+  }
+
+  main {
+    /*AD section*/
+    .ad {
+      margin-top: 3rem;
+
+      & img {
+        display: flex;
+        border-radius: 1rem;
+        width: 35rem;
+        margin: 0 auto;
+      }
+
+      & .league-event-box {
+        margin: 0 auto;
+        margin-top: 3rem;
+        background-color: var(--games-bg-color);
+        border-radius: 1rem;
+        width: 40rem;
+        height: 35rem;
+        & h1 {
+          background-color: var(--title-bg-color);
+          border-radius: 1rem;
+          padding: 1rem;
+          color: var(--main-bg-color2);
+          font-family: var(--font);
+          text-align: center;
+          font-size: 1.3rem;
+        }
+        & .ads {
+          justify-content: center;
+          & li {
+            list-style-type: none;
+            background-color: var(--league-ad-color);
+            margin-top: 2.5rem;
+            padding: 1rem;
+            margin-left: 4.5rem;
+            margin-right: 4.5rem;
+            border-radius: 1rem;
+
+            & figure {
+              margin-top: 1rem;
+              & img {
+                margin-left: 15rem;
+              }
+              & figcaption {
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*News story*/
+    .news {
+      margin-top: 3rem;
+      background-color: var(--bg-color);
+      display: flex;
+      padding: 3rem;
+      justify-content: center;
+
+      /* 1 medeenii heseg */
+      & .medee {
+        font-family: var(--font);
+        margin: 1.25rem;
+        background-color: white;
+        border-radius: 5px;
+        height: 24rem;
+        width: 25%;
+        overflow: hidden;
+
+        /* Medeenii zurag */
+        & img {
+          object-fit: cover;
+          height: 60%;
+          width: 100%;
+        }
+      }
+    }
+    /* Medeenii text heseg */
+    .title {
+      background-color: white;
+      padding: 1.25rem;
+
+      /* Garchignii doodoh zuraas */
+      & h5::after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 100%;
+        border-radius: 3px;
+        background: var(--main-bg-color);
+        margin-top: 1.25rem;
+      }
+    }
+
+    /* Medeenii zuragnii hover */
+    .medee:hover .zurag {
+      height: 30%;
+      transition-duration: 0.6s;
+      transition-timing-function: ease-in;
+    }
+
+    /* Medeenii title hover */
+    .medee:hover .title {
+      height: 70%;
+      border-radius: 5px;
+    }
+    .desc {
+      padding-top: 0.6rem;
+      display: none;
+      color: #666c74;
+      font-size: 10px;
+      text-align: justify;
+    }
+
+    /* Medeenii delgerengui hesgiin hover */
+    .medee:hover .desc {
+      display: block;
+    }
+
+    main {
+      display: grid;
+
+      & #adimg {
+        padding: 3rem;
+      }
     }
 
     /*Table of teams position*/
+    .position {
+      background-color: var(--games-bg-color);
+      border-radius: 1rem;
+      margin-top: 3rem;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      font-family: var(--font);
 
+      & h1 {
+        color: var(--main-bg-color2);
+        background-color: var(--title-bg-color);
+        border-radius: 1rem;
+        padding: 1rem;
+        font-size: 1.3rem;
+      }
+
+      & article {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+        & p {
+          margin: 1rem;
+        }
+      }
+    }
+  }
+  /*footer*/
+  footer {
+    height: auto;
+    background-color: var(--main-bg-color);
+    margin-top: 5rem;
+    & .title {
+      color: var(--footer-color);
+      font-weight: 300;
+      font-size: 1.3rem;
+      margin-left: 12rem;
+      padding-top: 2rem;
+    }
+    & .main {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      color: var(--footer-color);
+      & .contact-us {
+        margin-right: 16rem;
+        font-size: 0.9rem;
+        & ul {
+          margin-top: 1rem;
+          & li {
+            list-style-type: none;
+            margin-bottom: 1rem;
+            align-items: center;
+          }
+          & img {
+            margin-right: 1rem;
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+      & .follow-us {
+        font-size: 0.9rem;
+        & ul {
+          display: flex;
+          & li {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            list-style-type: none;
+          }
+          & img {
+            width: 3.5rem;
+            height: 3.5rem;
+          }
+        }
+      }
+    }
+  }
 }
- /*footer*/
- footer {
+
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+  * {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  header {
+    height: 7.5rem;
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
+
+    /*team logos*/
+    & .logos {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+
+      /*Logonii hemjee*/
+      & img {
+        width: 3.1rem;
+        height: 3.1rem;
+        padding: 0.6rem 1.2rem;
+        transition: transform 500ms;
+      }
+
+      & img:hover {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-bottom: 1px solid var(--main-bg-color2);
+        transform: translateY(-0.3rem);
+      }
+    }
+    /*menu*/
+    & .menu {
+      padding: 0.58rem;
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      font-size: 17px;
+      font-family: var(--font);
+
+      /*Menu text*/
+      & a {
+        padding: 1.55rem 1.8rem 0.65rem;
+        text-decoration: none;
+        color: var(--main-bg-color2);
+        border-bottom: 3px solid var(--main-bg-color);
+      }
+
+      /*Menu hover*/
+      & a:hover {
+        border-bottom: 3px solid var(--main-bg-color2);
+      }
+    }
+  }
+
+  main {
+    /*AD section*/
+    .ad {
+      display: flex;
+      margin: 5rem;
+
+      & img {
+        margin-left: 1rem;
+        border-radius: 1rem;
+        width: 28rem;
+      }
+
+      & .league-event-box {
+        margin-right: 1rem;
+        background-color: var(--games-bg-color);
+        border-radius: 1rem;
+        width: 50rem;
+        height: 28rem;
+        margin-left: 5rem;
+        & h1 {
+          background-color: var(--title-bg-color);
+          border-radius: 1rem;
+          padding: 0.8rem;
+          color: var(--main-bg-color2);
+          font-family: var(--font);
+          text-align: center;
+        }
+        & .ads {
+          justify-content: center;
+          & li {
+            list-style-type: none;
+            background-color: var(--league-ad-color);
+            margin-top: 1.8rem;
+            padding: 0.5rem;
+            margin-left: 4.5rem;
+            margin-right: 4.5rem;
+            border-radius: 1rem;
+
+            & figure {
+              margin-top: 1rem;
+              & img {
+                margin-left: 15rem;
+              }
+              & figcaption {
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*News story*/
+    .news {
+      background-color: var(--bg-color);
+      display: flex;
+      padding: 3rem;
+      justify-content: center;
+
+      /* 1 medeenii heseg */
+      & .medee {
+        font-family: var(--font);
+        margin: 1.25rem;
+        background-color: white;
+        border-radius: 5px;
+        height: 24rem;
+        width: 25%;
+        overflow: hidden;
+
+        /* Medeenii zurag */
+        & img {
+          object-fit: cover;
+          height: 60%;
+          width: 100%;
+        }
+      }
+    }
+    /* Medeenii text heseg */
+    .title {
+      background-color: white;
+      padding: 1.25rem;
+
+      /* Garchignii doodoh zuraas */
+      & h5::after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 100%;
+        border-radius: 3px;
+        background: var(--main-bg-color);
+        margin-top: 1.25rem;
+      }
+    }
+
+    /* Medeenii zuragnii hover */
+    .medee:hover .zurag {
+      height: 30%;
+      transition-duration: 0.6s;
+      transition-timing-function: ease-in;
+    }
+
+    /* Medeenii title hover */
+    .medee:hover .title {
+      height: 70%;
+      border-radius: 5px;
+    }
+    .desc {
+      padding-top: 0.6rem;
+      display: none;
+      color: #666c74;
+      font-size: 10px;
+      text-align: justify;
+    }
+
+    /* Medeenii delgerengui hesgiin hover */
+    .medee:hover .desc {
+      display: block;
+    }
+
+    main {
+      display: grid;
+
+      & #adimg {
+        padding: 3rem;
+      }
+    }
+
+    /*Table of teams position*/
+    .position {
+      background-color: var(--games-bg-color);
+      border-radius: 1rem;
+      margin-top: 4rem;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      font-family: var(--font);
+
+      & h1 {
+        color: var(--main-bg-color2);
+        background-color: var(--title-bg-color);
+        border-radius: 1rem;
+        padding: 0.8rem;
+      }
+
+      & article {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+        & p {
+          margin: 1rem;
+        }
+      }
+    }
+  }
+  /*footer*/
+  footer {
+    height: auto;
+    background-color: var(--main-bg-color);
+    margin-top: 5rem;
+    & .title {
+      color: var(--footer-color);
+      font-weight: 300;
+      font-size: 1.3rem;
+      margin-left: 12rem;
+      padding-top: 2rem;
+    }
+    & .main {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      color: var(--footer-color);
+      & .contact-us {
+        margin-right: 16rem;
+        font-size: 0.9rem;
+        & ul {
+          margin-top: 1rem;
+          & li {
+            list-style-type: none;
+            margin-bottom: 1rem;
+            align-items: center;
+          }
+          & img {
+            margin-right: 1rem;
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+      & .follow-us {
+        font-size: 0.9rem;
+        & ul {
+          display: flex;
+          & li {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            list-style-type: none;
+          }
+          & img {
+            width: 3.5rem;
+            height: 3.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 1580px) {
+  * {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  header {
+    height: 7.5rem;
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
+
+    /*team logos*/
+    & .logos {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+
+      /*Logonii hemjee*/
+      & img {
+        width: 3.1rem;
+        height: 3.1rem;
+        padding: 0.6rem 1.2rem;
+        transition: transform 500ms;
+      }
+
+      & img:hover {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-bottom: 1px solid var(--main-bg-color2);
+        transform: translateY(-0.3rem);
+      }
+    }
+    /*menu*/
+    & .menu {
+      padding: 0.58rem;
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      font-size: 17px;
+      font-family: var(--font);
+
+      /*Menu text*/
+      & a {
+        padding: 1.55rem 1.8rem 0.65rem;
+        text-decoration: none;
+        color: var(--main-bg-color2);
+        border-bottom: 3px solid var(--main-bg-color);
+      }
+
+      /*Menu hover*/
+      & a:hover {
+        border-bottom: 3px solid var(--main-bg-color2);
+      }
+    }
+  }
+
+  main {
+    /*AD section*/
+    .ad {
+      display: flex;
+      margin: 5rem;
+
+      & img {
+        margin-left: 3rem;
+        border-radius: 1rem;
+        width: 32rem;
+      }
+
+      & .league-event-box {
+        margin-right: 3rem;
+        background-color: var(--games-bg-color);
+        border-radius: 1rem;
+        width: 50rem;
+        height: 32rem;
+        margin-left: 8rem;
+        & h1 {
+          background-color: var(--title-bg-color);
+          border-radius: 1rem;
+          padding: 1.2rem;
+          color: var(--main-bg-color2);
+          font-family: var(--font);
+          text-align: center;
+        }
+        & .ads {
+          justify-content: center;
+          & li {
+            list-style-type: none;
+            background-color: var(--league-ad-color);
+            margin-top: 1.8rem;
+            padding: 1rem;
+            margin-left: 4.5rem;
+            margin-right: 4.5rem;
+            border-radius: 1rem;
+
+            & figure {
+              margin-top: 1rem;
+              & img {
+                margin-left: 15rem;
+              }
+              & figcaption {
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*News story*/
+    .news {
+      background-color: var(--bg-color);
+      display: flex;
+      padding: 3rem;
+      justify-content: center;
+
+      /* 1 medeenii heseg */
+      & .medee {
+        font-family: var(--font);
+        margin: 1.25rem;
+        background-color: white;
+        border-radius: 5px;
+        height: 24rem;
+        width: 25%;
+        overflow: hidden;
+
+        /* Medeenii zurag */
+        & img {
+          object-fit: cover;
+          height: 60%;
+          width: 100%;
+        }
+      }
+    }
+    /* Medeenii text heseg */
+    .title {
+      background-color: white;
+      padding: 1.25rem;
+
+      /* Garchignii doodoh zuraas */
+      & h5::after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 100%;
+        border-radius: 3px;
+        background: var(--main-bg-color);
+        margin-top: 1.25rem;
+      }
+    }
+
+    /* Medeenii zuragnii hover */
+    .medee:hover .zurag {
+      height: 30%;
+      transition-duration: 0.6s;
+      transition-timing-function: ease-in;
+    }
+
+    /* Medeenii title hover */
+    .medee:hover .title {
+      height: 70%;
+      border-radius: 5px;
+    }
+    .desc {
+      padding-top: 0.6rem;
+      display: none;
+      color: #666c74;
+      font-size: 10px;
+      text-align: justify;
+    }
+
+    /* Medeenii delgerengui hesgiin hover */
+    .medee:hover .desc {
+      display: block;
+    }
+
+    main {
+      display: grid;
+
+      & #adimg {
+        padding: 3rem;
+      }
+    }
+
+    /*Table of teams position*/
+    .position {
+      background-color: var(--games-bg-color);
+      border-radius: 1rem;
+      margin-top: 5rem;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      font-family: var(--font);
+
+      & h1 {
+        color: var(--main-bg-color2);
+        background-color: var(--title-bg-color);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+      & article {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+        & p {
+          margin: 1rem;
+        }
+      }
+    }
+  }
+  /*footer*/
+  footer {
+    height: auto;
+    background-color: var(--main-bg-color);
+    margin-top: 5rem;
+    & .title {
+      color: var(--footer-color);
+      font-weight: 300;
+      font-size: 1.5rem;
+      margin-left: 16rem;
+      padding-top: 2rem;
+    }
+    & .main {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      color: var(--footer-color);
+      & .contact-us {
+        margin-right: 18rem;
+        & ul {
+          margin-top: 1rem;
+          & li {
+            list-style-type: none;
+            margin-bottom: 1rem;
+            align-items: center;
+          }
+          & img {
+            margin-right: 1rem;
+          }
+        }
+      }
+      & .follow-us {
+        & ul {
+          display: flex;
+          & li {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            list-style-type: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1581px) {
+  * {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  header {
+    height: 7.5rem;
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
+
+    /*team logos*/
+    & .logos {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+
+      /*Logonii hemjee*/
+      & img {
+        width: 3.1rem;
+        height: 3.1rem;
+        padding: 0.6rem 1.2rem;
+        transition: transform 500ms;
+      }
+
+      & img:hover {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-bottom: 1px solid var(--main-bg-color2);
+        transform: translateY(-0.3rem);
+      }
+    }
+    /*menu*/
+    & .menu {
+      padding: 0.58rem;
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      font-size: 17px;
+      font-family: var(--font);
+
+      /*Menu text*/
+      & a {
+        padding: 1.55rem 1.8rem 0.65rem;
+        text-decoration: none;
+        color: var(--main-bg-color2);
+        border-bottom: 3px solid var(--main-bg-color);
+      }
+
+      /*Menu hover*/
+      & a:hover {
+        border-bottom: 3px solid var(--main-bg-color2);
+      }
+    }
+  }
+
+  main {
+    /*AD section*/
+    .ad {
+      display: flex;
+      margin: 5rem;
+
+      & img {
+        margin-left: 5rem;
+        border-radius: 1rem;
+        width: 35rem;
+      }
+
+      & .league-event-box {
+        margin-right: 5rem;
+        background-color: var(--games-bg-color);
+        border-radius: 1rem;
+        width: 50rem;
+        height: 35rem;
+        margin-left: 10rem;
+        & h1 {
+          background-color: var(--title-bg-color);
+          border-radius: 1rem;
+          padding: 1.5rem;
+          color: var(--main-bg-color2);
+          font-family: var(--font);
+          text-align: center;
+        }
+        & .ads {
+          justify-content: center;
+          & li {
+            list-style-type: none;
+            background-color: var(--league-ad-color);
+            margin-top: 2rem;
+            padding: 1rem;
+            margin-left: 4.5rem;
+            margin-right: 4.5rem;
+            border-radius: 1rem;
+
+            & figure {
+              margin-top: 1rem;
+              & img {
+                margin-left: 15rem;
+              }
+              & figcaption {
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*News story*/
+    .news {
+      background-color: var(--bg-color);
+      display: flex;
+      padding: 3rem;
+      justify-content: center;
+
+      /* 1 medeenii heseg */
+      & .medee {
+        font-family: var(--font);
+        margin: 1.25rem;
+        background-color: white;
+        border-radius: 5px;
+        height: 24rem;
+        width: 25%;
+        overflow: hidden;
+
+        /* Medeenii zurag */
+        & img {
+          object-fit: cover;
+          height: 60%;
+          width: 100%;
+        }
+      }
+    }
+    /* Medeenii text heseg */
+    .title {
+      background-color: white;
+      padding: 1.25rem;
+
+      /* Garchignii doodoh zuraas */
+      & h5::after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 100%;
+        border-radius: 3px;
+        background: var(--main-bg-color);
+        margin-top: 1.25rem;
+      }
+    }
+
+    /* Medeenii zuragnii hover */
+    .medee:hover .zurag {
+      height: 30%;
+      transition-duration: 0.6s;
+      transition-timing-function: ease-in;
+    }
+
+    /* Medeenii title hover */
+    .medee:hover .title {
+      height: 70%;
+      border-radius: 5px;
+    }
+    .desc {
+      padding-top: 0.6rem;
+      display: none;
+      color: #666c74;
+      font-size: 10px;
+      text-align: justify;
+    }
+
+    /* Medeenii delgerengui hesgiin hover */
+    .medee:hover .desc {
+      display: block;
+    }
+
+    main {
+      display: grid;
+
+      & #adimg {
+        padding: 3rem;
+      }
+    }
+
+    /*Table of teams position*/
+    .position {
+      background-color: var(--games-bg-color);
+      border-radius: 1rem;
+      margin-top: 5rem;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      font-family: var(--font);
+
+      & h1 {
+        color: var(--main-bg-color2);
+        background-color: var(--title-bg-color);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+      & article {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 4rem;
+        margin-right: 4rem;
+
+        & p {
+          margin: 1rem;
+        }
+      }
+    }
+  }
+  /*footer*/
+  footer {
     height: auto;
     background-color: var(--main-bg-color);
     margin-top: 5rem;
@@ -217,8 +2104,6 @@ main{
         }
       }
       & .follow-us {
-        & h3 {
-        }
         & ul {
           display: flex;
           & li {
@@ -230,7 +2115,4 @@ main{
       }
     }
   }
-
-
-
-
+}
