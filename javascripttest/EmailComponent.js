@@ -68,7 +68,7 @@ class EmailComponent extends HTMLElement {
       const email = this.emailInput.value.trim();
       if (email) {
           this.dispatchEvent(new CustomEvent('emailSent', { detail: { email } }));
-          this.emailInput.value = ''; // Clear the input after sending
+          this.emailInput.value = ''; 
       }
   }
 }
