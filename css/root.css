@@ -1,7 +1,8 @@
 :root{
     --main-bg-color: #0B193A;
     --main-bg-color2: white;
-    --bg-color: #1F325CE5;
+    --mid-bg-color:white;
+    --bg-color: #37466d;
     --title-bg-color: #1F325C;
     --games-bg-color: #e0e3e8;
     --text-color: #5b5b5b;
@@ -9,18 +10,16 @@
     --footer-color: #b0acac;
     --main-font: Arial, Helvetica, sans-serif;
     --font: 'Poppins', sans-serif;
-
-    
 }
 
 [data-theme="dark"] {
-    --main-bg-color: #c8cdd7;
-      --main-bg-color2: rgb(23, 6, 6);
-      --bg-color: #abaeb6e5;
-      --title-bg-color: #2067f4;
-      --games-bg-color: #040507;
-      --text-color: #190e0e;
-      --footer-color: #231a1a;
-      --main-font: Arial, Helvetica, sans-serif;
-      --font: 'Poppins', sans-serif;
+    --main-bg-color: #161c2c;
+    --main-bg-color2: rgb(23, 6, 6);
+    --bg-color: #27314c;
+    --title-bg-color: #212a41;
+    --games-bg-color: #040507;
+    --text-color: #190e0e;
+    --footer-color: #231a1a;
+    --main-font: Arial, Helvetica, sans-serif;
+    --font: 'Poppins', sans-serif;
   }
