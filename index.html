@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script type="module" src="javascripttest/Email.js"></script>
+    <script type="module" src="javascripttest/Notification.js"></script>
+    <script type="module" src="javascripttest/List.js"></script>
     <title>Home</title>
 </head>
 
@@ -424,12 +427,13 @@
 
     <!--Footer-->
     <footer>
-        <email-input></email-input>
-        <email-notification></email-notification>
-
-        <script src="/javascripttest/emailinput.js"></script>
-        <script src="/javascripttest/emailnotif.js"></script>
-
+        <comp-list direction="row">
+            <comp-email>
+                <input slot="email-input" type="email" placeholder="Enter your email">
+                <button slot="submit-button" role="button">Submit</button>
+            </comp-email>
+            <comp-notification></comp-notification>
+        </comp-list>
 
         <!-- <script src="component/game.js"></script>
         <div class="match" id="games">
