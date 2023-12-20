@@ -6,11 +6,11 @@ class Notification extends HTMLElement {
         this.shadowRoot.innerHTML = `
             <style>
                 p {
-                    color: white;
+                    color: black;
                 }
             </style>
             <div class="notification">
-                <p id="notification-message"></p>
+                <p id="notification-message">Хоосон байна.</p>
             </div>
         `;
     }
@@ -18,7 +18,7 @@ class Notification extends HTMLElement {
     showMessage(useremail) {
         const messageElement = this.shadowRoot.querySelector("#notification-message");
         if (messageElement) {
-            messageElement.textContent = "Tanii email: '" + useremail + "' amjilttai burtgegdlee .";
+            messageElement.textContent = "Таны '" + useremail + "' хаяг амжилттай бүртгэгдлээ.";
         }
     }
 }
