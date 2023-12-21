@@ -3,16 +3,17 @@ const { Client } = require("pg");
 const app = express();
 
 
-app.use(express.json);
+app.use(express.json());
 
 client = new Client({
     user:'postgres',
-    password:'postgres',
+    password:'91209913',
     database:'WebApp-HustleNewGen',
     host:'localhost',
     port:5432
 });
 
+client.connect();
 
 //Routes
 
@@ -23,15 +24,15 @@ app.get("/", (req, res) => {
     res.sendFile("index.html", {root: __dirname});
 });
 
-app.get("/player", async(res, req) =>{
+app.get("/player", async(req, res) =>{
     res.sendFile("Player.html", {root:__dirname})
 });
 
-app.get("/games", async(res, req) =>{
+app.get("/games", async(req, res) =>{
     res.sendFile("games.html", {root:__dirname})
 });
 
-app.get("/team", async(res, req) =>{
+app.get("/team", async(req, res) =>{
     res.sendFile("Teamlookup.html", {root:__dirname})
 });
 
@@ -49,8 +50,15 @@ app.get("/gamedetail", async(req, res) => {
 
 //Post
 
-app.post("", async(req, res) => {
-
+app.post("/createmyemail", async(req, res) => {
+try {
+    const{id, name, email} = req.params;
+    
+    res.status(200);
+} catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" })
+}
 });
 
 //Delete
