@@ -162,20 +162,49 @@ nav{
 
 /* honhnii heseg */
 .honh{
-    display: flex;
+    /* display: flex;
     justify-content: center;
     padding-top: 5px;
     height: 1.8rem;
     width: 2.1rem;
     display: flex;
     border: 2px solid white;
-    border-radius: 4px;
+    border-radius: 4px; */
+}
+
+.honh-btn{
+    height: 2.36rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+
+}
+.honh-sec{
+    display: none;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    width: 22rem;
+    height: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-top: 0.2rem;
+    margin-right: 4rem;
+    right: 0;
+    font-size: 13px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* email button */
 .notbut{
     height: 2.36rem;
-    padding-top: 5px;
+    /* padding-top: 5px; */
     border: 2px solid white;
     border-radius: 5px;
     background-color: var(--main-bg-color);
@@ -183,6 +212,7 @@ nav{
     font-family: var(--font);
     font-size: 15px;
     display: flex;
+    align-items: center;
 
     & span{
         margin-right: 3px;
@@ -204,10 +234,8 @@ nav{
     right: 0;
     color: black;
     font-size: 16px;
-}
-
-/* email bichih input heseg */
-.email-input{
+    /* email bichih input heseg */
+& input{
     width: 12rem;
     height: 1.3rem;
     padding: 2px 4px;
@@ -215,7 +243,7 @@ nav{
 }
 
 /* email-iin submit button */
-.email-btn{
+& button{
     height: 1.5rem;
     background-color: #050c1c;
     color: white;
@@ -224,6 +252,26 @@ nav{
     border-radius: 3px;
     
 }
+}
+
+/* email bichih input heseg */
+/* .email-input{
+    width: 12rem;
+    height: 1.3rem;
+    padding: 2px 4px;
+    border: 1px solid var(--main-bg-color) ;
+} */
+
+/* email-iin submit button */
+/* .email-btn{
+    height: 1.5rem;
+    background-color: #050c1c;
+    color: white;
+    font-family: var(--font);
+    border: none;
+    border-radius: 3px;
+    
+} */
 
 /* dark light button heseg */
 .dark{
