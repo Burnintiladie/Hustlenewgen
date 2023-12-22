@@ -45,8 +45,16 @@
             <div class="not">
 
                 <!-- honh -->
-                <div class="honh">
-                    <span class="material-symbols-outlined">notifications</span>
+                <div class="honh" onclick="honhdrop()">
+
+                   <button class="honh-btn" id="honh-btn">
+                       <span class="material-symbols-outlined">notifications</span>
+                   </button>
+
+                   <div class="honh-sec" id="honh-drop">
+                       <comp-notification></comp-notification>
+                   </div>
+                   <script src="javascript/honh.js"></script>
                 </div>
 
                 <!-- email button heseg -->
@@ -59,11 +67,15 @@
 
                     <!-- daranguut unaj ireh heseg -->
                     <div class="email" id="email-drop">
-                        <form action="">
+                        <!-- <form action="">
                             <label for="">Email:</label>
                             <input type="email" class="email-input" placeholder="youremail@example.com">
                             <input type="button" class="email-btn" value="submit">
-                        </form>
+                        </form> -->
+                        <comp-email>
+                            <input slot="email-input" type="email" placeholder="Enter your email">
+                            <button slot="submit-button" role="button">Submit</button>
+                        </comp-email>
                     </div>
                     <script src="javascript/email.js"></script>
                 </div>
@@ -427,13 +439,13 @@
 
     <!--Footer-->
     <footer>
-        <comp-list direction="row">
+        <!-- <comp-list direction="row">
             <comp-email>
                 <input slot="email-input" type="email" placeholder="Enter your email">
                 <button slot="submit-button" role="button">Submit</button>
             </comp-email>
             <comp-notification></comp-notification>
-        </comp-list>
+        </comp-list> -->
 
         <!-- <script src="component/game.js"></script>
         <div class="match" id="games">

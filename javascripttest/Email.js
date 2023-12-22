@@ -9,11 +9,29 @@ class Email extends HTMLElement {
             <style>
                 .comp-email {
                     /* Your styles here */
+                    /* email bichih input heseg */
+                    & .email-input{
+                        width: 12rem;
+                        height: 1.3rem;
+                        padding: 2px 4px;
+                        border: 1px solid var(--main-bg-color) ;
+                    }
+                    
+                    /* email-iin submit button */
+                    & .email-btn{
+                        height: 1.5rem;
+                        background-color: #050c1c;
+                        color: white;
+                        font-family: var(--font);
+                        border: none;
+                        border-radius: 3px;
+                    }
                 }
             </style>
             <div class="comp-email">
-                <slot name="email-input"></slot>
-                <slot name="submit-button"></slot>
+                <label for="">Email:</label>
+                <slot name="email-input" class="email-input"></slot>
+                <slot name="submit-button" class="email-btn"></slot>
             </div>
         `;
 
