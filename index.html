@@ -5,67 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Mongolian Deed League Website (new generation)">
+
+    <!--CSS-->
     <link rel="stylesheet" href="css/index.css">
+
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <!--Google Icon-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <script type="module" src="javascripttest/Email.js"></script>
-    <script type="module" src="javascripttest/Notification.js"></script>
-    <script type="module" src="javascripttest/List.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!--Team Logo-nii drop player javascript-->
+    <script src="js-1/home-players.js"></script>
+
+    <!--Email bolon Notification components-->
+    <script type="module" src="email_component/Email.js"></script>
+    <script type="module" src="email_component/Notification.js"></script>
+    <script type="module" src="email_component/List.js"></script>
+
+    <!--Title-->
     <title>Home</title>
 </head>
 
 <body>
-    <!--Menu-->
+    <!--Header heseg-->
     <header>
-        <!--Team logos-->
+
+        <!--Bagiin logonii heseg-->
         <div>
             <ul class="logo" id="mylogo"></ul>
-            <script src="javascript/home-players.js"></script>
             <script>
-                const app = new App("mylogo");
-                app.init();
+                const player_app = new App("mylogo");
+                player_app.init();
             </script>
         </div>
 
         <!--Main menu bar-->
         <nav>
 
-            <!-- menu heseg -->
+            <!--Menu heseg -->
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Games.html">Games</a></li>
                 <li><a href="League.html">League</a></li>
             </ul>
 
-            <!-- button heseg(honh, email, dark light) -->
+            <!-- Button heseg(honh, email, dark light) -->
             <div class="not">
 
-                <!-- honh -->
+                <!--Honhnii heseg -->
                 <div class="honh" onclick="honhdrop()">
 
+                    <!--Honhnii tovchluur-->
                    <button class="honh-btn" id="honh-btn">
                        <span class="material-symbols-outlined">notifications</span>
                    </button>
 
+                   <!--Honhon deer daranguut garch ireh heseg -->
                    <div class="honh-sec" id="honh-drop">
                        <comp-notification></comp-notification>
                    </div>
+
+                   <!-- JS -->
                    <script src="javascript/honh.js"></script>
                 </div>
 
-                <!-- email button heseg -->
+                <!-- Email button heseg -->
                 <div class="not-sec">
-                    <!-- email button -->
+
+                    <!-- Email button -->
                     <button class="notbut" onclick="emaildrop()" id="notbtn">
                         <span class="material-symbols-outlined">email</span>
                         Notify
                     </button>
 
-                    <!-- daranguut unaj ireh heseg -->
+                    <!-- Email button deer daranguut unaj ireh heseg -->
                     <div class="email" id="email-drop">
                         <!-- <form action="">
                             <label for="">Email:</label>
@@ -77,11 +94,14 @@
                             <button slot="submit-button" role="button">Submit</button>
                         </comp-email>
                     </div>
+
+                     <!-- JS -->
                     <script src="javascript/email.js"></script>
                 </div>
 
-                <!-- dark light mode button -->
+                <!-- dark light mode heseg-->
                 <div class="dark">
+
                     <label class="switch" for="checkbox">
                         <input type="checkbox" id="checkbox">
 
@@ -90,10 +110,11 @@
                             <span class="material-symbols-outlined" id="light">partly_cloudy_day</span>
                         </div>
                     </label>
+
+                     <!-- JS -->
                     <script src="javascript/darkmode.js"></script>
                 </div>
             </div>
-
         </nav>
     </header>
 
@@ -145,178 +166,24 @@
         </div>
 
 
-
         <!--Recent matches-->
-        <div class="match">
-            <!--Match 1-->
-            <div class="buhel">
-                <div class="game">
-                    <section>
-                        <img src="assets/garid.png" alt="team1 logo">
-                        <p>Garid</p>
-                    </section>
-
-                    <section class="final">
-                        <p class="final-text">Q2 03:12</p>
-                        <div class="team">
-                            <p>34</p>
-                            <p>:</p>
-                            <p>41</p>
-                        </div>
-                    </section>
-
-                    <section>
-                        <img src="assets/metal.png" alt="team2 logo">
-                        <p>Metal</p>
-                    </section>
-                </div>
-
-                <div class="detail">
-                    <a href="Gamedetail.html">
-                        <p>Game Detail</p>
-                    </a>
-                </div>
-            </div>
-
-            <!--Match 2-->
-            <div class="buhel">
-                <div class="game">
-                    <section>
-                        <img src="assets/bison.png" alt="team1 logo">
-                        <p>Bison</p>
-                    </section>
-
-                    <section class="final">
-                        <p class="final-text">Q4 02:15</p>
-                        <div class="team">
-                            <p>99</p>
-                            <p>:</p>
-                            <p>93</p>
-                        </div>
-                    </section>
-
-                    <section>
-                        <img src="assets/brothers.png" alt="team2 logo">
-                        <p>Brothers</p>
-                    </section>
-                </div>
-
-                <div class="detail">
-                    <a href="Gamedetail.html">
-                        <p>Game Detail</p>
-                    </a>
-                </div>
-            </div>
-
-            <!--Match 3-->
-            <div class="buhel">
-                <div class="game">
-                    <section>
-                        <img src="assets/ihc.png" alt="team1 logo">
-                        <p>Apes</p>
-                    </section>
-
-                    <section class="final">
-                        <p class="final-text">FINAL</p>
-                        <div class="team">
-                            <p>85</p>
-                            <p>:</p>
-                            <p>83</p>
-                        </div>
-                    </section>
-
-                    <section>
-                        <img src="assets/daichid.png" alt="team2 logo">
-                        <p>Warriors</p>
-                    </section>
-
-                </div>
-                <div class="detail">
-                    <a href="Gamedetail.html">
-                        <p>Game Detail</p>
-                    </a>
-                </div>
-            </div>
-
-            <!--Match 4-->
-            <div class="buhel">
-                <div class="game">
-                    <section>
-                        <img src="assets/miners.png" alt="team1 logo">
-                        <p>Miners</p>
-                    </section>
-
-                    <section class="final">
-                        <p class="final-text">FINAL</p>
-                        <div class="team">
-                            <p>108</p>
-                            <p>:</p>
-                            <p>102</p>
-                        </div>
-                    </section>
-
-                    <section>
-                        <img src="assets/huleguud.png" alt="team2 logo">
-                        <p>Broncos</p>
-                    </section>
-                </div>
-
-                <div class="detail">
-                    <a href="Gamedetail.html">
-                        <p>Game Detail</p>
-                    </a>
-                </div>
-            </div>
+        <script src="component/game.js"></script>
+        <div class="match" id="games">
+            <script src="component/game-json.js"></script>
+            <script>
+                const games_app = new Gapp("games");
+                games_app.init();
+            </script>
         </div>
 
         <!--News story-->
-        <div class="news">
-            <!--News 1-->
-            <article class="medee">
-                <img src="assets/news1.png" alt="news1" class="zurag">
-                <div class="title">
-                    <h5>Сагсан бөмбөгийн шигшээ баг эцсийн мөчид ялагдлаа</h5>
-                    <p class="desc">Азийн наадмын сагсан бөмбөгийн хэсгийн тоглолтууд үргэлжилж манай шигшээ хоёр дахь
-                        тоглолтоо Хонгконгын эсрэг тоглож эцсийн мөчид хожигдол амслаа.
-                        Хоёрдугаар үед эсрэг багийн төвийн тоглогч болон хурдан довтолгоог хамгаалж чадалгүй дуусав.
-                    </p>
-                </div>
-            </article>
-
-            <!--News 2-->
-            <article class="medee">
-                <img src="assets/sanchir.jpg" alt="news3" class="zurag">
-                <div class="title">
-                    <h5>Дээд лигийн үнэ цэнтэй тоглогчоор Т.Санчир тодорлоо</h5>
-                    <p class="desc">Эрэгтэй Дээд лигийн улирлын шилдэг дасгалжуулагч Эрдэнэт Майнерс багийн ахлах
-                        дасгалжуулагч Грек эрхэм Фрагиас Василиус, шилдэг зургаа дахь тоглогч М Гарьд багийн довтлогч
-                        Д.Дөлгөөнмөрөн, шилдэг шинэ тоглогч Налайх Бизон багийн холбогч Э.Тулга, улирлын шилдэг
-                        хамгаалан тоглогч Хасын Хүлэгүүд багийн хамгаалагч Т.Мэндбаяр нар тус тус нэрлэгдлээ.</p>
-                </div>
-            </article>
-
-            <!--News 3-->
-            <article class="medee">
-                <img src="assets/bilguun.jpg" alt="news3" class="zurag">
-                <div class="title">
-                    <h5>Б.Билгүүн: Тамирчид нэг лигт тоглох хүртэл би Хүлэгүүд багийн бүрэлдэхүүнд тоглохгүй</h5>
-                    <p class="desc">Мөн Хасын Хүлэгүүд багийн тоглогч Б.Билгүүн "Манайд баг лигт орох нь хэвээрээ боловч
-                        тамирчид нэг байр суурьтай байх ёстой. Тамирчид нэг лигтээ тоглохоор бэлтгэлээ хийж байсан ч
-                        тулсан үед ийм шийдвэр гарч байгаа нь харамсалтай байна. Тамирчид нэг лигт тоглох хүртэл би
-                        Хүлэгүүд багийн бүрэлдэхүүнд тоглохгүй" хэмээн мэдэгдлээ.</p>
-                </div>
-            </article>
-
-            <!--News 4-->
-            <article class="medee">
-                <img src="assets/MGL.jpeg" alt="news3" class="zurag">
-                <div class="title">
-                    <h5>Сагсан бөмбөгийн тамирчдын холбоо сүүлийн үед үүсээд байгаа асуудлын талаар мэдэгдэл хийлээ</h5>
-                    <p class="desc">Монголын Үндэсний дээд лиг, багуудын эздийн холбоо нарын хооронд үүссэн үл
-                        ойлголцлын улмаас Үндэсний дээд лигт өмнөх улиралд оролцож байсан зургаан баг энэ улирлын Дээд
-                        лигт оролцоход хүндрэлтэй нөхцөл байдал тулгарсан билээ. </p>
-                </div>
-            </article>
+        <script src="component/news.js"></script>
+        <div class="news" id="news">
+            <script src="component/news-json.js"></script>    
+            <script>
+                const news_app = new Napp("news");
+                news_app.init();
+            </script>
         </div>
 
         <!--Leaderboard/AD-->
@@ -446,15 +313,6 @@
             </comp-email>
             <comp-notification></comp-notification>
         </comp-list> -->
-
-        <!-- <script src="component/game.js"></script>
-        <div class="match" id="games">
-            <script src="javascript/game-json.js"></script>
-            <script>
-                const app2 = new Gapp("games");
-                app2.init();
-            </script>
-        </div> -->
     </footer>
 </body>
 
