@@ -1,3 +1,6 @@
+/*sql, database iin table uud bolon ashiglaj bui querienuudiin huraangui*/
+
+
 Create table client(
 	UserId int,
 	SessionId int,

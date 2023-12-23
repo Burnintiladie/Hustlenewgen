@@ -1,8 +1,9 @@
 class ListComp extends HTMLElement {
     constructor() {
         super();
+        //shadowroot
         this.attachShadow({ mode: 'open' });
-
+        //shadowrootiin htmliig css tei oruulaw
         this.shadowRoot.innerHTML = `
             <style> 
                 .product-list {
@@ -23,5 +24,5 @@ class ListComp extends HTMLElement {
         `;
     }
 }
-
+//custom element zarlana
 window.customElements.define('comp-list', ListComp);

@@ -1,12 +1,16 @@
+//express ashiglaj bn
 const express = require("express");
+//data base teige clienta holbono
 const { Client } = require("pg");
 const cors = require('cors');
 const app = express();
 const port = 3000;
 
+//json file aa ashiglaltand oruulna
 app.use(express.json());
 app.use(cors());
 
+//database iin info-g todorhoilj baina.
 client = new Client({
     user:'postgres',
     password:'91209913',
@@ -20,7 +24,7 @@ client.connect();
 //Routes
 
 
-//Get
+//Get requestuud
 
 app.get("/", (req, res) => {
     res.sendFile("index.html", {root: __dirname});
@@ -66,7 +70,7 @@ app.get("/playerinfo", async(req, res) => {
     }
 });
 
-//Create
+//Create requestuud
 
 app.post("/createmyemail", async (req, res) => {
     try {
@@ -89,9 +93,26 @@ app.post("/createmyemail", async (req, res) => {
       res.status(500).json({ error: "Server error" });
     }
   });
-  
 
-//Update
+
+  app.post('/players', async (req, res) => {
+    try {
+        const { team_id, player_number, playercardimg, player_name, age, position, height, weight } = req.body;
+
+        const result = await client.query(
+            'INSERT INTO players(team_id, player_number, playercardimg, player_name, age, position, height, weight) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *',
+            [team_id, player_number, playercardimg, player_name, age, position, height, weight]
+        );
+
+        const createdPlayer = result.rows[0];
+        res.status(201).json(createdPlayer);
+    } catch (error) {
+        console.error('Error creating player:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+//Update requestuud
 
 app.post('/updateemail/:userId', async (req, res) => {
     try {
@@ -112,7 +133,7 @@ app.post('/updateemail/:userId', async (req, res) => {
     }
   });
 
-//Delete
+//Delete requestuud
 
 app.delete('/deleteuser/:email', async (req, res) => {
     try {
@@ -132,7 +153,26 @@ app.delete('/deleteuser/:email', async (req, res) => {
     }
   });
 
-//
+
+  app.delete('/players/:player_name', async (req, res) => {
+    try {
+        const player_name = req.params.player_name;
+
+        const result = await client.query('DELETE FROM players WHERE player_name = $1 RETURNING *', [player_name]);
+
+        const deletedPlayer = result.rows[0];
+
+        if (!deletedPlayer) {
+            return res.status(404).json({ error: 'Player not found' });
+        }
+
+        res.json({ message: 'Player deleted successfully', deletedPlayer });
+    } catch (error) {
+        console.error('Error deleting player:', error);
+        res.status(500).send('Server Error');
+    }
+});
+//portiin medeelliig console deer delgetslene
 
 app.listen(port, () => {
     console.log("Server is listening port: " + port);

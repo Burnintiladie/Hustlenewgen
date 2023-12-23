@@ -1,9 +1,10 @@
 class Email extends HTMLElement {
     constructor() {
       super();
+      //shadow root ee zarlaj baina
       this.attachShadow({ mode: 'open' });
       this.email = '';
-  
+  //shadowrootiiha html bolon css iig todorhoilno
       this.shadowRoot.innerHTML = `
         <style>
           .comp-email {
@@ -32,10 +33,10 @@ class Email extends HTMLElement {
           <slot name="submit-button" class="email-btn"></slot>
         </div>
       `;
-  
       this.connectedCallback = this.connectedCallback.bind(this);
     }
-  
+  //connectedcallback deer n shadowrootdee template bolon slotiig ashiglan emaileer orj irsen utgiig database-d
+  //oruulahaasa omno shalgaj database ru hiine
     connectedCallback() {
       const emailInputSlot = this.shadowRoot.querySelector('slot[name="email-input"]');
       const submitButtonSlot = this.shadowRoot.querySelector('slot[name="submit-button"]');
@@ -48,7 +49,7 @@ class Email extends HTMLElement {
           });
         }
       });
-  
+  //database-d handalt hiij dawhardal baiga eseh baihgu bol shuud database iin table ru hiine!
       submitButtonSlot.addEventListener('slotchange', () => {
         const submitButton = submitButtonSlot.assignedNodes()[0];
         if (submitButton) {
@@ -80,6 +81,6 @@ class Email extends HTMLElement {
       });
     }
   }
-  
+  //custom element iig zarlaj ogno
   window.customElements.define('comp-email', Email);
   

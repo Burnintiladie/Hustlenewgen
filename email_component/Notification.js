@@ -1,8 +1,9 @@
 class Notification extends HTMLElement {
     constructor() {
         super();
+        //shadowrootee zarlana
         this.attachShadow({ mode: 'open' });
-
+        //shadowrootiin html css iig zarlana
         this.shadowRoot.innerHTML = `
             <style>
                 p {
@@ -14,7 +15,7 @@ class Notification extends HTMLElement {
             </div>
         `;
     }
-
+    //hereglegchiin emailiig notificationii component dotor haruulah heseg
     showMessage(useremail) {
         const messageElement = this.shadowRoot.querySelector("#notification-message");
         if (messageElement) {
@@ -22,5 +23,5 @@ class Notification extends HTMLElement {
         }
     }
 }
-
+//custom element zarlaj ogch baina.
 window.customElements.define('comp-notification', Notification);
