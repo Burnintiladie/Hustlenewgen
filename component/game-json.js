@@ -1,7 +1,10 @@
+//Linkee huvisagchid hadgalj avch baina.
 const api = "https://api.jsonbin.io/v3/b/657c7c841f5677401f0e4143";
 
+//Recent game gesen class
 class RGame
 {
+    //Baiguulagch
     constructor(game)
     {
         this.first_team_logo = game.first_team_logo;
@@ -15,6 +18,8 @@ class RGame
 
     Render()
     {
+        //Attributes and Component
+        //<recent-game></recent-game>
         return`
         <recent-game first_team_logo="${this.first_team_logo}" 
         first_team="${this.first_team}" 
@@ -28,8 +33,10 @@ class RGame
     }
 }
 
+//Games-iin app class
 class Gapp
 {
+    //Baiguulagch
     constructor(targetid)
     {
         this.target = targetid;
@@ -37,14 +44,17 @@ class Gapp
 
     init()
     {   
+        //fetchleed json oo avah
         fetch(api).then(response => response.json()).then(data => {
+            //game-d datanii record buyu json-g hadgalah
             let game = data.record;
             let select = document.getElementById(this.target);
 
-            for(let i=0; i< game.length; i++)
+            //delgetsleh davtalt
+            for(let i=0; i < game.length; i++)
             {
-                const detail = new RGame(game[i]);
-                select.insertAdjacentHTML('beforeend', detail.Render());
+                const tgame = new RGame(game[i]);
+                select.insertAdjacentHTML('beforeend', tgame.Render());
             }
         })
     }
@@ -53,9 +63,7 @@ class Gapp
 
 
 
-
-
-
+//Recent games hesgiin json 
 
 // const games = [
 //     {

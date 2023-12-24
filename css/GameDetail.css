@@ -163,8 +163,8 @@ header{
 }
 
 .par{
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     flex-direction: column;
     padding: 0rem 2rem;
 }

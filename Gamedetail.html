@@ -8,6 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <!--Google Icon-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!--Icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Footer component-->
+    <script type="module" src="component/footer.js"></script>
+
     <title>Game Detail</title>
 </head>
 <body>
@@ -16,7 +31,7 @@
         <!--Team logos--> 
         <div>
             <ul class="logo" id="mylogo"></ul>
-            <script src="javascript/home-players.js"></script>
+            <script src="js-1/home-players.js"></script>
             <script>
                 const app = new App("mylogo");
                 app.init();
@@ -42,19 +57,6 @@
             <div class="versus">
                 <!--Team 1--> 
                 <div class="one-team">
-                    <!--Stats Diagram--> 
-                    <div class="par">
-                        <div><meter value="9" min="0" max="10"></meter><label for="">PTS</label></div>
-                        <div><meter value="5" min="0" max="10"></meter><label for="">REB</label></div>
-                        <div><meter value="7" min="0" max="10"></meter><label for="">AST</label></div>
-                        <div><meter value="1" min="0" max="10"></meter><label for="">STL</label></div>
-                        <div><meter value="4" min="0" max="10"></meter><label for="">BLK</label></div>
-                        <div><meter value="6" min="0" max="10"></meter><label for="">TO</label></div>
-                        <div><meter value="7" min="0" max="10"></meter><label for="">FG%</label></div>
-                        <div><meter value="5.5" min="0" max="10"></meter><label for="">3PT%</label></div>
-                        <div><meter value="9.5" min="0" max="10"></meter><label for="">FT%</label></div>
-                    </div>
-                    
                     <!--Logo--> 
                     <img src="assets/ihc.png" alt="IHC Apes logo">
                 </div>
@@ -70,23 +72,9 @@
                 <div class="one-team">
                     <!--Logo--> 
                     <img src="assets/miners.png" alt="Garid logo">
-    
-                    
-                    <div class="par">
-                        <div><label for="">PTS</label><meter value="9" min="0" max="10"></meter></div>
-                        <div><label for="">REB</label><meter value="5" min="0" max="10"></meter></div>
-                        <div><label for="">AST</label><meter value="7" min="0" max="10"></meter></div>
-                        <div><label for="">STL</label><meter value="1" min="0" max="10"></meter></div>
-                        <div><label for="">BLK</label><meter value="4" min="0" max="10"></meter></div>
-                        <div><label for="">TO</label><meter value="6" min="0" max="10"></meter></div>
-                        <div><label for="">FG%</label><meter value="7" min="0" max="10"></meter></div>
-                        <div><label for="">3PT%</label><meter value="5.5" min="0" max="10"></meter></div>
-                        <div><label for="">FT%</label><meter value="9.5" min="0" max="10"></meter></div>
-                    </div>
                 </div>
             </div>
 
-            <!-- Second row -->
             <!--Quarter--> 
             <div class="q-sec">
                 <div class="quarter">
@@ -125,7 +113,7 @@
 
         <div class="cent">
             <div class="teamz" id="score">
-                <script src="javascript/gamedetail.js"></script>
+                <script src="js-2/gamedetail.js"></script>
                 <script>
                     const appp = new Appp("score");
                     appp.init();
@@ -136,8 +124,6 @@
     </main>
 
     <!--Footer--> 
-    <footer>
-
-    </footer>
+    <cus-foot></cus-foot>
 </body>
 </html>
