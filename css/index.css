@@ -324,22 +324,22 @@ nav{
 
 .a1{
     background-image: linear-gradient(to right , rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
-     url('/assets/cover.jpeg');
+     url('https://i.ibb.co/cQC9xws/cover.jpg');
 }
 
 .a2{
     background-image: linear-gradient(to right, rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
-    url('/assets/start.jpg');
+    url('https://i.ibb.co/jhY99zw/start.jpg');
 }
 
 .a3{
     background-image: linear-gradient(to right, rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
-    url('/assets/allstar-cover.jpg');
+    url('https://i.ibb.co/1mfHWLJ/allstar-cover.jpg');
 }
 
 .a4{
     background-image: linear-gradient(to right, rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
-    url('/assets/monh.jpg');
+    url('https://i.ibb.co/9TVpth0/monh.jpg');
 }
 
 /*1 tom zuragnii heseg*/
