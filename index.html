@@ -29,6 +29,16 @@
     <script type="module" src="email_component/Notification.js"></script>
     <script type="module" src="email_component/List.js"></script>
 
+    <!--Notification component-->
+    <script type="module" src="component/honh-button.js"></script>
+    <script type="module" src="component/honh-unalt.js"></script>
+    <script type="module" src="component/honh-buhel.js"></script>
+
+    <!--Email component-->
+    <script type="module" src="component/email-btn.js"></script>
+    <script type="module" src="component/email-unalt.js"></script>
+    <script type="module" src="component/email-buhel.js"></script>
+
     <!--Footer component-->
     <script type="module" src="component/footer.js"></script>
 
@@ -63,47 +73,30 @@
             <div class="not">
 
                 <!--Honhnii heseg -->
-                <div class="honh" onclick="honhdrop()">
+                <honh-buhel>
+                    <script src="javascript/honh.js"></script>
+                </honh-buhel>
 
-                    <!--Honhnii tovchluur-->
-                   <button class="honh-btn" id="honh-btn">
-                       <span class="material-symbols-outlined">notifications</span>
-                   </button>
-
-                   <!--Honhon deer daranguut garch ireh heseg -->
-                   <div class="honh-sec" id="honh-drop">
-                       <comp-notification></comp-notification>
-                   </div>
-
-                   <!-- JS -->
-                   <script src="javascript/honh.js"></script>
-                </div>
+                <!-- 
+                <honh-buhel>
+                    <honh-btn></honh-btn>
+                    <honh-unalt></honh-unalt>
+                    <script src="javascript/honh.js"></script>
+                </honh-buhel> 
+                -->
 
                 <!-- Email button heseg -->
-                <div class="not-sec">
-
-                    <!-- Email button -->
-                    <button class="notbut" onclick="emaildrop()" id="notbtn">
-                        <span class="material-symbols-outlined">email</span>
-                        Notify
-                    </button>
-
-                    <!-- Email button deer daranguut unaj ireh heseg -->
-                    <div class="email" id="email-drop">
-                        <!-- <form action="">
-                            <label for="">Email:</label>
-                            <input type="email" class="email-input" placeholder="youremail@example.com">
-                            <input type="button" class="email-btn" value="submit">
-                        </form> -->
-                        <comp-email>
-                            <input slot="email-input" type="email" placeholder="Enter your email">
-                            <button slot="submit-button" role="button">Submit</button>
-                        </comp-email>
-                    </div>
-
-                     <!-- JS -->
+                <email-buhel>
                     <script src="javascript/email.js"></script>
-                </div>
+                </email-buhel>
+
+                <!-- 
+                <email-buhel>
+                    <email-btn></email-btn>
+                    <email-unalt></email-unalt>
+                    <script src="javascript/email.js"></script>
+                </email-buhel>
+                 -->
 
                 <!-- dark light mode heseg-->
                 <div class="dark">

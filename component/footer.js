@@ -157,7 +157,7 @@ class Footer extends HTMLElement
             <p> &copy Зохиогчийн эрхээр хамгаалагдсан.</p>
          </div>
          </footer>
-        `
+        `;
     }
 }
 window.customElements.define('cus-foot', Footer);

@@ -160,119 +160,6 @@ nav{
     }
 }
 
-/* honhnii heseg */
-.honh{
-    /* display: flex;
-    justify-content: center;
-    padding-top: 5px;
-    height: 1.8rem;
-    width: 2.1rem;
-    display: flex;
-    border: 2px solid white;
-    border-radius: 4px; */
-}
-
-.honh-btn{
-    height: 2.36rem;
-    width: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-bg-color);
-    color: white;
-    border: 2px solid white;
-    border-radius: 5px;
-
-}
-.honh-sec{
-    display: none;
-    background-color: white;
-    position: absolute;
-    z-index: 1;
-    width: 22rem;
-    height: 1.5rem;
-    padding: 1.5rem;
-    border-radius: 5px;
-    margin-top: 0.2rem;
-    margin-right: 4rem;
-    right: 0;
-    font-size: 13px;
-    justify-content: center;
-    align-items: center;
-}
-
-/* email button */
-.notbut{
-    height: 2.36rem;
-    /* padding-top: 5px; */
-    border: 2px solid white;
-    border-radius: 5px;
-    background-color: var(--main-bg-color);
-    color: white;
-    font-family: var(--font);
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-
-    & span{
-        margin-right: 3px;
-    }
-}
-
-/* email button daranguut unah form heseg */
-.email{
-    display: none;
-    background-color: white;
-    border-radius: 5px;
-    position: absolute;
-    z-index: 1;
-    width: 22rem;
-    padding: 1.5rem;
-    margin-top: 0.2rem;
-    margin-right: 1.1rem;
-    justify-content: center;
-    right: 0;
-    color: black;
-    font-size: 16px;
-    /* email bichih input heseg */
-& input{
-    width: 12rem;
-    height: 1.3rem;
-    padding: 2px 4px;
-    border: 1px solid var(--main-bg-color) ;
-}
-
-/* email-iin submit button */
-& button{
-    height: 1.5rem;
-    background-color: #050c1c;
-    color: white;
-    font-family: var(--font);
-    border: none;
-    border-radius: 3px;
-    
-}
-}
-
-/* email bichih input heseg */
-/* .email-input{
-    width: 12rem;
-    height: 1.3rem;
-    padding: 2px 4px;
-    border: 1px solid var(--main-bg-color) ;
-} */
-
-/* email-iin submit button */
-/* .email-btn{
-    height: 1.5rem;
-    background-color: #050c1c;
-    color: white;
-    font-family: var(--font);
-    border: none;
-    border-radius: 3px;
-    
-} */
-
 /* dark light button heseg */
 .dark{
     padding-left: 0.5rem;
@@ -320,27 +207,23 @@ nav{
 .big{
     position: relative;
     width: 100%;
-}
-
-.a1{
-    background-image: linear-gradient(to right , rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
-     url('https://i.ibb.co/cQC9xws/cover.jpg');
-}
-
-.a2{
-    background-image: linear-gradient(to right, rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
-    url('https://i.ibb.co/jhY99zw/start.jpg');
-}
-
-.a3{
-    background-image: linear-gradient(to right, rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
-    url('https://i.ibb.co/1mfHWLJ/allstar-cover.jpg');
-}
-
-.a4{
-    background-image: linear-gradient(to right, rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
-    url('https://i.ibb.co/9TVpth0/monh.jpg');
-}
+    & .a1{
+        background-image: linear-gradient(to right , rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
+         url('/assets/cover.jpeg');
+    }
+    & .a2{
+        background-image: linear-gradient(to right, rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
+        url('/assets/start.jpg');
+    }
+    & .a3{
+        background-image: linear-gradient(to right, rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
+        url('/assets/allstar-cover.jpg');
+    }
+    & .a4{
+        background-image: linear-gradient(to right, rgba(17, 23, 58, 0.1), rgba(0, 0, 0, 0.9)),
+        url('/assets/monh.jpg');
+    }
+  }
 
 /*1 tom zuragnii heseg*/
 .slide {
@@ -622,6 +505,10 @@ nav{
         }
     }
 }
+
+
+
+
 
 @media screen and (max-width: 1024px) {
 
