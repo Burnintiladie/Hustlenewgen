@@ -6,9 +6,40 @@ const cors = require('cors');
 const app = express();  
 const port = 3000;
 
+//swagger
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("swagger-jsdoc");
+
 //json file aa ashiglaltand oruulna
 app.use(express.json());
 app.use(cors());
+
+const options = {
+  swaggerDefinition: {
+      openapi: "3.0.0",
+      info: {
+          title: "Hustle New Generation",
+          version: "1.0.0",
+          description:
+              "I dunno", 
+          contact: {
+              name: "Tsagaadai",
+              url: "Tsagaadaihaan.mn",
+              email: "tsak@ihmongol.uls.mn"
+          }
+      },
+      servers: [
+          {
+              url: "http://localhost:3000/"
+          }
+      ]
+  },
+  apis: ["./index.js"]
+};
+
+const specs = swaggerDocument(options);
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(specs));
+
 
 //database iin info-g todorhoilj baina.
 client = new Client({
@@ -16,19 +47,69 @@ client = new Client({
     password:'91209913',
     database:'WebApp-HustleNewGen',
     host:'localhost',
-    port:5432
+    port:5433
 });
 
 client.connect();
 
 //Routes
 
-
 //Get requestuud
 
 app.get("/", (req, res) => {
     res.sendFile("index.html", {root: __dirname});
 });
+/**
+ * @swagger
+ * tags:
+ *  -
+ *   name: "Email"
+ *   description: Product related operations
+ *      
+ *  - 
+ *   name: "Player"
+ *   description: Company info 
+ *
+ *  - 
+ *   name: "uugii"
+ *   description: Order related operations 
+
+ */
+/**
+ * @swagger
+ *  paths:
+ *      /products/{productId}/likes:
+ *          post:
+ *              tags:
+ *                  - Product
+ *              summary: Upload product likes to NUM
+ *              parameters:
+*                -
+*                   in: path
+*                   name: productId
+*                   schema:
+*                   type: integer
+*                   required: true
+*                   description: Numeric ID of the product
+ *              requestBody:
+ *                  description: Like ийн тоог явуулна
+ *                  required: true
+ *                  content:
+ *                      application/json:
+ *                          schema:
+ *                              type: object
+ *                              properties:
+ *                                  likes:
+ *                                      type: integer
+ *                              
+ *              responses:
+ *                  "201":
+ *                      description: POST to NUM API
+ *                      content:
+ *                          application/json:
+ *                              schema:
+ *                                  type: string
+ */
 
 app.get("/player", async(req, res) =>{
     res.sendFile("Player.html", {root:__dirname})
