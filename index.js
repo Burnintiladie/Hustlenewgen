@@ -3,7 +3,7 @@ const express = require("express");
 //data base teige clienta holbono
 const { Client } = require("pg");
 const cors = require('cors');
-const app = express();
+const app = express();  
 const port = 3000;
 
 //json file aa ashiglaltand oruulna
