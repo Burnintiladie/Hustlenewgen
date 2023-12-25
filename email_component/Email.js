@@ -54,6 +54,14 @@ class Email extends HTMLElement {
         const submitButton = submitButtonSlot.assignedNodes()[0];
         if (submitButton) {
           submitButton.addEventListener('click', async () => {
+            const notification = document.querySelector("comp-notification");
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(this.email)) {
+                    console.error('Invalid email format');
+                    notification.showMessage('Email-ийг зөв форматтайгаар оруулна уу!');
+                    return;
+                }
+
             try {
               const response = await fetch('http://localhost:3000/createmyemail', {
                 method: 'POST',
@@ -69,9 +77,9 @@ class Email extends HTMLElement {
               const data = await response.json();
 
               console.log(data);
-              const notification = document.querySelector("comp-notification");
+              notification = document.querySelector("comp-notification");
               if (notification) {
-                notification.showMessage(this.email.message);
+                notification.showMessage("Таны '" + this.email + "' хаяг амжилттай бүртгэгдлээ.");
               }
             } catch (error) {
               console.error( error);

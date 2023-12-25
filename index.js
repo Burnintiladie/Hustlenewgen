@@ -73,26 +73,25 @@ app.get("/playerinfo", async(req, res) => {
 //Create requestuud
 
 app.post("/createmyemail", async (req, res) => {
-    try {
-        const { userId, email } = req.body;
+  try {
+      const { userId, email } = req.body;
 
       const result = await client.query('SELECT * FROM client WHERE Email = $1', [email]);
-  
-      if (result.rows.length > 0) {
-        res.status(400).json({ error: 'Email is already registered' });
-      } else {
-        const sessionId = Math.floor(userId * Math.random() * 100_000);
-        await client.query('INSERT INTO client (UserId, SessionId, Email) VALUES ($1, $2, $3)', [userId, sessionId, email]);
-        res.status(201).json({ message: 'Email inserted successfully' });
-        res.cookie("session_id", sessionId);
-      }
 
-      res.status(200).json({ message: 'Request processed successfully' });
-    } catch (err) {
+      if (result.rows.length > 0) {
+          res.status(400).json({ error: 'Email is already registered' });
+      } else {
+          const sessionId = Math.floor(userId * Math.random() * 100_000);
+          await client.query('INSERT INTO client (UserId, SessionId, Email) VALUES ($1, $2, $3)', [userId, sessionId, email]);
+          res.cookie("session_id", sessionId);
+          res.status(201).json({ message: 'Email inserted successfully' });
+      }
+  } catch (err) {
       console.error(err);
       res.status(500).json({ error: "Server error" });
-    }
-  });
+  }
+});
+
 
 
   app.post('/players', async (req, res) => {
