@@ -47,7 +47,7 @@ client = new Client({
     password:'91209913',
     database:'WebApp-HustleNewGen',
     host:'localhost',
-    port:5433
+    port:5432
 });
 
 client.connect();
