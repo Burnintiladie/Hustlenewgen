@@ -49,7 +49,7 @@ client = new Client({
     //tsak,suvda
     //port:5432
     //ja
-    port:5433
+    port:5432
 });
 
 client.connect();
@@ -146,26 +146,32 @@ client.connect();
 //Get requestuud
 app.get("/", (req, res) => {
     res.sendFile("index.html", {root: __dirname});
+    res.status(200);
 });
 
 app.get("/player", async(req, res) =>{
-    res.sendFile("Player.html", {root:__dirname})
+    res.sendFile("Player.html", {root:__dirname});
+    res.status(200);
 });
 
 app.get("/games", async(req, res) =>{
-    res.sendFile("games.html", {root:__dirname})
+    res.sendFile("games.html", {root:__dirname});
+    res.status(200);
 });
 
 app.get("/team", async(req, res) =>{
-    res.sendFile("Teamlookup.html", {root:__dirname})
+    res.sendFile("Teamlookup.html", {root:__dirname});
+    res.status(200);
 });
 
 app.get("/league", async(req, res) => {
-    res.sendFile("League.html", {root: __dirname})
+    res.sendFile("League.html", {root: __dirname});
+    res.status(200);
 });
 
 app.get("/gamedetail", async(req, res) => {
-    res.sendFile("Gamedetail.html", {root: __dirname})
+    res.sendFile("Gamedetail.html", {root: __dirname});
+    res.status(200);
 });
 
 
@@ -285,7 +291,7 @@ app.post("/createmyemail", async (req, res) => {
       const result = await client.query('SELECT * FROM client WHERE Email = $1', [email]);
 
       if (result.rows.length > 0) {
-          res.status(400).json({ error: 'Email is already registered' });
+        res.status(400).json({ error: 'Email is already registered' });
       } else {
           const sessionId = Math.floor(userId * Math.random() * 100_000);
           await client.query('INSERT INTO client (UserId, SessionId, Email) VALUES ($1, $2, $3)', [userId, sessionId, email]);
