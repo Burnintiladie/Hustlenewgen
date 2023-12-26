@@ -21,11 +21,11 @@ const options = {
           title: "Hustle New Generation",
           version: "1.0.0",
           description:
-              "I dunno", 
+              "IМОНГОЛЫН САГСАН БӨМБӨГИЙН ҮНДЭСНИЙ ДЭЭД ЛИГИЙН АЛБАН ЁСНЫ САЙТ", 
           contact: {
-              name: "Tsagaadai",
-              url: "Tsagaadaihaan.mn",
-              email: "tsak@ihmongol.uls.mn"
+              name: "Admin",
+              url: "Hustle.mn",
+              email: "admin@hustle.mn"
           }
       },
       servers: [
@@ -40,76 +40,113 @@ const options = {
 const specs = swaggerDocument(options);
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(specs));
 
-
 //database iin info-g todorhoilj baina.
 client = new Client({
     user:'postgres',
     password:'91209913',
     database:'WebApp-HustleNewGen',
     host:'localhost',
-    port:5432
+    //tsak,suvda
+    //port:5432
+    //ja
+    port:5433
 });
 
 client.connect();
 
 //Routes
 
-//Get requestuud
-
-app.get("/", (req, res) => {
-    res.sendFile("index.html", {root: __dirname});
-});
 /**
  * @swagger
  * tags:
  *  -
- *   name: "Email"
- *   description: Product related operations
+ *   name: "Client"
+ *   description: Hereglegchiin email hayg
  *      
  *  - 
  *   name: "Player"
- *   description: Company info 
- *
- *  - 
- *   name: "uugii"
- *   description: Order related operations 
-
+ *   description: Toglogchiin medeelel 
  */
+
+
+//Schema uusgelt
 /**
  * @swagger
- *  paths:
- *      /products/{productId}/likes:
- *          post:
- *              tags:
- *                  - Product
- *              summary: Upload product likes to NUM
- *              parameters:
-*                -
-*                   in: path
-*                   name: productId
-*                   schema:
-*                   type: integer
-*                   required: true
-*                   description: Numeric ID of the product
- *              requestBody:
- *                  description: Like ийн тоог явуулна
- *                  required: true
- *                  content:
- *                      application/json:
- *                          schema:
- *                              type: object
- *                              properties:
- *                                  likes:
- *                                      type: integer
- *                              
- *              responses:
- *                  "201":
- *                      description: POST to NUM API
- *                      content:
- *                          application/json:
- *                              schema:
- *                                  type: string
+ * components:
+ *   schemas:
+ *     Client:
+ *       type: object
+ *       required:
+ *         - client email
+ *       properties:
+ *         userid:
+ *           type: integer
+ *           description: Hereglegchiin id
+ *         sessionid:
+ *           type: integer
+ *           description: Cookie id
+ *         email:
+ *           type: variable character
+ *           description: Hereglegchiin email hayg
+ *       example:
+ *         userid: 23
+ *         sessionid: 1618437
+ *         email: javhaa@gmail.com
+ *     Player:
+ *       type: object
+ *       required:
+ *         - player number
+ *         - player name
+ *         - player age
+ *         - player position
+ *         - player height
+ *         - player weight
+ *       properties:
+ *         playerid:
+ *           type: integer
+ *           description: Toglogchiin id
+ *         teamid:
+ *           type: integer
+ *           description: Bagiin id
+ *         playernumber:
+ *           type: integer
+ *           description: Toglogchiin huviin dugaar
+ *         playercardimg:
+ *           type: variable character
+ *           description: Toglogchiin profile zurag
+ *         playername:
+ *           type: variable character
+ *           description: Toglogchiin ner
+ *         age:
+ *           type: integer
+ *           description: Toglogchiin nas
+ *         position:
+ *           type: variable character
+ *           description: Toglogchiin bairlal
+ *         height:
+ *           type: integer
+ *           description: Toglogchiin undur
+ *         weight:
+ *           type: integer
+ *           description: Toglogchiin jin
+ *       example:
+ *         playerid: 1
+ *         teamid: 1
+ *         playernumber: 0
+ *         playercardimg: /assets/team_metal/jahlil.png
+ *         playername: Jahlil Tripp
+ *         age: 29
+ *         position: SF
+ *         height: 196
+ *         weight: 98
  */
+
+
+
+//Get requestuud
+app.get("/", (req, res) => {
+    res.sendFile("index.html", {root: __dirname});
+});
 
 app.get("/player", async(req, res) =>{
     res.sendFile("Player.html", {root:__dirname})
@@ -131,6 +168,28 @@ app.get("/gamedetail", async(req, res) => {
     res.sendFile("Gamedetail.html", {root: __dirname})
 });
 
+
+
+
+//-------------------------------------------------------------------Get---------------------------------------------------------------- 
+/**
+ * @swagger
+ *  paths:
+ *     /userinfo:
+ *         get:
+ *           summary: Get user info
+ *           tags: 
+ *              - Client
+ *           responses:
+ *             200:
+ *               description: userinfo json
+ *               contens:
+ *                  application/json:
+ *                    schema:
+ *                      $ref: '#/components/schemas/Client'
+ *             500:
+ *               description: Server error
+ */
 app.get("/userinfo", async(req, res) => {
     try {
         const userinfo = await client.query('SELECT * FROM client');
@@ -141,6 +200,26 @@ app.get("/userinfo", async(req, res) => {
     }
 });
 
+
+
+/**
+ * @swagger
+ *  paths:
+ *     /playerinfo:
+ *         get:
+ *           summary: Get user info
+ *           tags: 
+ *              - Player
+ *           responses:
+ *             200:
+ *               description: playerinfo json
+ *               contens:
+ *                  application/json:
+ *                    schema:
+ *                      $ref: '#/components/schemas/Client'
+ *             500:
+ *               description: Server error
+ */
 app.get("/playerinfo", async(req, res) => {
     try {
         const playerinfo = await client.query('SELECT * FROM players');
@@ -151,8 +230,54 @@ app.get("/playerinfo", async(req, res) => {
     }
 });
 
-//Create requestuud
 
+
+//--------------------------------------------------------------Create requestuud--------------------------------------------------------- 
+
+/**
+ * @swagger
+ * /createmyemail:
+ *   post:
+ *     summary: Create email
+ *     tags:
+ *        - Client
+ *     parameters:
+ *              - 
+ *                in: path
+ *                name: userid
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Hereglegchiin id
+ *              - 
+ *                in: path
+ *                name: email
+ *                schema:
+ *                  type: variable character
+ *                required: true
+ *                description: Hereglegchiin email hayg
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Client'
+ *     responses:
+ *       201:
+ *         description: Email inserted succesfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Client'
+ *       400:
+ *         description: Email is already registered 
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Client'
+ *       500:
+ *         description: Server error
+ */
 app.post("/createmyemail", async (req, res) => {
   try {
       const { userId, email } = req.body;
@@ -175,6 +300,86 @@ app.post("/createmyemail", async (req, res) => {
 
 
 
+/**
+ * @swagger
+ * /players:
+ *   post:
+ *     summary: Create player
+ *     tags:
+ *        - Player
+ *     parameters:
+ *              - 
+ *                in: path
+ *                name: teamid
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Bagiin id
+ *              - 
+ *                in: path
+ *                name: playernumber
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Toglogchiin huviin dugaar
+ *              - 
+ *                in: path
+ *                name: playercardimg
+ *                schema:
+ *                  type: variable character
+ *                required: true
+ *                description: Toglogchiin profile zurag
+ *              - 
+ *                in: path
+ *                name: playername
+ *                schema:
+ *                  type: variable character
+ *                required: true
+ *                description: Toglogchiin ner
+ *              - 
+ *                in: path
+ *                name: age
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Toglogchiin nas
+ *              - 
+ *                in: path
+ *                name: position
+ *                schema:
+ *                  type: variable character
+ *                required: true
+ *                description: Toglogchiin bairlal
+ *              - 
+ *                in: path
+ *                name: height
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Toglogchiin undur
+ *              - 
+ *                in: path
+ *                name: weight
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Toglogchiin jin
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Player'
+ *     responses:
+ *       201:
+ *         description: Created player
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Player'
+ *       500:
+ *         description: Server error
+ */
   app.post('/players', async (req, res) => {
     try {
         const { team_id, player_number, playercardimg, player_name, age, position, height, weight } = req.body;
@@ -192,8 +397,46 @@ app.post("/createmyemail", async (req, res) => {
     }
 });
 
-//Update requestuud
 
+//--------------------------------------------------------------Update requestuud--------------------------------------------------------- 
+
+/**
+ * @swagger
+ * /updateemail/{userId}:
+ *   post:
+ *     summary: Update email
+ *     tags:
+ *        - Client
+ *     parameters:
+ *              - 
+ *                in: path
+ *                name: userid
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Hereglegchiin id
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Client'
+ *     responses:
+ *       200:
+ *         description: Email updated succesfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Client'
+ *       404:
+ *         description: User not found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Client'
+ *       500:
+ *         description: Server error
+ */
 app.post('/updateemail/:userId', async (req, res) => {
     try {
       const userId = req.params.userId;
@@ -213,8 +456,34 @@ app.post('/updateemail/:userId', async (req, res) => {
     }
   });
 
-//Delete requestuud
 
+
+
+//--------------------------------------------------------------Delete requestuud--------------------------------------------------------- 
+
+/**
+ * @swagger
+ * /deleteuser/{email}:
+ *   delete:
+ *     summary: Remove the email 
+ *     tags:
+ *        - Client
+ *     parameters:
+ *       - in: path
+ *         name: email
+ *         schema:
+ *           type: variable character
+ *         required: true
+ *         description: Hereglegchiin email
+ * 
+ *     responses:
+ *       200:
+ *         description: User deleted succesfully
+ *       404:
+ *         description: User not found
+ *       500:
+ *         description: Server error
+ */
 app.delete('/deleteuser/:email', async (req, res) => {
     try {
       const email = req.params.email;
@@ -234,6 +503,30 @@ app.delete('/deleteuser/:email', async (req, res) => {
   });
 
 
+
+/**
+ * @swagger
+ * /players/{playername}:
+ *   delete:
+ *     summary: Remove the player
+ *     tags:
+ *        - Player
+ *     parameters:
+ *       - in: path
+ *         name: playername
+ *         schema:
+ *           type: variable character
+ *         required: true
+ *         description: Toglogchiin ner
+ * 
+ *     responses:
+ *       200:
+ *         description: Player deleted succesfully
+ *       404:
+ *         description: Player not found
+ *       500:
+ *         description: Server error
+ */
   app.delete('/players/:player_name', async (req, res) => {
     try {
         const player_name = req.params.player_name;
@@ -252,6 +545,8 @@ app.delete('/deleteuser/:email', async (req, res) => {
         res.status(500).send('Server Error');
     }
 });
+
+
 //portiin medeelliig console deer delgetslene
 
 app.listen(port, () => {
