@@ -1,5 +1,5 @@
 @import url(root.css);
-@media only screen and (max-width: 535px){ 
+@media only screen and (max-width: 535px) {
   * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@
     margin: auto;
     width: 100%;
   }
-   /*header*/
+  /*header*/
   header {
     height: auto;
     background-color: var(--main-bg-color);
@@ -60,8 +60,7 @@
       }
     }
   }
-  
-  
+
   .match-background {
     background-image: url(../assets/team-cover.png);
     background-size: cover;
@@ -70,53 +69,53 @@
     display: flex;
     justify-content: center;
   }
-  
+
   .match-b-text {
     display: flex;
     margin-top: 0.5rem;
     align-items: center;
-    & img{
+    & img {
       margin-left: 0.2rem;
       margin-right: 0.2rem;
     }
-    & .Nextmatch{
+    & .Nextmatch {
       text-align: center;
       margin-bottom: 15rem;
-      & .title{
+      & .title {
         margin-top: 6rem;
         font-size: 1rem;
         font-family: var(--font);
         color: var(--main-bg-color);
       }
-      & .gamedate{
+      & .gamedate {
         font-size: 0.5rem;
         color: var(--title-bg-color);
       }
     }
   }
-  
+
   .logoteam1 {
     height: 4rem;
   }
-  
+
   .gamedate {
     font-size: small;
     font-weight: bolder;
   }
-  
+
   .match {
     display: flex;
     padding: 25px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: white;
     justify-content: center;
   }
-  
+
   .match img {
     width: 60px;
     height: 60px;
   }
-  
+
   .game {
     display: flex;
     background-color: rgba(31, 50, 92, 0.9);
@@ -127,60 +126,57 @@
     padding: 15px 15px;
     justify-content: center;
   }
-  
+
   .game section {
     margin: 0px 8px;
     text-align: center;
   }
-  
+
   .final-text {
     padding-top: 15px;
     font-size: 9px;
     color: #f04040;
     text-align: center;
   }
-  
+
   .team {
     font-size: 20px;
     display: flex;
   }
-  
-  
+
   .recentmatchtxt {
     align-content: center;
     text-align: center;
     font-size: 1.5em;
     margin-top: 2%;
-    text-shadow: #0B193A;
-  
+    text-shadow: #0b193a;
   }
-  
+
   .team_table {
-    
     grid-template-columns: repeat(2, 1fr);
     background-color: rgba(31, 50, 92, 0.9);
     border: 0.1px solid #111;
     border-radius: 1rem;
     width: 22rem;
   }
-  
-  .team_table>p {
+
+  .team_table > p {
     padding: 5px;
     color: #fff;
     font-size: 0.5rem;
   }
-  
+
   section h3 {
     text-align: center;
     margin-bottom: 1rem;
   }
-  
+
   .aboutteam {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .Player_card {
     display: flex;
     flex-direction: column;
@@ -191,32 +187,31 @@
     border-radius: 10px;
     width: 200px;
   }
-  
+
   .playercardimg {
     width: 100%;
     overflow: hidden;
     margin: 10px 0;
   }
-  
+
   .playercardimg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   .player_number {
     font-size: 24px;
     font-weight: bold;
   }
-  
+
   .player-card_info_container {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     width: 100%;
-  
   }
-  
+
   .player-card_info_table {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -224,46 +219,45 @@
     text-align: left;
     font-size: 14px;
     font: var(--font);
-    & p{
+    & p {
       font-size: 0.8rem;
     }
   }
-  
+
   .player-card_info_table h4 {
     grid-column: 1 / span 2;
     text-align: center;
     font-weight: bold;
   }
-  
+
   .player-card_info_table div {
     grid-column: 1 / span 2;
   }
-  
+
   .slider-container {
     display: flex;
     overflow: hidden;
     align-items: center;
     position: relative;
   }
-  
+
   .slider {
     display: flex;
     flex-wrap: wrap;
     transition: transform 0.5 ease;
     gap: 15px;
   }
-  
+
   .Team_roster {
     margin: 3rem;
-    
   }
-  
+
   .teamrosterparagraph {
     text-align: center;
     margin-bottom: 1rem;
     font-weight: bold;
   }
-  
+
   .employee_card {
     display: flex;
     flex-direction: column;
@@ -275,7 +269,7 @@
     width: 200px;
     margin-left: 8rem;
   }
-  
+
   .Team_employee_info {
     display: flex;
     overflow: hidden;
@@ -283,7 +277,7 @@
     position: relative;
     gap: 20px;
   }
-  
+
   .employeerosterparagraph {
     text-align: center;
     margin-bottom: 1rem;
@@ -342,7 +336,7 @@
     }
   }
 }
-@media only screen and (min-width: 536px) and (max-width: 799px){ 
+@media only screen and (min-width: 536px) and (max-width: 799px) {
   * {
     margin: 0;
     padding: 0;
@@ -352,8 +346,8 @@
     margin: auto;
     width: 100%;
   }
-   /*header*/
-   header {
+  /*header*/
+  header {
     height: auto;
     background-color: var(--main-bg-color);
     font-family: var(--main-font);
@@ -403,8 +397,7 @@
       }
     }
   }
-  
-  
+
   .match-background {
     background-image: url(../assets/team-cover.png);
     background-size: cover;
@@ -413,53 +406,53 @@
     display: flex;
     justify-content: center;
   }
-  
+
   .match-b-text {
     display: flex;
     margin-top: 0.5rem;
     align-items: center;
-    & img{
+    & img {
       margin-left: 0.5rem;
       margin-right: 0.5rem;
     }
-    & .Nextmatch{
+    & .Nextmatch {
       text-align: center;
       margin-bottom: 15rem;
-      & .title{
+      & .title {
         margin-top: 4rem;
         font-size: 1.5rem;
         font-family: var(--font);
         color: var(--main-bg-color);
       }
-      & .gamedate{
+      & .gamedate {
         font-size: 0.8rem;
         color: var(--title-bg-color);
       }
     }
   }
-  
+
   .logoteam1 {
     height: 5rem;
   }
-  
+
   .gamedate {
     font-size: small;
     font-weight: bolder;
   }
-  
+
   .match {
     display: flex;
     padding: 25px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: white;
     justify-content: center;
   }
-  
+
   .match img {
     width: 60px;
     height: 60px;
   }
-  
+
   .game {
     display: flex;
     background-color: rgba(31, 50, 92, 0.9);
@@ -470,60 +463,57 @@
     padding: 15px 15px;
     justify-content: center;
   }
-  
+
   .game section {
     margin: 0px 8px;
     text-align: center;
   }
-  
+
   .final-text {
     padding-top: 15px;
     font-size: 9px;
     color: #f04040;
     text-align: center;
   }
-  
+
   .team {
     font-size: 20px;
     display: flex;
   }
-  
-  
+
   .recentmatchtxt {
     align-content: center;
     text-align: center;
     font-size: 1.5em;
     margin-top: 2%;
-    text-shadow: #0B193A;
-  
+    text-shadow: #0b193a;
   }
-  
+
   .team_table {
-    
     grid-template-columns: repeat(2, 1fr);
     background-color: rgba(31, 50, 92, 0.9);
     border: 0.1px solid #111;
     border-radius: 1rem;
     width: 30rem;
   }
-  
-  .team_table>p {
+
+  .team_table > p {
     padding: 5px;
     color: #fff;
     font-size: 0.8rem;
   }
-  
+
   section h3 {
     text-align: center;
     margin-bottom: 1rem;
   }
-  
+
   .aboutteam {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .Player_card {
     display: flex;
     flex-direction: column;
@@ -534,32 +524,31 @@
     border-radius: 10px;
     width: 180px;
   }
-  
+
   .playercardimg {
     width: 100%;
     overflow: hidden;
     margin: 10px 0;
   }
-  
+
   .playercardimg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   .player_number {
     font-size: 24px;
     font-weight: bold;
   }
-  
+
   .player-card_info_container {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     width: 100%;
-  
   }
-  
+
   .player-card_info_table {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -567,46 +556,45 @@
     text-align: left;
     font-size: 14px;
     font: var(--font);
-    & p{
+    & p {
       font-size: 0.8rem;
     }
   }
-  
+
   .player-card_info_table h4 {
     grid-column: 1 / span 2;
     text-align: center;
     font-weight: bold;
   }
-  
+
   .player-card_info_table div {
     grid-column: 1 / span 2;
   }
-  
+
   .slider-container {
     display: flex;
     overflow: hidden;
     align-items: center;
     position: relative;
   }
-  
+
   .slider {
     display: flex;
     flex-wrap: wrap;
     transition: transform 0.5 ease;
     gap: 15px;
   }
-  
+
   .Team_roster {
     margin: 3rem;
-    
   }
-  
+
   .teamrosterparagraph {
     text-align: center;
     margin-bottom: 1rem;
     font-weight: bold;
   }
-  
+
   .employee_card {
     display: flex;
     flex-direction: column;
@@ -618,7 +606,7 @@
     width: 200px;
     margin-left: 8rem;
   }
-  
+
   .Team_employee_info {
     display: flex;
     overflow: hidden;
@@ -626,13 +614,13 @@
     position: relative;
     gap: 20px;
   }
-  
+
   .employeerosterparagraph {
     text-align: center;
     margin-bottom: 1rem;
     font-weight: bold;
   }
-   /*footer*/
+  /*footer*/
   footer {
     height: auto;
     background-color: var(--main-bg-color);
@@ -685,7 +673,7 @@
     }
   }
 }
-@media only screen and (min-width: 800px) and (max-width: 1049px){
+@media only screen and (min-width: 800px) and (max-width: 1049px) {
   * {
     margin: 0;
     padding: 0;
@@ -745,8 +733,7 @@
       }
     }
   }
-  
-  
+
   .match-background {
     background-image: url(../assets/team-cover.png);
     background-size: cover;
@@ -755,52 +742,52 @@
     display: flex;
     justify-content: center;
   }
-  
+
   .match-b-text {
     display: flex;
     margin-top: 2rem;
     align-items: center;
-    & img{
+    & img {
       margin-left: 2rem;
       margin-right: 2rem;
     }
-    & .Nextmatch{
+    & .Nextmatch {
       text-align: center;
       margin-bottom: 15rem;
-      & .title{
+      & .title {
         font-size: 2rem;
         font-family: var(--font);
         color: var(--main-bg-color);
       }
-      & .gamedate{
+      & .gamedate {
         font-size: 0.8rem;
         color: var(--title-bg-color);
       }
     }
   }
-  
+
   .logoteam1 {
     height: 6rem;
   }
-  
+
   .gamedate {
     font-size: small;
     font-weight: bolder;
   }
-  
+
   .match {
     display: flex;
     padding: 25px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: white;
     justify-content: center;
   }
-  
+
   .match img {
     width: 60px;
     height: 60px;
   }
-  
+
   .game {
     display: flex;
     background-color: rgba(31, 50, 92, 0.9);
@@ -811,60 +798,57 @@
     padding: 15px 15px;
     justify-content: center;
   }
-  
+
   .game section {
     margin: 0px 8px;
     text-align: center;
   }
-  
+
   .final-text {
     padding-top: 15px;
     font-size: 9px;
     color: #f04040;
     text-align: center;
   }
-  
+
   .team {
     font-size: 20px;
     display: flex;
   }
-  
-  
+
   .recentmatchtxt {
     align-content: center;
     text-align: center;
     font-size: 1.5em;
     margin-top: 2%;
-    text-shadow: #0B193A;
-  
+    text-shadow: #0b193a;
   }
-  
+
   .team_table {
-    
     grid-template-columns: repeat(2, 1fr);
     background-color: rgba(31, 50, 92, 0.9);
     border: 0.1px solid #111;
     border-radius: 1rem;
     width: 45rem;
   }
-  
-  .team_table>p {
+
+  .team_table > p {
     padding: 5px;
     color: #fff;
     font-size: 1rem;
   }
-  
+
   section h3 {
     text-align: center;
     margin-bottom: 1rem;
   }
-  
+
   .aboutteam {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .Player_card {
     display: flex;
     flex-direction: column;
@@ -875,32 +859,31 @@
     border-radius: 10px;
     width: 200px;
   }
-  
+
   .playercardimg {
     width: 100%;
     overflow: hidden;
     margin: 10px 0;
   }
-  
+
   .playercardimg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   .player_number {
     font-size: 24px;
     font-weight: bold;
   }
-  
+
   .player-card_info_container {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     width: 100%;
-  
   }
-  
+
   .player-card_info_table {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -909,42 +892,41 @@
     font-size: 14px;
     font: var(--font);
   }
-  
+
   .player-card_info_table h4 {
     grid-column: 1 / span 2;
     text-align: center;
     font-weight: bold;
   }
-  
+
   .player-card_info_table div {
     grid-column: 1 / span 2;
   }
-  
+
   .slider-container {
     display: flex;
     overflow: hidden;
     align-items: center;
     position: relative;
   }
-  
+
   .slider {
     display: flex;
     flex-wrap: wrap;
     transition: transform 0.5 ease;
     gap: 15px;
   }
-  
+
   .Team_roster {
     margin: 3rem;
-    
   }
-  
+
   .teamrosterparagraph {
     text-align: center;
     margin-bottom: 1rem;
     font-weight: bold;
   }
-  
+
   .employee_card {
     display: flex;
     flex-direction: column;
@@ -956,7 +938,7 @@
     width: 200px;
     margin-left: 8rem;
   }
-  
+
   .Team_employee_info {
     display: flex;
     overflow: hidden;
@@ -964,13 +946,13 @@
     position: relative;
     gap: 20px;
   }
-  
+
   .employeerosterparagraph {
     text-align: center;
     margin-bottom: 1rem;
     font-weight: bold;
   }
-   /*footer*/
+  /*footer*/
   footer {
     height: auto;
     background-color: var(--main-bg-color);
@@ -1015,7 +997,7 @@
             margin-right: 1rem;
             list-style-type: none;
           }
-          & img{
+          & img {
             width: 3rem;
             height: 3rem;
           }
@@ -1024,8 +1006,7 @@
     }
   }
 }
-@media only screen and (min-width: 1050px) and (max-width: 1329px){
-
+@media only screen and (min-width: 1050px) and (max-width: 1329px) {
   * {
     margin: 0;
     padding: 0;
@@ -1085,8 +1066,7 @@
       }
     }
   }
-  
-  
+
   .match-background {
     background-image: url(../assets/team-cover.png);
     background-size: cover;
@@ -1095,49 +1075,49 @@
     display: flex;
     justify-content: center;
   }
-  
+
   .match-b-text {
     display: flex;
     margin-top: 3rem;
     align-items: center;
-    & .logoteam1{
+    & .logoteam1 {
       margin-left: 1.5rem;
       margin-right: 1.5rem;
       height: 10rem;
     }
-    & .Nextmatch{
+    & .Nextmatch {
       text-align: center;
       margin-bottom: 15rem;
-      & .title{
+      & .title {
         font-size: 3rem;
         font-family: var(--font);
         color: var(--main-bg-color);
       }
-      & .gamedate{
+      & .gamedate {
         font-size: 1.2rem;
         color: var(--title-bg-color);
       }
     }
   }
-  
+
   .gamedate {
     font-size: small;
     font-weight: bolder;
   }
-  
+
   .match {
     display: flex;
     padding: 25px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: white;
     justify-content: center;
   }
-  
+
   .match img {
     width: 60px;
     height: 60px;
   }
-  
+
   .game {
     display: flex;
     background-color: rgba(31, 50, 92, 0.9);
@@ -1148,34 +1128,32 @@
     padding: 15px 15px;
     justify-content: center;
   }
-  
+
   .game section {
     margin: 0px 8px;
     text-align: center;
   }
-  
+
   .final-text {
     padding-top: 15px;
     font-size: 9px;
     color: #f04040;
     text-align: center;
   }
-  
+
   .team {
     font-size: 20px;
     display: flex;
   }
-  
-  
+
   .recentmatchtxt {
     align-content: center;
     text-align: center;
     font-size: 1.5em;
     margin-top: 2%;
-    text-shadow: #0B193A;
-  
+    text-shadow: #0b193a;
   }
-  
+
   .team_table {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1184,23 +1162,23 @@
     border-radius: 1rem;
     width: 60rem;
   }
-  
-  .team_table>p {
+
+  .team_table > p {
     padding: 5px;
     color: #fff;
   }
-  
+
   section h3 {
     text-align: center;
     margin-bottom: 1rem;
   }
-  
+
   .aboutteam {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .Player_card {
     display: flex;
     flex-direction: column;
@@ -1211,32 +1189,31 @@
     border-radius: 10px;
     width: 200px;
   }
-  
+
   .playercardimg {
     width: 100%;
     overflow: hidden;
     margin: 10px 0;
   }
-  
+
   .playercardimg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   .player_number {
     font-size: 24px;
     font-weight: bold;
   }
-  
+
   .player-card_info_container {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     width: 100%;
-  
   }
-  
+
   .player-card_info_table {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1245,42 +1222,41 @@
     font-size: 14px;
     font: var(--font);
   }
-  
+
   .player-card_info_table h4 {
     grid-column: 1 / span 2;
     text-align: center;
     font-weight: bold;
   }
-  
+
   .player-card_info_table div {
     grid-column: 1 / span 2;
   }
-  
+
   .slider-container {
     display: flex;
     overflow: hidden;
     align-items: center;
     position: relative;
   }
-  
+
   .slider {
     display: flex;
     flex-wrap: wrap;
     transition: transform 0.5 ease;
     gap: 15px;
   }
-  
+
   .Team_roster {
     margin: 3rem;
-    
   }
-  
+
   .teamrosterparagraph {
     text-align: center;
     margin-bottom: 1rem;
     font-weight: bold;
   }
-  
+
   .employee_card {
     display: flex;
     flex-direction: column;
@@ -1292,7 +1268,7 @@
     width: 200px;
     margin-left: 8rem;
   }
-  
+
   .Team_employee_info {
     display: flex;
     overflow: hidden;
@@ -1300,14 +1276,14 @@
     position: relative;
     gap: 20px;
   }
-  
+
   .employeerosterparagraph {
     text-align: center;
     margin-bottom: 1rem;
     font-weight: bold;
   }
-   /*footer*/
-   footer {
+  /*footer*/
+  footer {
     height: auto;
     background-color: var(--main-bg-color);
     margin-top: 4rem;
@@ -1351,7 +1327,7 @@
             margin-right: 1rem;
             list-style-type: none;
           }
-          & img{
+          & img {
             width: 3.5rem;
             height: 3.5rem;
           }
@@ -1360,64 +1336,62 @@
     }
   }
 }
-@media only screen and (min-width: 1330px){
+@media only screen and (min-width: 1330px) {
   * {
     margin: 0%;
     padding: 0;
-   
   }
-  
+
   header {
     height: 7.5rem;
     background-color: var(--main-bg-color);
     font-family: var(--main-font);
-  
+
     /*team logos*/
     & .logos {
-        display: flex;
-        list-style-type: none;
-        justify-content: center;
-  
-        /*Logonii hemjee*/
-        & img {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+
+      /*Logonii hemjee*/
+      & img {
         width: 3.1rem;
         height: 3.1rem;
         padding: 0.6rem 1.2rem;
         transition: transform 500ms;
-        }
-  
-        & img:hover {
+      }
+
+      & img:hover {
         width: 3.2rem;
         height: 3.2rem;
         border-bottom: 1px solid var(--main-bg-color2);
         transform: translateY(-0.3rem);
-        }
+      }
     }
     /*menu*/
     & .menu {
-        padding: 0.58rem;
-        display: flex;
-        list-style-type: none;
-        justify-content: center;
-        font-size: 17px;
-        font-family: var(--font);
-  
-        /*Menu text*/
-        & a {
+      padding: 0.58rem;
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      font-size: 17px;
+      font-family: var(--font);
+
+      /*Menu text*/
+      & a {
         padding: 1.55rem 1.8rem 0.65rem;
         text-decoration: none;
         color: var(--main-bg-color2);
         border-bottom: 3px solid var(--main-bg-color);
-        }
-  
-        /*Menu hover*/
-        & a:hover {
+      }
+
+      /*Menu hover*/
+      & a:hover {
         border-bottom: 3px solid var(--main-bg-color2);
-        }
+      }
     }
   }
-  
-  
+
   .match-background {
     background-image: url(../assets/team-cover.png);
     background-size: cover;
@@ -1426,54 +1400,52 @@
     display: flex;
     justify-content: center;
   }
-  
+
   .match-b-text {
     display: flex;
     margin-top: 3rem;
     align-items: center;
-    & img{
+    & img {
       margin-left: 4rem;
       margin-right: 4rem;
     }
-    & .Nextmatch{
+    & .Nextmatch {
       text-align: center;
       margin-bottom: 15rem;
-      & .title{
+      & .title {
         font-size: 3rem;
         font-family: var(--font);
         color: var(--main-bg-color);
       }
-      & .gamedate{
+      & .gamedate {
         font-size: 1.2rem;
         color: var(--title-bg-color);
       }
     }
   }
 
-   
-  
   .logoteam1 {
     height: 12rem;
   }
-  
+
   .gamedate {
     font-size: small;
     font-weight: bolder;
   }
-  
+
   .match {
     display: flex;
     padding: 25px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: white;
     justify-content: center;
   }
-  
+
   .match img {
     width: 60px;
     height: 60px;
   }
-  
+
   .game {
     display: flex;
     background-color: rgba(31, 50, 92, 0.9);
@@ -1484,34 +1456,34 @@
     padding: 15px 15px;
     justify-content: center;
   }
-  
+
   .game section {
     margin: 0px 8px;
     text-align: center;
   }
-  
+
   .final-text {
     padding-top: 15px;
     font-size: 9px;
     color: #f04040;
     text-align: center;
   }
-  
+
   .team {
     font-size: 20px;
     display: flex;
   }
-  
-  
+
   .recentmatchtxt {
     align-content: center;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2.5rem;
+    font-family: var(--font);
     margin-top: 2%;
-    text-shadow: #0B193A;
-  
+    text-shadow: #0b193a;
+    color: var(--main-bg-color);
   }
-  
+
   .team_table {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1519,25 +1491,25 @@
     border: 0.1px solid #111;
     border-radius: 1rem;
     width: 80rem;
-  
   }
-  
-  .team_table>p {
+
+  .team_table > p {
     padding: 5px;
     color: #fff;
+    font-family: var(--font);
   }
-  
+
   section h3 {
     text-align: center;
     margin-bottom: 1rem;
   }
-  
+
   .aboutteam {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .Player_card {
     display: flex;
     flex-direction: column;
@@ -1548,32 +1520,35 @@
     border-radius: 10px;
     width: 200px;
   }
-  
+
   .playercardimg {
     width: 100%;
     overflow: hidden;
     margin: 10px 0;
+    filter: drop-shadow(2px 2px 8px #898282);
   }
-  
+
   .playercardimg img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 16rem;
+    justify-content: center;
   }
-  
+
   .player_number {
-    font-size: 24px;
+    font-size: 25px;
     font-weight: bold;
+    font-family: var(--font);
+    color: var(--main-bg-color);
+    text-align: center;
   }
-  
+
   .player-card_info_container {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     width: 100%;
-  
   }
-  
+
   .player-card_info_table {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1581,42 +1556,55 @@
     text-align: left;
     font-size: 14px;
     font: var(--font);
+    & p {
+      font-size: 0.8rem;
+    }
   }
-  
+
   .player-card_info_table h4 {
     grid-column: 1 / span 2;
     text-align: center;
-    font-weight: bold;
+    font-size: 18px;
+    font-family: var(--main-font);
+    color: var(--main-bg-color);
   }
-  
+
+  .player-card_info_table p {
+    font-size: 15px;
+    color: var(--bg-color);
+    font-weight: 600;
+  }
+
   .player-card_info_table div {
     grid-column: 1 / span 2;
   }
-  
+
   .slider-container {
     display: flex;
     overflow: hidden;
     align-items: center;
     position: relative;
   }
-  
+
   .slider {
     display: flex;
     flex-wrap: wrap;
     transition: transform 0.5 ease;
     gap: 15px;
   }
-  
+
   .Team_roster {
     margin: 3rem;
   }
-  
+
   .teamrosterparagraph {
     text-align: center;
-    margin-bottom: 1rem;
-    font-weight: bold;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: var(--font);
+    color: var(--main-bg-color);
   }
-  
+
   .employee_card {
     display: flex;
     flex-direction: column;
@@ -1628,7 +1616,7 @@
     width: 200px;
     margin-left: 8rem;
   }
-  
+
   .Team_employee_info {
     display: flex;
     overflow: hidden;
@@ -1636,13 +1624,13 @@
     position: relative;
     gap: 20px;
   }
-  
+
   .employeerosterparagraph {
     text-align: center;
     margin-bottom: 1rem;
     font-weight: bold;
   }
-  
+
   /*footer*/
   footer {
     height: auto;
