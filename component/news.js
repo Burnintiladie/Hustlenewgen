@@ -108,6 +108,16 @@ class News extends HTMLElement
     }
     
 
+    handleClick() {
+        const newsClickEvent = new CustomEvent("news-click", {
+          detail: {
+            title: this.title,
+            description: this.desc,
+          },
+        });
+        this.dispatchEvent(newsClickEvent);
+      }
+
     //Attribute butsaalt
     static get observedAttributes()
     {
