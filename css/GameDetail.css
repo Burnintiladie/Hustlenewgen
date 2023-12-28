@@ -169,28 +169,6 @@ header{
     padding: 0rem 2rem;
 }
 
-/* meter::-webkit-meter-optimum-value {
-    box-shadow: 0 5px 5px -5px #999 inset;
-    
-    background-size: 100% 100%;
-    -webkit-transition: width .5s;
-  }
-  
-  meter::-webkit-meter-optimum-value:hover {
-    background-image: linear-gradient(
-      90deg, 
-      #8bcf69 20%, 
-      #e6d450 20%,
-      #e6d450 40%,
-      #f28f68 40%,
-      #f28f68 60%,
-      #cf82bf 60%,
-      #cf82bf 80%,
-    );
-    transition: width .5s;
-    width: 100% 
-  } */
-
 .score{
     display: flex;
     font-size: 35px;
@@ -241,12 +219,14 @@ header{
 .cent{
     display: flex;
     justify-content: center;
+    overflow-x: scroll;
+    background-color: var(--main-bg-color2);
 }
 .teamz{
     display: grid;
     grid-template-rows: auto auto;
     margin-bottom: 3rem;
-
+    font-family: var(--font);
 
     & img{
         width: 2rem;
@@ -259,7 +239,7 @@ header{
 .scoreboard{
     display: grid;
     grid-template-rows: repeat(13, 1fr);
-    width: 80vw;
+    width: 75rem;
     color: white;
     gap: 0.5px;
     padding-top: 5rem;
@@ -279,16 +259,27 @@ header{
         color: white;
         font-family: var(--font);
         font-size: 13px;
+
+        & .first{
+            width: 15rem;
+            text-align: left;
+            padding-left: 0.9rem;
+        }
+
+        & div{
+            width: 3rem;
+        }
     }
 
     & .a3{
         background-color: rgba(11, 25, 58, 0.1);
-        color: rgb(40, 40, 40);
+        color: black;
+
     }
 
     & .a4{
         background-color: rgba(11, 25, 58, 0.3);
-        color: rgb(40, 40, 40);
+        color: black;
     }
 
     & .a5{
@@ -314,10 +305,158 @@ header{
     padding-left: 0.9rem;
 }
 
-footer{
-    height: 20rem;
-    background-color: var(--main-bg-color);
+.ontsloh{
+    color: #2758CC;
 }
 
+.eff{
+    color: rgb(165, 8, 8);
+}
 
+@media screen and (max-width: 1024px) {
+    .logo{
+        & img{
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+        & img:hover{
+            width: 2.6rem;
+            height: 2.6rem;
+        }
+    }
+    .drop-player{
+        & a{
+            font-size: 1vw;
+        }
+    }
+    .column{
+        padding-right: 0;
+    }
+    .matchup{
+        height: 50vh;
+    }
 
+    .scoreboard{
+        width: 80vw;
+    }
+
+    .quarter{
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo{
+        & img{
+            height: 2.3rem;
+            width: 2.3rem;
+        }
+        & img:hover{
+            width: 2.5rem;
+            height: 2.5rem;
+            }
+    }
+    .drop-player{
+        height: 15rem;
+       & a{
+        font-size: 1.4vw;
+       }
+       & a:hover{
+        font-size: 1.4vw;
+       }
+       & h3{
+        padding-bottom: 0.5rem;
+       }
+    }
+    .column{
+        width: 30%;
+        margin-left: 0.5rem;
+    }
+    .one-team{
+        & img{
+            width: 7rem;
+            height: 7rem;
+        }
+    }
+    .quarter{
+        margin-top: 3rem;
+    }
+    .score{
+        padding: 2rem 3rem;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .logo{
+        justify-content: space-evenly;
+       & img{
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0;
+        margin-top: 1rem;
+       }
+       & img:hover{
+        width: 2.6rem;
+        height: 2.6rem;
+        }
+    }
+    .drop-player{
+        height: 21rem;
+       & a{
+        font-size: 2vw;
+       }
+       & a:hover{
+        font-size: 2vw;
+       }
+       & h3{
+        padding-bottom: 0.5rem;
+       }
+    }
+    .column{
+        width: 40%;
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .drop-player{
+        justify-content: center;
+        padding: 0;
+        height: 37rem;
+       & a{
+        font-size: 3vw;
+       }
+       & a:hover{
+        font-size: 3vw;
+       }
+       & h3{
+        padding-bottom: 0.5rem;
+       }
+       & h3::after{
+        width: 100%;
+        height: 0.1rem;
+    }
+    }
+    .column{
+        margin-left: 5.5rem;
+        text-align: center;
+        width: 50%;
+        border-right: none;
+    }
+    .one-team{
+        align-self: center;
+        & img{
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .logo{
+        & img{
+         width: 2.0rem;
+         height: 2.0rem;
+        }
+     }
+}

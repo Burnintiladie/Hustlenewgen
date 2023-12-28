@@ -74,14 +74,14 @@ class PlayerStats
             playersHTML +=`
             <div class="mur a3">
                     <div class="first">${player.playername}</div>
-                    <div>${player.minutes}</div>
-                    <div>${player.points}</div>
+                    <div class="ontsloh">${player.minutes}</div>
+                    <div class="ontsloh">${player.points}</div>
                     <div>${player.offensive_rebound}</div>
                     <div>${player.defensive_rebound}</div>
-                    <div>${player.rebound}</div>
-                    <div>${player.assist}</div>
-                    <div>${player.steal}</div>
-                    <div>${player.block}</div>
+                    <div class="ontsloh">${player.rebound}</div>
+                    <div class="ontsloh">${player.assist}</div>
+                    <div class="ontsloh">${player.steal}</div>
+                    <div class="ontsloh">${player.block}</div>
                     <div>${player.field_goals_made}</div>
                     <div>${player.field_goals_attempted}</div>
                     <div>${player.field_golas_percentage}</div>
@@ -93,7 +93,7 @@ class PlayerStats
                     <div>${player.free_throws_percentage}</div>
                     <div>${player.turnover}</div>
                     <div>${player.personal_foul}</div>
-                    <div>${player.plus_minus}</div>
+                    <div class="eff">${player.plus_minus}</div>
             </div>
             `;
         }
@@ -108,14 +108,14 @@ class PlayerStats
             benchHTML +=`
             <div class="mur a4">
                     <div class="first">${benchplayer.playername}</div>
-                    <div>${benchplayer.minutes}</div>
-                    <div>${benchplayer.points}</div>
+                    <div class="ontsloh">${benchplayer.minutes}</div>
+                    <div class="ontsloh">${benchplayer.points}</div>
                     <div>${benchplayer.offensive_rebound}</div>
                     <div>${benchplayer.defensive_rebound}</div>
-                    <div>${benchplayer.rebound}</div>
-                    <div>${benchplayer.assist}</div>
-                    <div>${benchplayer.steal}</div>
-                    <div>${benchplayer.block}</div>
+                    <div class="ontsloh">${benchplayer.rebound}</div>
+                    <div class="ontsloh">${benchplayer.assist}</div>
+                    <div class="ontsloh">${benchplayer.steal}</div>
+                    <div class="ontsloh">${benchplayer.block}</div>
                     <div>${benchplayer.field_goals_made}</div>
                     <div>${benchplayer.field_goals_attempted}</div>
                     <div>${benchplayer.field_golas_percentage}</div>
@@ -127,7 +127,7 @@ class PlayerStats
                     <div>${benchplayer.free_throws_percentage}</div>
                     <div>${benchplayer.turnover}</div>
                     <div>${benchplayer.personal_foul}</div>
-                    <div>${benchplayer.plus_minus}</div>
+                    <div class="eff">${benchplayer.plus_minus}</div>
             </div>
             `;
         }

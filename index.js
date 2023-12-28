@@ -21,7 +21,7 @@ const options = {
           title: "Hustle New Generation",
           version: "1.0.0",
           description:
-              "IМОНГОЛЫН САГСАН БӨМБӨГИЙН ҮНДЭСНИЙ ДЭЭД ЛИГИЙН АЛБАН ЁСНЫ САЙТ", 
+              "МОНГОЛЫН САГСАН БӨМБӨГИЙН ҮНДЭСНИЙ ДЭЭД ЛИГИЙН АЛБАН ЁСНЫ САЙТ", 
           contact: {
               name: "Admin",
               url: "Hustle.mn",
@@ -248,13 +248,6 @@ app.get("/playerinfo", async(req, res) => {
  *     tags:
  *        - Client
  *     parameters:
- *              - 
- *                in: path
- *                name: userid
- *                schema:
- *                  type: integer
- *                required: true
- *                description: Hereglegchiin id
  *              - 
  *                in: path
  *                name: email

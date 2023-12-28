@@ -2,6 +2,7 @@
     --main-bg-color: #0B193A;
     --main-bg-color2: white;
     --mid-bg-color:white;
+    --black:black;
     --bg-color: #37466d;
     --title-bg-color: #1F325C;
     --games-bg-color: #e0e3e8;
@@ -14,8 +15,9 @@
 
 [data-theme="dark"] {
     --main-bg-color: #161c2c;
-    --main-bg-color2: rgb(23, 6, 6);
-    --bg-color: #27314c;
+    --main-bg-color2: rgb(0, 0, 0);
+    --black:white;
+    --bg-color:  #0c0f19;
     --title-bg-color: #212a41;
     --games-bg-color: #040507;
     --text-color: #190e0e;

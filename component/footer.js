@@ -117,6 +117,30 @@ class Footer extends HTMLElement
                 padding: 0.5rem 0.3rem;
             }
         }
+        @media screen and (max-width: 425px) {
+
+             /*Footer heseg buheldee*/
+             footer{
+                padding: 3rem 1rem 1rem;
+            }
+            /*Footeriin deed heseg*/
+            .top-side{
+                display: block;
+            }
+            
+            /*Deed hesgiin zuun tal*/
+            .a-side{
+                margin-bottom: 2rem;
+                & img{
+                  width: 8rem;  
+                  height: 8rem;
+                }
+            
+                & p{
+                    font-size: 11px;
+                }
+            }
+        }
          </style>
 
          <footer>
