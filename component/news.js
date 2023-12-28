@@ -10,6 +10,7 @@ class News extends HTMLElement
         this.image = this.getAttribute("image");
         this.title = this.getAttribute("title");
         this.desc = this.getAttribute("desc");
+        this.darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
         this.#Render();
     }
 
@@ -18,11 +19,19 @@ class News extends HTMLElement
         this.myRoot.innerHTML = `
         <style>
 
+        :host {
+            --background-color-light: #ffffff;
+            --text-color-light: #000000;
+            --background-color-dark: #1a1a1a;
+            --text-color-dark: #ffffff;
+          }
+
         /* 1 medeenii heseg */
         .medee{
            font-family: var(--font);
            margin: 1.25rem;
-           background-color: white;
+           background-color: var(--background-color-light);
+           color: var(--text-color-light);
            border-radius: 5px;  
            height: 24rem;
            overflow: hidden;
