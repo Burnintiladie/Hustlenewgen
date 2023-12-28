@@ -530,6 +530,9 @@ nav{
     .column{
         padding-right: 0;
     }
+    .not{
+        padding-right: 1rem;
+    }
     .cover{
         height: 65vh;
     }
@@ -579,6 +582,9 @@ nav{
     .column{
         width: 30%;
         margin-left: 0.5rem;
+    }
+    .not{
+        padding-right: 0.5rem;
     }
     .cover{
         height: 60vh;
@@ -691,11 +697,16 @@ nav{
 }
 
 @media screen and (max-width: 425px) {
+    header{
+        height: 10rem;
+        background-color: var(--main-bg-color);
+        font-family: var(--main-font);
+    }
 
     .menu{
+        height: 2.5rem;
         justify-content: space-evenly;
         font-size: 16px;
-        padding: 0.5rem;
         & a{
             border-bottom: none;
         }
@@ -723,6 +734,20 @@ nav{
         text-align: center;
         width: 50%;
         border-right: none;
+    }
+    nav{
+    height: 5rem;
+    }
+    /*Menu heseg*/
+    .menu{
+    height: 2.5rem;
+    }
+
+    /* not button heseg buheldee */
+    .not{
+    height: 2.5rem;
+    margin-top: 0rem;
+    justify-content: center;
     }
 
     .cover{
