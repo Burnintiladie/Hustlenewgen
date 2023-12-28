@@ -111,7 +111,7 @@ class Appp {
 
         for (let i = 0; i < game.length; i++) {
           const recentmatches = new RecentMatches(game[i]);
-          select.insertAdjacentHTML("beforeend", recentmatches.Render());
+          select.insertAdjacentHTML('beforeend', recentmatches.Render());
         }
       });
   }

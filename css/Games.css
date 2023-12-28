@@ -1083,6 +1083,7 @@
                 color: var(--main-bg-color);
                 font-weight: 600;
                 text-align: center;
+                font-family: var(--font);
             }
     
             /*togloltiin huvaari*/
@@ -1109,11 +1110,13 @@
                         width: 100%;
                         text-align: center;
                         font-size: 0.8rem;
+                        font-family: var(--font);
                     }
                 }
                 /*togloltiin hugatsaa, onoo*/
                 & .finalScore {
                     padding: 1.5rem;
+                    font-family: var(--font);
     
                     & .hugatsaa {
                         color: var(--text-color);
