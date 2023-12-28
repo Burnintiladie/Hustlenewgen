@@ -19,7 +19,7 @@ class Notification extends HTMLElement {
     showMessage(useremail) {
         const messageElement = this.shadowRoot.querySelector("#notification-message");
         if (messageElement) {
-            messageElement.textContent = "Таны '" + useremail + "' хаяг амжилттай бүртгэгдлээ.";
+            messageElement.textContent = useremail;
         }
     }
 }

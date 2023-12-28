@@ -3,12 +3,42 @@ const express = require("express");
 //data base teige clienta holbono
 const { Client } = require("pg");
 const cors = require('cors');
-const app = express();
+const app = express();  
 const port = 3000;
+
+//swagger
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("swagger-jsdoc");
 
 //json file aa ashiglaltand oruulna
 app.use(express.json());
 app.use(cors());
+
+const options = {
+  swaggerDefinition: {
+      openapi: "3.0.0",
+      info: {
+          title: "Hustle New Generation",
+          version: "1.0.0",
+          description:
+              "IМОНГОЛЫН САГСАН БӨМБӨГИЙН ҮНДЭСНИЙ ДЭЭД ЛИГИЙН АЛБАН ЁСНЫ САЙТ", 
+          contact: {
+              name: "Admin",
+              url: "Hustle.mn",
+              email: "admin@hustle.mn"
+          }
+      },
+      servers: [
+          {
+              url: "http://localhost:3000/"
+          }
+      ]
+  },
+  apis: ["./index.js"]
+};
+
+const specs = swaggerDocument(options);
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(specs));
 
 //database iin info-g todorhoilj baina.
 client = new Client({
@@ -16,6 +46,9 @@ client = new Client({
     password:'91209913',
     database:'WebApp-HustleNewGen',
     host:'localhost',
+    //tsak,suvda
+    //port:5432
+    //ja
     port:5432
 });
 
@@ -23,33 +56,146 @@ client.connect();
 
 //Routes
 
+/**
+ * @swagger
+ * tags:
+ *  -
+ *   name: "Client"
+ *   description: Hereglegchiin email hayg
+ *      
+ *  - 
+ *   name: "Player"
+ *   description: Toglogchiin medeelel 
+ */
+
+
+//Schema uusgelt
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Client:
+ *       type: object
+ *       required:
+ *         - client email
+ *       properties:
+ *         userid:
+ *           type: integer
+ *           description: Hereglegchiin id
+ *         sessionid:
+ *           type: integer
+ *           description: Cookie id
+ *         email:
+ *           type: variable character
+ *           description: Hereglegchiin email hayg
+ *       example:
+ *         userid: 23
+ *         sessionid: 1618437
+ *         email: javhaa@gmail.com
+ *     Player:
+ *       type: object
+ *       required:
+ *         - player number
+ *         - player name
+ *         - player age
+ *         - player position
+ *         - player height
+ *         - player weight
+ *       properties:
+ *         playerid:
+ *           type: integer
+ *           description: Toglogchiin id
+ *         teamid:
+ *           type: integer
+ *           description: Bagiin id
+ *         playernumber:
+ *           type: integer
+ *           description: Toglogchiin huviin dugaar
+ *         playercardimg:
+ *           type: variable character
+ *           description: Toglogchiin profile zurag
+ *         playername:
+ *           type: variable character
+ *           description: Toglogchiin ner
+ *         age:
+ *           type: integer
+ *           description: Toglogchiin nas
+ *         position:
+ *           type: variable character
+ *           description: Toglogchiin bairlal
+ *         height:
+ *           type: integer
+ *           description: Toglogchiin undur
+ *         weight:
+ *           type: integer
+ *           description: Toglogchiin jin
+ *       example:
+ *         playerid: 1
+ *         teamid: 1
+ *         playernumber: 0
+ *         playercardimg: /assets/team_metal/jahlil.png
+ *         playername: Jahlil Tripp
+ *         age: 29
+ *         position: SF
+ *         height: 196
+ *         weight: 98
+ */
+
+
 
 //Get requestuud
-
 app.get("/", (req, res) => {
     res.sendFile("index.html", {root: __dirname});
+    res.status(200);
 });
 
 app.get("/player", async(req, res) =>{
-    res.sendFile("Player.html", {root:__dirname})
+    res.sendFile("Player.html", {root:__dirname});
+    res.status(200);
 });
 
 app.get("/games", async(req, res) =>{
-    res.sendFile("games.html", {root:__dirname})
+    res.sendFile("games.html", {root:__dirname});
+    res.status(200);
 });
 
 app.get("/team", async(req, res) =>{
-    res.sendFile("Teamlookup.html", {root:__dirname})
+    res.sendFile("Teamlookup.html", {root:__dirname});
+    res.status(200);
 });
 
 app.get("/league", async(req, res) => {
-    res.sendFile("League.html", {root: __dirname})
+    res.sendFile("League.html", {root: __dirname});
+    res.status(200);
 });
 
 app.get("/gamedetail", async(req, res) => {
-    res.sendFile("Gamedetail.html", {root: __dirname})
+    res.sendFile("Gamedetail.html", {root: __dirname});
+    res.status(200);
 });
 
+
+
+
+//-------------------------------------------------------------------Get---------------------------------------------------------------- 
+/**
+ * @swagger
+ *  paths:
+ *     /userinfo:
+ *         get:
+ *           summary: Get user info
+ *           tags: 
+ *              - Client
+ *           responses:
+ *             200:
+ *               description: userinfo json
+ *               contens:
+ *                  application/json:
+ *                    schema:
+ *                      $ref: '#/components/schemas/Client'
+ *             500:
+ *               description: Server error
+ */
 app.get("/userinfo", async(req, res) => {
     try {
         const userinfo = await client.query('SELECT * FROM client');
@@ -60,6 +206,26 @@ app.get("/userinfo", async(req, res) => {
     }
 });
 
+
+
+/**
+ * @swagger
+ *  paths:
+ *     /playerinfo:
+ *         get:
+ *           summary: Get user info
+ *           tags: 
+ *              - Player
+ *           responses:
+ *             200:
+ *               description: playerinfo json
+ *               contens:
+ *                  application/json:
+ *                    schema:
+ *                      $ref: '#/components/schemas/Client'
+ *             500:
+ *               description: Server error
+ */
 app.get("/playerinfo", async(req, res) => {
     try {
         const playerinfo = await client.query('SELECT * FROM players');
@@ -70,31 +236,156 @@ app.get("/playerinfo", async(req, res) => {
     }
 });
 
-//Create requestuud
 
+
+//--------------------------------------------------------------Create requestuud--------------------------------------------------------- 
+
+/**
+ * @swagger
+ * /createmyemail:
+ *   post:
+ *     summary: Create email
+ *     tags:
+ *        - Client
+ *     parameters:
+ *              - 
+ *                in: path
+ *                name: userid
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Hereglegchiin id
+ *              - 
+ *                in: path
+ *                name: email
+ *                schema:
+ *                  type: variable character
+ *                required: true
+ *                description: Hereglegchiin email hayg
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Client'
+ *     responses:
+ *       201:
+ *         description: Email inserted succesfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Client'
+ *       400:
+ *         description: Email is already registered 
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Client'
+ *       500:
+ *         description: Server error
+ */
 app.post("/createmyemail", async (req, res) => {
-    try {
-        const { userId, email } = req.body;
+  try {
+      const { userId, email } = req.body;
 
       const result = await client.query('SELECT * FROM client WHERE Email = $1', [email]);
-  
+
       if (result.rows.length > 0) {
         res.status(400).json({ error: 'Email is already registered' });
       } else {
-        const sessionId = Math.floor(userId * Math.random() * 100_000);
-        await client.query('INSERT INTO client (UserId, SessionId, Email) VALUES ($1, $2, $3)', [userId, sessionId, email]);
-        res.status(201).json({ message: 'Email inserted successfully' });
-        res.cookie("session_id", sessionId);
+          const sessionId = Math.floor(userId * Math.random() * 100_000);
+          await client.query('INSERT INTO client (UserId, SessionId, Email) VALUES ($1, $2, $3)', [userId, sessionId, email]);
+          res.cookie("session_id", sessionId);
+          res.status(201).json({ message: 'Email inserted successfully' });
       }
-
-      res.status(200).json({ message: 'Request processed successfully' });
-    } catch (err) {
+  } catch (err) {
       console.error(err);
       res.status(500).json({ error: "Server error" });
-    }
-  });
+  }
+});
 
 
+
+/**
+ * @swagger
+ * /players:
+ *   post:
+ *     summary: Create player
+ *     tags:
+ *        - Player
+ *     parameters:
+ *              - 
+ *                in: path
+ *                name: teamid
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Bagiin id
+ *              - 
+ *                in: path
+ *                name: playernumber
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Toglogchiin huviin dugaar
+ *              - 
+ *                in: path
+ *                name: playercardimg
+ *                schema:
+ *                  type: variable character
+ *                required: true
+ *                description: Toglogchiin profile zurag
+ *              - 
+ *                in: path
+ *                name: playername
+ *                schema:
+ *                  type: variable character
+ *                required: true
+ *                description: Toglogchiin ner
+ *              - 
+ *                in: path
+ *                name: age
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Toglogchiin nas
+ *              - 
+ *                in: path
+ *                name: position
+ *                schema:
+ *                  type: variable character
+ *                required: true
+ *                description: Toglogchiin bairlal
+ *              - 
+ *                in: path
+ *                name: height
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Toglogchiin undur
+ *              - 
+ *                in: path
+ *                name: weight
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Toglogchiin jin
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Player'
+ *     responses:
+ *       201:
+ *         description: Created player
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Player'
+ *       500:
+ *         description: Server error
+ */
   app.post('/players', async (req, res) => {
     try {
         const { team_id, player_number, playercardimg, player_name, age, position, height, weight } = req.body;
@@ -112,8 +403,46 @@ app.post("/createmyemail", async (req, res) => {
     }
 });
 
-//Update requestuud
 
+//--------------------------------------------------------------Update requestuud--------------------------------------------------------- 
+
+/**
+ * @swagger
+ * /updateemail/{userId}:
+ *   post:
+ *     summary: Update email
+ *     tags:
+ *        - Client
+ *     parameters:
+ *              - 
+ *                in: path
+ *                name: userid
+ *                schema:
+ *                  type: integer
+ *                required: true
+ *                description: Hereglegchiin id
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Client'
+ *     responses:
+ *       200:
+ *         description: Email updated succesfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Client'
+ *       404:
+ *         description: User not found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Client'
+ *       500:
+ *         description: Server error
+ */
 app.post('/updateemail/:userId', async (req, res) => {
     try {
       const userId = req.params.userId;
@@ -133,8 +462,34 @@ app.post('/updateemail/:userId', async (req, res) => {
     }
   });
 
-//Delete requestuud
 
+
+
+//--------------------------------------------------------------Delete requestuud--------------------------------------------------------- 
+
+/**
+ * @swagger
+ * /deleteuser/{email}:
+ *   delete:
+ *     summary: Remove the email 
+ *     tags:
+ *        - Client
+ *     parameters:
+ *       - in: path
+ *         name: email
+ *         schema:
+ *           type: variable character
+ *         required: true
+ *         description: Hereglegchiin email
+ * 
+ *     responses:
+ *       200:
+ *         description: User deleted succesfully
+ *       404:
+ *         description: User not found
+ *       500:
+ *         description: Server error
+ */
 app.delete('/deleteuser/:email', async (req, res) => {
     try {
       const email = req.params.email;
@@ -154,6 +509,30 @@ app.delete('/deleteuser/:email', async (req, res) => {
   });
 
 
+
+/**
+ * @swagger
+ * /players/{playername}:
+ *   delete:
+ *     summary: Remove the player
+ *     tags:
+ *        - Player
+ *     parameters:
+ *       - in: path
+ *         name: playername
+ *         schema:
+ *           type: variable character
+ *         required: true
+ *         description: Toglogchiin ner
+ * 
+ *     responses:
+ *       200:
+ *         description: Player deleted succesfully
+ *       404:
+ *         description: Player not found
+ *       500:
+ *         description: Server error
+ */
   app.delete('/players/:player_name', async (req, res) => {
     try {
         const player_name = req.params.player_name;
@@ -172,6 +551,8 @@ app.delete('/deleteuser/:email', async (req, res) => {
         res.status(500).send('Server Error');
     }
 });
+
+
 //portiin medeelliig console deer delgetslene
 
 app.listen(port, () => {
