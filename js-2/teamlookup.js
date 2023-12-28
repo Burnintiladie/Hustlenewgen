@@ -43,6 +43,7 @@ class PlayerCard {
             playerData.playercardimg,
             playerData.player_name,
             playerData.age,
+            playerData.age,
             playerData.position,
             playerData.height,
             playerData.weight
