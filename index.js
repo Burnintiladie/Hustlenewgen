@@ -228,7 +228,7 @@ app.get("/userinfo", async(req, res) => {
  */
 app.get("/playerinfo", async(req, res) => {
     try {
-        const playerinfo = await client.query('SELECT * FROM players');
+        const playerinfo = await client.query('SELECT player_number, playercardimg, player_name, age, position, height, weight FROM players');
         res.status(200).json(playerinfo.rows);
     } catch (err) {
         console.error(err);
