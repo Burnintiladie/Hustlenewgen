@@ -30,7 +30,7 @@ class News extends HTMLElement
         .medee{
            font-family: var(--font);
            margin: 1.25rem;
-           background-color: var(--background-color-light);
+           background-color: var(--main-bg-color2);
            color: var(--text-color-light);
            border-radius: 5px;  
            height: 24rem;
@@ -46,9 +46,10 @@ class News extends HTMLElement
 
         /* Medeenii text heseg */
         .title{
-           background-color: white;
            padding: 0rem 1.25rem;
            margin: 0rem;
+           background-color: var(--main-bg-color2);
+           color: var(--black);
 
            /* Garchignii doodoh zuraas */
            & h5::after{

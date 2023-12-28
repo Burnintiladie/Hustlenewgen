@@ -274,7 +274,7 @@ nav{
 
 /*Togloltiin heseg ter chigtee*/
 .match{
-    background-color: var(--mid-bg-color);
+    background-color: var(--main-bg-color2);
     height: 25vh;
     display: grid;
     grid-template-columns: auto auto auto auto;
